@@ -53,8 +53,8 @@ const MaintenanceService = () => {
             <div className="flex gap-3 p-4 bg-primary/5 rounded-lg border border-primary/20">
               <Info className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
               <p className="text-sm text-muted-foreground">
-                Any additional work or scope expansion is taken up only after prior client approval. 
-                Service effort and diagnosis have value even if further action is not pursued.
+                Any additional work or scope changes are discussed and approved before execution. 
+                Our service visits are structured to ensure professional diagnosis and clear next steps.
               </p>
             </div>
           </div>
