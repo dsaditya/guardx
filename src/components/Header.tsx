@@ -3,10 +3,10 @@ import { Menu, X, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { label: "Services", href: "#services" },
-  { label: "How We Work", href: "#execution" },
+  { label: "Systems We Handle", href: "#services" },
+  { label: "Execution Framework", href: "#execution" },
   { label: "AMC", href: "#amc" },
-  { label: "Contact", href: "#contact" },
+  { label: "Site Assessment", href: "#contact" },
 ];
 
 const Header = () => {
