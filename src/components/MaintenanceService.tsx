@@ -15,7 +15,7 @@ const serviceItems = [
   },
   {
     icon: Clock,
-    text: "Up to 3 hours of work",
+    text: "Within a defined service window",
   },
 ];
 
@@ -53,8 +53,8 @@ const MaintenanceService = () => {
             <div className="flex gap-3 p-4 bg-primary/5 rounded-lg border border-primary/20">
               <Info className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
               <p className="text-sm text-muted-foreground">
-                Any additional work or scope changes are discussed and approved before execution. 
-                Our service visits are structured to ensure professional diagnosis and clear next steps.
+                Standard service visits are structured to cover professional diagnosis and basic rectification within a defined service window. 
+                Any additional work or scope changes are discussed and approved before execution.
               </p>
             </div>
           </div>
