@@ -3,7 +3,7 @@ import { User, Stethoscope, Wrench, Clock, Info } from "lucide-react";
 const serviceItems = [
   {
     icon: User,
-    text: "Technician visit",
+    text: "On-site technician visit",
   },
   {
     icon: Stethoscope,
@@ -11,11 +11,12 @@ const serviceItems = [
   },
   {
     icon: Wrench,
-    text: "Basic rectification",
+    text: "Basic issue rectification",
   },
   {
     icon: Clock,
     text: "Within a defined service window",
+    subtext: "(planned to ensure effective diagnosis and resolution)",
   },
 ];
 
@@ -42,10 +43,17 @@ const MaintenanceService = () => {
               {serviceItems.map((item, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-3 bg-card p-4 rounded-lg"
+                  className="flex items-start gap-3 bg-card p-4 rounded-lg"
                 >
-                  <item.icon className="h-5 w-5 text-accent flex-shrink-0" />
-                  <span className="text-foreground">{item.text}</span>
+                  <item.icon className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                  <div>
+                    <span className="text-foreground">{item.text}</span>
+                    {item.subtext && (
+                      <span className="block text-xs text-muted-foreground mt-0.5">
+                        {item.subtext}
+                      </span>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>
