@@ -255,7 +255,7 @@ const ContactSection = () => {
 
               <div className="space-y-6">
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+917095777764"
                   className="flex items-center gap-4 p-4 bg-card rounded-lg border border-border hover:border-accent/50 transition-colors group"
                 >
                   <div className="bg-accent/10 p-3 rounded-lg group-hover:bg-accent/20 transition-colors">
@@ -263,7 +263,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Call Us</p>
-                    <p className="font-medium text-foreground">+91 98765 43210</p>
+                    <p className="font-medium text-foreground">+91 70957 77764</p>
                   </div>
                 </a>
 
