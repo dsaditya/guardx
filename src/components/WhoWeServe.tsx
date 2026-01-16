@@ -1,4 +1,4 @@
-import { Building2, Building, Factory, Home } from "lucide-react";
+import { Building, Factory, Home, HardHat } from "lucide-react";
 
 const audiences = [
   {
@@ -7,9 +7,9 @@ const audiences = [
     description: "RWAs and management committees requiring reliable entry control and surveillance",
   },
   {
-    icon: Building2,
-    title: "Apartment Complexes",
-    description: "Large residential societies with multiple access points and common areas",
+    icon: HardHat,
+    title: "Crusher & Mining Sites",
+    description: "High-risk industrial locations with controlled entry points, heavy vehicle movement, and critical security requirements",
   },
   {
     icon: Building,
