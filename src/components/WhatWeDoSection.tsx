@@ -21,12 +21,13 @@ const services = [
     title: "Solar Fencing & Perimeter Security",
     description: "Perimeter protection systems with intrusion detection",
   },
-  {
-    icon: Wrench,
-    title: "Annual Maintenance Contracts",
-    description: "Preventive maintenance and breakdown support with defined scope",
-  },
 ];
+
+const amcService = {
+  icon: Wrench,
+  title: "Annual Maintenance Contracts",
+  description: "Preventive maintenance and breakdown support with defined scope",
+};
 
 const WhatWeDoSection = () => {
   return (
@@ -41,7 +42,7 @@ const WhatWeDoSection = () => {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8 mb-6">
           {services.map((service) => (
             <div
               key={service.title}
@@ -58,6 +59,19 @@ const WhatWeDoSection = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* AMC Full Row */}
+        <div className="flex gap-4 p-6 bg-section-alt rounded-lg mb-12">
+          <amcService.icon className="h-8 w-8 text-accent flex-shrink-0" />
+          <div>
+            <h3 className="font-semibold text-primary mb-1">
+              {amcService.title}
+            </h3>
+            <p className="text-sm text-muted-foreground">
+              {amcService.description}
+            </p>
+          </div>
         </div>
 
         <div className="text-center">
