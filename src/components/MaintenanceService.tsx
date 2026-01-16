@@ -16,7 +16,7 @@ const serviceItems = [
   {
     icon: Clock,
     text: "Within a defined service window",
-    subtext: "(planned to ensure effective diagnosis and resolution)",
+    subtext: "(planned to ensure effective diagnosis and clear next steps)",
   },
 ];
 
