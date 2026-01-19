@@ -32,10 +32,13 @@ const ProblemsSection = () => {
     <section className="section-padding bg-section-alt">
       <div className="container-narrow">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
+            Security Reality
+          </p>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4 font-heading">
             Real Problems Clients Face
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-secondary max-w-2xl mx-auto">
             Most clients approach us after facing these issues.
           </p>
         </div>
@@ -44,10 +47,10 @@ const ProblemsSection = () => {
           {problems.map((problem, index) => (
             <div
               key={index}
-              className="flex items-start gap-4 p-5 bg-card rounded-lg border border-border"
+              className="flex items-start gap-4 p-5 bg-card border-l-4 border-l-destructive border border-border"
             >
-              <problem.icon className="h-6 w-6 text-destructive flex-shrink-0 mt-0.5" />
-              <p className="text-foreground font-medium">{problem.text}</p>
+              <problem.icon className="h-5 w-5 text-destructive flex-shrink-0 mt-0.5" />
+              <p className="text-foreground font-medium text-sm">{problem.text}</p>
             </div>
           ))}
         </div>

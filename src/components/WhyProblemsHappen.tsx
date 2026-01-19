@@ -32,10 +32,13 @@ const WhyProblemsHappen = () => {
     <section className="section-padding bg-background">
       <div className="container-narrow">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
+            Process Education
+          </p>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4 font-heading">
             Why These Problems Happen
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-secondary max-w-2xl mx-auto">
             These failures are not random. They are operational.
           </p>
         </div>
@@ -44,10 +47,10 @@ const WhyProblemsHappen = () => {
           {causes.map((cause, index) => (
             <div
               key={index}
-              className="flex items-center gap-4 p-5 bg-section-alt rounded-lg"
+              className="flex items-center gap-4 p-5 bg-section-alt border border-border"
             >
-              <cause.icon className="h-6 w-6 text-secondary flex-shrink-0" />
-              <p className="text-foreground">{cause.text}</p>
+              <cause.icon className="h-5 w-5 text-primary flex-shrink-0" />
+              <p className="text-foreground text-sm">{cause.text}</p>
             </div>
           ))}
         </div>
