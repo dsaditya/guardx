@@ -41,9 +41,9 @@ const WhyChooseUs = () => {
           {reasons.map((reason, index) => (
             <div
               key={index}
-              className="flex items-center gap-4 p-5 bg-card rounded-lg border border-border hover:border-accent/50 transition-colors"
+              className="flex items-center gap-4 p-5 bg-card rounded-lg border border-border hover:border-primary/30 transition-colors"
             >
-              <reason.icon className="h-6 w-6 text-accent flex-shrink-0" />
+              <reason.icon className="h-6 w-6 text-primary flex-shrink-0" />
               <p className="text-foreground font-medium">{reason.text}</p>
             </div>
           ))}

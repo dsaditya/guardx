@@ -48,7 +48,7 @@ const WhatWeDoSection = () => {
               key={service.title}
               className="flex gap-4 p-6 bg-section-alt rounded-lg"
             >
-              <service.icon className="h-8 w-8 text-accent flex-shrink-0" />
+              <service.icon className="h-8 w-8 text-primary flex-shrink-0" />
               <div>
                 <h3 className="font-semibold text-primary mb-1">
                   {service.title}
@@ -63,7 +63,7 @@ const WhatWeDoSection = () => {
 
         {/* AMC Full Row */}
         <div className="flex gap-4 p-6 bg-section-alt rounded-lg mb-12">
-          <amcService.icon className="h-8 w-8 text-accent flex-shrink-0" />
+          <amcService.icon className="h-8 w-8 text-primary flex-shrink-0" />
           <div>
             <h3 className="font-semibold text-primary mb-1">
               {amcService.title}

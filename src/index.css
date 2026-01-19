@@ -3,82 +3,97 @@
 @tailwind utilities;
 
 /* GUARDX360 Design System
-   Primary: Deep Navy Blue
-   Secondary: Slate Grey
-   Accent: Steel Blue/Teal for CTAs
-   All colors are HSL.
+   ═══════════════════════════════════════════════════════════
+   Visual Tone: Serious, Trustworthy, Calm, Engineering-led
+   Target: Gated community committees & industrial clients
+   ═══════════════════════════════════════════════════════════
+   
+   LOCKED COLOR PALETTE:
+   - Primary (Brand Anchor): Deep Navy Blue #1E3A5F
+   - Secondary (Structure): Slate Grey #64748B
+   - Background: White #FFFFFF, Alt sections #F8FAFC
+   - Accent (CTA ONLY): Muted Steel Blue/Teal #0EA5B7
+   
+   All colors are HSL for Tailwind compatibility.
 */
 
 @layer base {
   :root {
+    /* Background: Pure white */
     --background: 0 0% 100%;
-    --foreground: 213 37% 19%;
+    /* Foreground: Deep navy for text */
+    --foreground: 210 53% 24%;
 
+    /* Card: White with navy text */
     --card: 0 0% 100%;
-    --card-foreground: 213 37% 19%;
+    --card-foreground: 210 53% 24%;
 
+    /* Popover: White with navy text */
     --popover: 0 0% 100%;
-    --popover-foreground: 213 37% 19%;
+    --popover-foreground: 210 53% 24%;
 
-    /* Deep Navy Blue - Primary brand color */
-    --primary: 213 55% 24%;
+    /* Primary: Deep Navy Blue #1E3A5F → HSL 210 53% 24% */
+    --primary: 210 53% 24%;
     --primary-foreground: 210 40% 98%;
 
-    /* Slate Grey - Secondary */
-    --secondary: 215 16% 47%;
+    /* Secondary: Slate Grey #64748B → HSL 215 14% 47% */
+    --secondary: 215 14% 47%;
     --secondary-foreground: 210 40% 98%;
 
-    /* Light grey for muted elements */
-    --muted: 210 20% 96%;
-    --muted-foreground: 215 16% 47%;
+    /* Muted: Light grey for subtle backgrounds */
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 14% 47%;
 
-    /* Steel Blue/Teal - Accent for CTAs */
-    --accent: 199 89% 48%;
-    --accent-foreground: 210 40% 98%;
+    /* Accent: Muted Steel Blue/Teal #0EA5B7 → HSL 187 85% 39% */
+    /* ONLY for: Primary CTA buttons, active UI states, important highlights */
+    --accent: 187 85% 39%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Destructive: Muted red for errors */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
 
+    /* Border: Very light slate */
     --border: 214 20% 88%;
     --input: 214 20% 88%;
-    --ring: 213 55% 24%;
+    --ring: 210 53% 24%;
 
     --radius: 0.5rem;
 
-    /* Section backgrounds */
-    --section-alt: 210 20% 97%;
+    /* Section alternating background: #F8FAFC → HSL 210 40% 98% */
+    --section-alt: 210 40% 98%;
   }
 
   .dark {
-    --background: 213 37% 10%;
+    --background: 210 53% 10%;
     --foreground: 210 40% 98%;
 
-    --card: 213 37% 14%;
+    --card: 210 53% 14%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 213 37% 14%;
+    --popover: 210 53% 14%;
     --popover-foreground: 210 40% 98%;
 
     --primary: 210 40% 98%;
-    --primary-foreground: 213 55% 24%;
+    --primary-foreground: 210 53% 24%;
 
     --secondary: 215 20% 65%;
-    --secondary-foreground: 213 37% 10%;
+    --secondary-foreground: 210 53% 10%;
 
-    --muted: 213 30% 18%;
+    --muted: 210 30% 18%;
     --muted-foreground: 215 20% 65%;
 
-    --accent: 199 89% 48%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 187 85% 39%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 213 30% 22%;
-    --input: 213 30% 22%;
-    --ring: 199 89% 48%;
+    --border: 210 30% 22%;
+    --input: 210 30% 22%;
+    --ring: 187 85% 39%;
 
-    --section-alt: 213 37% 12%;
+    --section-alt: 210 53% 12%;
   }
 }
 
@@ -89,6 +104,7 @@
 
   body {
     @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 
   html {
