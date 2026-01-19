@@ -81,8 +81,8 @@ const ContactSection = () => {
       <section id="contact" className="section-padding bg-background">
         <div className="container-narrow">
           <div className="max-w-2xl mx-auto text-center">
-            <div className="bg-accent/10 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
-              <CheckCircle className="h-10 w-10 text-accent" />
+            <div className="bg-primary/10 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+              <CheckCircle className="h-10 w-10 text-primary" />
             </div>
             <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
               Thank You
@@ -256,10 +256,10 @@ const ContactSection = () => {
               <div className="space-y-6">
                 <a
                   href="tel:+917095777764"
-                  className="flex items-center gap-4 p-4 bg-card rounded-lg border border-border hover:border-accent/50 transition-colors group"
+                  className="flex items-center gap-4 p-4 bg-card rounded-lg border border-border hover:border-primary/30 transition-colors group"
                 >
-                  <div className="bg-accent/10 p-3 rounded-lg group-hover:bg-accent/20 transition-colors">
-                    <Phone className="h-5 w-5 text-accent" />
+                  <div className="bg-primary/10 p-3 rounded-lg group-hover:bg-primary/20 transition-colors">
+                    <Phone className="h-5 w-5 text-primary" />
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Call Us</p>
@@ -269,10 +269,10 @@ const ContactSection = () => {
 
                 <a
                   href="mailto:contact@guardx360.com"
-                  className="flex items-center gap-4 p-4 bg-card rounded-lg border border-border hover:border-accent/50 transition-colors group"
+                  className="flex items-center gap-4 p-4 bg-card rounded-lg border border-border hover:border-primary/30 transition-colors group"
                 >
-                  <div className="bg-accent/10 p-3 rounded-lg group-hover:bg-accent/20 transition-colors">
-                    <Mail className="h-5 w-5 text-accent" />
+                  <div className="bg-primary/10 p-3 rounded-lg group-hover:bg-primary/20 transition-colors">
+                    <Mail className="h-5 w-5 text-primary" />
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Email Us</p>

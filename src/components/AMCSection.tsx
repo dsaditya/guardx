@@ -46,7 +46,7 @@ const AMCSection = () => {
               key={index}
               className="flex items-center gap-4 p-5 bg-card rounded-lg border border-border"
             >
-              <feature.icon className="h-6 w-6 text-accent flex-shrink-0" />
+              <feature.icon className="h-6 w-6 text-primary flex-shrink-0" />
               <p className="text-foreground font-medium">{feature.text}</p>
             </div>
           ))}

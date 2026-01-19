@@ -42,7 +42,7 @@ const WhoWeServe = () => {
               key={item.title}
               className="bg-card p-6 md:p-8 rounded-lg border border-border hover:border-primary/30 transition-colors"
             >
-              <item.icon className="h-10 w-10 text-accent mb-4" />
+              <item.icon className="h-10 w-10 text-primary mb-4" />
               <h3 className="text-lg font-semibold text-primary mb-2">
                 {item.title}
               </h3>

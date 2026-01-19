@@ -40,7 +40,7 @@ const ComparisonTable = () => {
                 <span className="text-muted-foreground text-sm md:text-base">{row.typical}</span>
               </div>
               <div className="p-4 md:p-5 flex items-center gap-3 bg-primary/5">
-                <Check className="h-5 w-5 text-accent flex-shrink-0" />
+                <Check className="h-5 w-5 text-primary flex-shrink-0" />
                 <span className="text-foreground font-medium text-sm md:text-base">{row.guardx}</span>
               </div>
             </div>

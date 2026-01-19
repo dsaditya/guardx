@@ -53,8 +53,8 @@ const ExecutionPhilosophy = () => {
               className="bg-primary-foreground/10 backdrop-blur-sm p-6 rounded-lg border border-primary-foreground/20"
             >
               <div className="flex items-center gap-4 mb-3">
-                <div className="bg-accent p-2 rounded-lg">
-                  <step.icon className="h-6 w-6 text-accent-foreground" />
+                <div className="bg-primary-foreground/20 p-2 rounded-lg">
+                  <step.icon className="h-6 w-6 text-primary-foreground" />
                 </div>
                 <span className="text-3xl font-bold text-primary-foreground/30">
                   {String(index + 1).padStart(2, "0")}

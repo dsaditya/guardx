@@ -45,7 +45,7 @@ const MaintenanceService = () => {
                   key={index}
                   className="flex items-start gap-3 bg-card p-4 rounded-lg"
                 >
-                  <item.icon className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                  <item.icon className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                   <div>
                     <span className="text-foreground">{item.text}</span>
                     {item.subtext && (
