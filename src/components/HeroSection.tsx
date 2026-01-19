@@ -14,13 +14,11 @@ const HeroSection = () => {
       <div className="container-narrow">
         <div className="max-w-4xl">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight mb-6">
-            Security systems don't fail during installation.
-            <span className="block mt-2 text-secondary">They fail during incidents.</span>
+            Security systems that work when they're needed most.
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-10">
-            GUARDX360 designs, installs, and maintains security systems so they work 
-            reliably when they are needed most.
+            Professional security systems for gated communities and critical sites — designed, installed, and maintained with discipline.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
