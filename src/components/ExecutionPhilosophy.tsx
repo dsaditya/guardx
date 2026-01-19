@@ -35,35 +35,36 @@ const steps = [
 
 const ExecutionPhilosophy = () => {
   return (
-    <section id="execution" className="section-padding bg-primary">
+    <section id="execution" className="section-padding bg-section-dark">
       <div className="container-narrow">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary-foreground mb-4">
+          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
+            Our Process
+          </p>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 font-heading">
             Our Execution Philosophy
           </h2>
-          <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-white/70 max-w-3xl mx-auto">
             First-time-right execution and reliable systems — without repeated follow-ups.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {steps.map((step, index) => (
             <div
               key={index}
-              className="bg-primary-foreground/10 backdrop-blur-sm p-6 rounded-lg border border-primary-foreground/20"
+              className="bg-white/5 p-6 border border-white/10"
             >
-              <div className="flex items-center gap-4 mb-3">
-                <div className="bg-primary-foreground/20 p-2 rounded-lg">
-                  <step.icon className="h-6 w-6 text-primary-foreground" />
-                </div>
-                <span className="text-3xl font-bold text-primary-foreground/30">
+              <div className="flex items-center gap-4 mb-4">
+                <span className="text-4xl font-bold text-white/20 font-heading">
                   {String(index + 1).padStart(2, "0")}
                 </span>
+                <step.icon className="h-5 w-5 text-accent" strokeWidth={1.5} />
               </div>
-              <h3 className="text-lg font-semibold text-primary-foreground mb-2">
+              <h3 className="text-base font-semibold text-white mb-2 uppercase tracking-wide">
                 {step.title}
               </h3>
-              <p className="text-primary-foreground/80 text-sm">
+              <p className="text-white/60 text-sm leading-relaxed">
                 {step.description}
               </p>
             </div>

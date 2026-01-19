@@ -32,10 +32,13 @@ const AMCSection = () => {
     <section id="amc" className="section-padding bg-section-alt">
       <div className="container-narrow">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
+            Lifecycle Management
+          </p>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4 font-heading">
             Preventive Maintenance (AMC)
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-secondary max-w-2xl mx-auto">
             Our AMC model is designed to prevent failures, not just respond to breakdowns.
           </p>
         </div>
@@ -44,10 +47,10 @@ const AMCSection = () => {
           {amcFeatures.map((feature, index) => (
             <div
               key={index}
-              className="flex items-center gap-4 p-5 bg-card rounded-lg border border-border"
+              className="flex items-center gap-4 p-5 bg-card border border-border"
             >
-              <feature.icon className="h-6 w-6 text-primary flex-shrink-0" />
-              <p className="text-foreground font-medium">{feature.text}</p>
+              <feature.icon className="h-5 w-5 text-primary flex-shrink-0" strokeWidth={1.5} />
+              <p className="text-foreground font-medium text-sm">{feature.text}</p>
             </div>
           ))}
         </div>

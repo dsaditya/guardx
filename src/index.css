@@ -1,99 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* GUARDX360 Design System
+/* GUARDX360 Brand Design System
    ═══════════════════════════════════════════════════════════
-   Visual Tone: Serious, Trustworthy, Calm, Engineering-led
-   Target: Gated community committees & industrial clients
+   Brand Purpose: Security systems that work when actually needed
+   Tone: Calm, Factual, Confident, Assured
+   Visual: Serious, Authority-driven, Professional
    ═══════════════════════════════════════════════════════════
    
-   LOCKED COLOR PALETTE:
-   - Primary (Brand Anchor): Deep Navy Blue #1E3A5F
-   - Secondary (Structure): Slate Grey #64748B
-   - Background: White #FFFFFF, Alt sections #F8FAFC
-   - Accent (CTA ONLY): Muted Steel Blue/Teal #0EA5B7
+   LOCKED COLOR PALETTE (Brand Manual):
+   - Primary: Deep Charcoal #1A1A1A (Authority & Seriousness)
+   - Secondary: Steel Grey #6B7280 (Technology & Trust)
+   - Background: White #FFFFFF, Dark sections #111111
+   - Accent (CTA ONLY): Muted Amber #D97706
    
-   All colors are HSL for Tailwind compatibility.
+   Typography: Inter (body), Montserrat (headings)
+   Shapes: Rectangles, straight lines, grid-based, strong borders
 */
 
 @layer base {
   :root {
     /* Background: Pure white */
     --background: 0 0% 100%;
-    /* Foreground: Deep navy for text */
-    --foreground: 210 53% 24%;
+    /* Foreground: Deep charcoal for text */
+    --foreground: 0 0% 10%;
 
-    /* Card: White with navy text */
+    /* Card: White with charcoal text */
     --card: 0 0% 100%;
-    --card-foreground: 210 53% 24%;
+    --card-foreground: 0 0% 10%;
 
-    /* Popover: White with navy text */
+    /* Popover: White with charcoal text */
     --popover: 0 0% 100%;
-    --popover-foreground: 210 53% 24%;
+    --popover-foreground: 0 0% 10%;
 
-    /* Primary: Deep Navy Blue #1E3A5F → HSL 210 53% 24% */
-    --primary: 210 53% 24%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary: Deep Charcoal #1A1A1A */
+    --primary: 0 0% 10%;
+    --primary-foreground: 0 0% 98%;
 
-    /* Secondary: Slate Grey #64748B → HSL 215 14% 47% */
-    --secondary: 215 14% 47%;
-    --secondary-foreground: 210 40% 98%;
+    /* Secondary: Steel Grey #6B7280 → HSL 220 9% 46% */
+    --secondary: 220 9% 46%;
+    --secondary-foreground: 0 0% 98%;
 
     /* Muted: Light grey for subtle backgrounds */
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 14% 47%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
 
-    /* Accent: Muted Steel Blue/Teal #0EA5B7 → HSL 187 85% 39% */
-    /* ONLY for: Primary CTA buttons, active UI states, important highlights */
-    --accent: 187 85% 39%;
+    /* Accent: Muted Amber #D97706 → HSL 32 95% 44% */
+    /* ONLY for: Primary CTA buttons, active UI states */
+    --accent: 32 95% 44%;
     --accent-foreground: 0 0% 100%;
 
     /* Destructive: Muted red for errors */
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    /* Border: Very light slate */
-    --border: 214 20% 88%;
-    --input: 214 20% 88%;
-    --ring: 210 53% 24%;
+    /* Border: Light steel grey */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 0 0% 10%;
 
-    --radius: 0.5rem;
+    --radius: 0.25rem;
 
-    /* Section alternating background: #F8FAFC → HSL 210 40% 98% */
-    --section-alt: 210 40% 98%;
+    /* Section alternating background */
+    --section-alt: 220 14% 96%;
+    
+    /* Dark section background */
+    --section-dark: 0 0% 7%;
   }
 
   .dark {
-    --background: 210 53% 10%;
-    --foreground: 210 40% 98%;
+    --background: 0 0% 7%;
+    --foreground: 0 0% 98%;
 
-    --card: 210 53% 14%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 210 53% 14%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 210 53% 24%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 10%;
 
-    --secondary: 215 20% 65%;
-    --secondary-foreground: 210 53% 10%;
+    --secondary: 220 9% 60%;
+    --secondary-foreground: 0 0% 10%;
 
-    --muted: 210 30% 18%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 220 9% 60%;
 
-    --accent: 187 85% 39%;
+    --accent: 32 95% 44%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 210 30% 22%;
-    --input: 210 30% 22%;
-    --ring: 187 85% 39%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 32 95% 44%;
 
-    --section-alt: 210 53% 12%;
+    --section-alt: 0 0% 10%;
+    --section-dark: 0 0% 5%;
   }
 }
 
@@ -104,11 +112,15 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    font-family: 'Inter', system-ui, sans-serif;
   }
 
   html {
     scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', 'Inter', system-ui, sans-serif;
   }
 }
 
@@ -119,5 +131,11 @@
 
   .container-narrow {
     @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Dark section utility */
+  .section-dark {
+    background-color: hsl(var(--section-dark));
+    color: hsl(var(--primary-foreground));
   }
 }

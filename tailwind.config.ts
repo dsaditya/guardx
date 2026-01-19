@@ -48,6 +48,7 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         "section-alt": "hsl(var(--section-alt))",
+        "section-dark": "hsl(var(--section-dark))",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -56,6 +57,7 @@ export default {
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
+        heading: ["Montserrat", "Inter", "system-ui", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {

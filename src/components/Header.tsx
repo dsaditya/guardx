@@ -21,13 +21,13 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/98 backdrop-blur-sm border-b border-border">
       <div className="container-narrow">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
-            <Shield className="h-8 w-8 text-primary" />
-            <span className="text-xl md:text-2xl font-bold text-primary tracking-tight">
+            <Shield className="h-7 w-7 text-primary" strokeWidth={2} />
+            <span className="text-lg md:text-xl font-bold text-primary tracking-tight font-heading uppercase">
               GUARDX360
             </span>
           </a>
@@ -38,14 +38,14 @@ const Header = () => {
               <button
                 key={link.href}
                 onClick={() => scrollToSection(link.href)}
-                className="text-muted-foreground hover:text-primary transition-colors font-medium"
+                className="text-secondary hover:text-primary transition-colors text-sm font-medium uppercase tracking-wide"
               >
                 {link.label}
               </button>
             ))}
             <Button
               onClick={() => scrollToSection("#contact")}
-              className="bg-accent hover:bg-accent/90 text-accent-foreground"
+              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold uppercase tracking-wide text-sm"
             >
               Get Assessment
             </Button>
@@ -69,14 +69,14 @@ const Header = () => {
                 <button
                   key={link.href}
                   onClick={() => scrollToSection(link.href)}
-                  className="text-left text-muted-foreground hover:text-primary transition-colors font-medium py-2"
+                  className="text-left text-secondary hover:text-primary transition-colors font-medium py-2 uppercase tracking-wide text-sm"
                 >
                   {link.label}
                 </button>
               ))}
               <Button
                 onClick={() => scrollToSection("#contact")}
-                className="bg-accent hover:bg-accent/90 text-accent-foreground mt-2"
+                className="bg-accent hover:bg-accent/90 text-accent-foreground mt-2 font-semibold uppercase tracking-wide"
               >
                 Get Assessment
               </Button>

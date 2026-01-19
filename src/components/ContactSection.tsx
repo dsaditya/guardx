@@ -81,19 +81,19 @@ const ContactSection = () => {
       <section id="contact" className="section-padding bg-background">
         <div className="container-narrow">
           <div className="max-w-2xl mx-auto text-center">
-            <div className="bg-primary/10 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
-              <CheckCircle className="h-10 w-10 text-primary" />
+            <div className="bg-accent/10 w-20 h-20 flex items-center justify-center mx-auto mb-6">
+              <CheckCircle className="h-10 w-10 text-accent" />
             </div>
-            <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4 font-heading">
               Thank You
             </h2>
-            <p className="text-muted-foreground text-lg mb-8">
+            <p className="text-secondary text-lg mb-8">
               Your request has been submitted. Our team will contact you within 24 hours.
             </p>
             <Button
               onClick={() => setIsSubmitted(false)}
               variant="outline"
-              className="border-primary text-primary"
+              className="border-primary text-primary uppercase tracking-wide"
             >
               Submit Another Request
             </Button>
@@ -107,10 +107,13 @@ const ContactSection = () => {
     <section id="contact" className="section-padding bg-background">
       <div className="container-narrow">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
+            Site Assessment
+          </p>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4 font-heading">
             Request a Site Assessment
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg text-secondary">
             Get in touch with our security engineering team.
           </p>
         </div>
@@ -126,9 +129,9 @@ const ContactSection = () => {
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Name *</FormLabel>
+                        <FormLabel className="text-sm uppercase tracking-wide text-secondary">Name *</FormLabel>
                         <FormControl>
-                          <Input placeholder="Your name" {...field} />
+                          <Input placeholder="Your name" className="border-border" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -140,9 +143,9 @@ const ContactSection = () => {
                     name="phone"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Phone *</FormLabel>
+                        <FormLabel className="text-sm uppercase tracking-wide text-secondary">Phone *</FormLabel>
                         <FormControl>
-                          <Input placeholder="Your phone number" {...field} />
+                          <Input placeholder="Your phone number" className="border-border" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -155,9 +158,9 @@ const ContactSection = () => {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Email (Optional)</FormLabel>
+                      <FormLabel className="text-sm uppercase tracking-wide text-secondary">Email (Optional)</FormLabel>
                       <FormControl>
-                        <Input placeholder="Your email address" type="email" {...field} />
+                        <Input placeholder="Your email address" type="email" className="border-border" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -170,10 +173,10 @@ const ContactSection = () => {
                     name="siteType"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Site Type *</FormLabel>
+                        <FormLabel className="text-sm uppercase tracking-wide text-secondary">Site Type *</FormLabel>
                         <Select onValueChange={field.onChange} defaultValue={field.value}>
                           <FormControl>
-                            <SelectTrigger>
+                            <SelectTrigger className="border-border">
                               <SelectValue placeholder="Select site type" />
                             </SelectTrigger>
                           </FormControl>
@@ -195,10 +198,10 @@ const ContactSection = () => {
                     name="inquiryType"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Inquiry Type *</FormLabel>
+                        <FormLabel className="text-sm uppercase tracking-wide text-secondary">Inquiry Type *</FormLabel>
                         <Select onValueChange={field.onChange} defaultValue={field.value}>
                           <FormControl>
-                            <SelectTrigger>
+                            <SelectTrigger className="border-border">
                               <SelectValue placeholder="Select inquiry type" />
                             </SelectTrigger>
                           </FormControl>
@@ -221,11 +224,11 @@ const ContactSection = () => {
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Additional Context (Optional)</FormLabel>
+                      <FormLabel className="text-sm uppercase tracking-wide text-secondary">Additional Context (Optional)</FormLabel>
                       <FormControl>
                         <Textarea
                           placeholder="Brief description of your requirements or site details..."
-                          className="min-h-[120px] resize-none"
+                          className="min-h-[120px] resize-none border-border"
                           {...field}
                         />
                       </FormControl>
@@ -237,7 +240,7 @@ const ContactSection = () => {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-accent-foreground px-8"
+                  className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-accent-foreground px-8 font-semibold uppercase tracking-wide"
                 >
                   Submit Request
                   <Send className="ml-2 h-5 w-5" />
@@ -248,40 +251,40 @@ const ContactSection = () => {
 
           {/* Direct Contact */}
           <div className="lg:col-span-1">
-            <div className="bg-section-alt rounded-lg p-6 md:p-8 h-fit">
-              <h3 className="text-lg font-semibold text-primary mb-6">
+            <div className="bg-section-alt p-6 md:p-8 h-fit border border-border">
+              <h3 className="text-sm font-semibold text-primary mb-6 uppercase tracking-wide">
                 Direct Contact
               </h3>
 
-              <div className="space-y-6">
+              <div className="space-y-4">
                 <a
                   href="tel:+917095777764"
-                  className="flex items-center gap-4 p-4 bg-card rounded-lg border border-border hover:border-primary/30 transition-colors group"
+                  className="flex items-center gap-4 p-4 bg-card border border-border hover:border-primary/40 transition-colors group"
                 >
-                  <div className="bg-primary/10 p-3 rounded-lg group-hover:bg-primary/20 transition-colors">
-                    <Phone className="h-5 w-5 text-primary" />
+                  <div className="bg-primary p-3 group-hover:bg-primary/90 transition-colors">
+                    <Phone className="h-5 w-5 text-white" />
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground">Call Us</p>
+                    <p className="text-xs text-secondary uppercase tracking-wide">Call Us</p>
                     <p className="font-medium text-foreground">+91 70957 77764</p>
                   </div>
                 </a>
 
                 <a
                   href="mailto:contact@guardx360.com"
-                  className="flex items-center gap-4 p-4 bg-card rounded-lg border border-border hover:border-primary/30 transition-colors group"
+                  className="flex items-center gap-4 p-4 bg-card border border-border hover:border-primary/40 transition-colors group"
                 >
-                  <div className="bg-primary/10 p-3 rounded-lg group-hover:bg-primary/20 transition-colors">
-                    <Mail className="h-5 w-5 text-primary" />
+                  <div className="bg-primary p-3 group-hover:bg-primary/90 transition-colors">
+                    <Mail className="h-5 w-5 text-white" />
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground">Email Us</p>
+                    <p className="text-xs text-secondary uppercase tracking-wide">Email Us</p>
                     <p className="font-medium text-foreground">contact@guardx360.com</p>
                   </div>
                 </a>
               </div>
 
-              <p className="text-sm text-muted-foreground mt-6">
+              <p className="text-sm text-secondary mt-6">
                 Response within 24 hours on working days.
               </p>
             </div>
