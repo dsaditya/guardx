@@ -47,9 +47,9 @@ const ProblemsSection = () => {
           {problems.map((problem, index) => (
             <div
               key={index}
-              className="flex items-start gap-4 p-5 bg-card border-l-4 border-l-destructive border border-border"
+              className="flex items-start gap-4 p-5 bg-card border-l-4 border-l-secondary border border-border"
             >
-              <problem.icon className="h-5 w-5 text-destructive flex-shrink-0 mt-0.5" />
+              <problem.icon className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
               <p className="text-foreground font-medium text-sm">{problem.text}</p>
             </div>
           ))}

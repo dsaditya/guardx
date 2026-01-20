@@ -39,7 +39,7 @@ const ComparisonTable = () => {
               className="grid grid-cols-2 border-t border-border"
             >
               <div className="p-4 md:p-5 flex items-center gap-3 bg-card border-r border-border">
-                <X className="h-4 w-4 text-destructive flex-shrink-0" />
+                <X className="h-4 w-4 text-secondary flex-shrink-0" />
                 <span className="text-secondary text-sm">{row.typical}</span>
               </div>
               <div className="p-4 md:p-5 flex items-center gap-3 bg-section-dark/5">
