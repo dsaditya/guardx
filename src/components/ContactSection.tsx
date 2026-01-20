@@ -22,6 +22,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
+import AnimatedSection from "./AnimatedSection";
 
 const formSchema = z.object({
   name: z.string().trim().min(2, "Name must be at least 2 characters").max(100, "Name is too long"),
@@ -67,7 +68,6 @@ const ContactSection = () => {
   });
 
   const onSubmit = (data: FormData) => {
-    // Form data is validated, show success
     console.log("Form submitted:", data);
     setIsSubmitted(true);
     toast({
@@ -80,24 +80,26 @@ const ContactSection = () => {
     return (
       <section id="contact" className="section-padding bg-background">
         <div className="container-narrow">
-          <div className="max-w-2xl mx-auto text-center">
-            <div className="bg-accent/10 w-20 h-20 flex items-center justify-center mx-auto mb-6">
-              <CheckCircle className="h-10 w-10 text-accent" />
+          <AnimatedSection>
+            <div className="max-w-2xl mx-auto text-center">
+              <div className="bg-accent/10 w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                <CheckCircle className="h-10 w-10 text-accent" />
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4 font-heading">
+                Thank You
+              </h2>
+              <p className="text-secondary text-lg mb-8">
+                Your request has been submitted. Our team will contact you within 24 hours.
+              </p>
+              <Button
+                onClick={() => setIsSubmitted(false)}
+                variant="outline"
+                className="border-primary text-primary uppercase tracking-wide"
+              >
+                Submit Another Request
+              </Button>
             </div>
-            <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4 font-heading">
-              Thank You
-            </h2>
-            <p className="text-secondary text-lg mb-8">
-              Your request has been submitted. Our team will contact you within 24 hours.
-            </p>
-            <Button
-              onClick={() => setIsSubmitted(false)}
-              variant="outline"
-              className="border-primary text-primary uppercase tracking-wide"
-            >
-              Submit Another Request
-            </Button>
-          </div>
+          </AnimatedSection>
         </div>
       </section>
     );
@@ -106,21 +108,22 @@ const ContactSection = () => {
   return (
     <section id="contact" className="section-padding bg-background">
       <div className="container-narrow">
-        <div className="text-center mb-12 md:mb-16">
-          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
-            Site Assessment
-          </p>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4 font-heading">
-            Request a Site Assessment
-          </h2>
-          <p className="text-lg text-secondary">
-            Get in touch with our security engineering team.
-          </p>
-        </div>
+        <AnimatedSection>
+          <div className="text-center mb-12 md:mb-16">
+            <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
+              Site Assessment
+            </p>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4 font-heading">
+              Request a Site Assessment
+            </h2>
+            <p className="text-lg text-secondary">
+              Get in touch with our security engineering team.
+            </p>
+          </div>
+        </AnimatedSection>
 
         <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
-          {/* Contact Form */}
-          <div className="lg:col-span-2">
+          <AnimatedSection delay={0.2} className="lg:col-span-2">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <div className="grid sm:grid-cols-2 gap-6">
@@ -247,10 +250,9 @@ const ContactSection = () => {
                 </Button>
               </form>
             </Form>
-          </div>
+          </AnimatedSection>
 
-          {/* Direct Contact */}
-          <div className="lg:col-span-1">
+          <AnimatedSection delay={0.3} className="lg:col-span-1">
             <div className="bg-section-alt p-6 md:p-8 h-fit border border-border">
               <h3 className="text-sm font-semibold text-primary mb-6 uppercase tracking-wide">
                 Direct Contact
@@ -288,7 +290,7 @@ const ContactSection = () => {
                 Response within 24 hours on working days.
               </p>
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </div>
     </section>
