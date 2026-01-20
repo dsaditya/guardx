@@ -35,7 +35,7 @@ const WhyProblemsHappen = () => {
         <AnimatedSection>
           <div className="text-center mb-12 md:mb-16">
             <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
-              Process Education
+              Root Cause Analysis
             </p>
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4 font-heading">
               Why These Problems Happen
