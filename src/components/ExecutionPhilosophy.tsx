@@ -30,7 +30,7 @@ const steps = [
   {
     icon: FileText,
     title: "Documentation & Reporting",
-    description: "Complete service records and closure",
+    description: "Auto-generated service records for every visit",
   },
 ];
 
