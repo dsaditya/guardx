@@ -20,7 +20,7 @@ const steps = [
   {
     icon: Users,
     title: "Structured Handover",
-    description: "Clear client explanation and documentation",
+    description: "You'll know exactly how your system works",
   },
   {
     icon: Calendar,
