@@ -42,7 +42,7 @@ const HeroSection = () => {
               size="lg"
               variant="outline"
               onClick={scrollToContact}
-              className="border-white/30 text-white hover:bg-white hover:text-primary text-base px-8 py-6 font-medium"
+              className="border-white border-2 text-white bg-transparent hover:bg-white hover:text-primary text-base px-8 py-6 font-medium"
             >
               <Phone className="mr-2 h-5 w-5" />
               Speak to a Security Engineer
