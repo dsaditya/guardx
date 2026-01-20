@@ -84,7 +84,10 @@ const WhatWeDoSection = () => {
           <div className="text-center">
             <div className="bg-section-dark py-6 px-8 inline-block">
               <p className="text-lg md:text-xl font-semibold text-white">
-                If it is installed by us, it is operated and maintained by us.
+                What we install, we maintain.
+              </p>
+              <p className="text-sm text-white/60 mt-2">
+                Complete ownership from installation to lifecycle management.
               </p>
             </div>
           </div>
