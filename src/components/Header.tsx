@@ -21,13 +21,13 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/98 backdrop-blur-sm border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-section-dark border-b border-white/10">
       <div className="container-narrow">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
-            <Shield className="h-7 w-7 text-primary" strokeWidth={2} />
-            <span className="text-lg md:text-xl font-bold text-primary tracking-tight font-heading uppercase">
+            <Shield className="h-7 w-7 text-white" strokeWidth={2} />
+            <span className="text-lg md:text-xl font-bold text-white tracking-tight font-heading uppercase">
               GUARDX360
             </span>
           </a>
@@ -38,7 +38,7 @@ const Header = () => {
               <button
                 key={link.href}
                 onClick={() => scrollToSection(link.href)}
-                className="text-secondary hover:text-primary transition-colors text-sm font-medium uppercase tracking-wide"
+                className="text-white/70 hover:text-white transition-colors text-sm font-medium uppercase tracking-wide"
               >
                 {link.label}
               </button>
@@ -53,7 +53,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-primary"
+            className="md:hidden p-2 text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -63,13 +63,13 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden py-4 border-t border-border">
+          <nav className="md:hidden py-4 border-t border-white/10">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <button
                   key={link.href}
                   onClick={() => scrollToSection(link.href)}
-                  className="text-left text-secondary hover:text-primary transition-colors font-medium py-2 uppercase tracking-wide text-sm"
+                  className="text-left text-white/70 hover:text-white transition-colors font-medium py-2 uppercase tracking-wide text-sm"
                 >
                   {link.label}
                 </button>
