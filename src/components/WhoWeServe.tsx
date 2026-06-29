@@ -37,7 +37,7 @@ const WhoWeServe = () => {
           </div>
         </AnimatedSection>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {audiences.map((item, index) => (
             <AnimatedSection key={item.title} delay={index * 0.1}>
               <div className="bg-card p-6 md:p-8 border border-border hover:border-primary/40 transition-colors h-full">
