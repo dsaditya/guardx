@@ -1,4 +1,4 @@
-import { Building, Factory, Home, HardHat } from "lucide-react";
+import { Building, Home, HardHat } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 
 const audiences = [
@@ -10,17 +10,12 @@ const audiences = [
   {
     icon: HardHat,
     title: "Crusher & Mining Sites",
-    description: "High-risk industrial locations with controlled entry points, heavy vehicle movement, and critical security requirements",
+    description: "High-risk locations with controlled entry points, heavy vehicle movement, and stringent security requirements",
   },
   {
     icon: Building,
     title: "Commercial Buildings",
     description: "Office spaces, retail centers, and mixed-use facilities",
-  },
-  {
-    icon: Factory,
-    title: "Industrial Sites",
-    description: "Manufacturing plants, warehouses, and crusher sites with perimeter security needs",
   },
 ];
 

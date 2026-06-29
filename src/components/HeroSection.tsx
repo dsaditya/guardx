@@ -25,7 +25,7 @@ const HeroSection = () => {
           </h1>
           
           <p className="text-lg md:text-xl text-white/70 max-w-2xl mb-10 leading-relaxed">
-            Professional security systems for gated communities and critical sites — designed, installed, and maintained with discipline.
+            Professional security systems for gated communities — designed, installed, and maintained with discipline.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
