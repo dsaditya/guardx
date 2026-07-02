@@ -1,4 +1,4 @@
-import { Building, Home, HardHat } from "lucide-react";
+import { Building, Factory, Home, HardHat } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 
 const audiences = [
@@ -10,12 +10,17 @@ const audiences = [
   {
     icon: HardHat,
     title: "Crusher & Mining Sites",
-    description: "High-risk locations with controlled entry points, heavy vehicle movement, and stringent security requirements",
+    description: "High-risk industrial locations with controlled entry points, heavy vehicle movement, and critical security requirements",
   },
   {
     icon: Building,
     title: "Commercial Buildings",
     description: "Office spaces, retail centers, and mixed-use facilities",
+  },
+  {
+    icon: Factory,
+    title: "Industrial Sites",
+    description: "Manufacturing plants, warehouses, and crusher sites with perimeter security needs",
   },
 ];
 
@@ -37,7 +42,7 @@ const WhoWeServe = () => {
           </div>
         </AnimatedSection>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {audiences.map((item, index) => (
             <AnimatedSection key={item.title} delay={index * 0.1}>
               <div className="bg-card p-6 md:p-8 border border-border hover:border-primary/40 transition-colors h-full">

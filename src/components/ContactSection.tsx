@@ -39,6 +39,7 @@ const siteTypes = [
   "Gated Community / RWA",
   "Apartment Complex",
   "Commercial Building",
+  "Industrial Site",
   "Other",
 ];
 
