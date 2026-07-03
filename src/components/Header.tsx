@@ -81,41 +81,44 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden xl:flex items-center gap-6">
-            {navItems.map((item) => (
-              <div
-                key={item.label}
-                className="relative"
-                onMouseEnter={() => item.children && setOpenDropdown(item.label)}
-                onMouseLeave={() => setOpenDropdown(null)}
-              >
-                <button
-                  onClick={() => navigate(item.to)}
-                  className="flex items-center gap-1 text-white/80 hover:text-white transition-colors text-xs font-medium uppercase tracking-wide py-2"
+          <nav className="hidden md:flex items-center gap-3 lg:gap-5">
+            {navItems
+              .filter((item) => item.label !== "Partner With Us")
+              .map((item) => (
+                <div
+                  key={item.label}
+                  className="relative"
+                  onMouseEnter={() => item.children && setOpenDropdown(item.label)}
+                  onMouseLeave={() => setOpenDropdown(null)}
                 >
-                  {item.label}
-                  {item.children && <ChevronDown className="h-3 w-3" />}
-                </button>
-                {item.children && openDropdown === item.label && (
-                  <div className="absolute top-full left-0 pt-1 min-w-[260px]">
-                    <div className="bg-section-dark border border-white/10 py-2">
-                      {item.children.map((child) => (
-                        <button
-                          key={child.to}
-                          onClick={() => handleAnchorNav(child.to)}
-                          className="block w-full text-left px-4 py-2 text-xs text-white/70 hover:text-accent hover:bg-white/5 transition-colors uppercase tracking-wide"
-                        >
-                          {child.label}
-                        </button>
-                      ))}
+                  <button
+                    onClick={() => navigate(item.to)}
+                    className="flex items-center gap-1 text-white/80 hover:text-white transition-colors text-[11px] lg:text-xs font-medium uppercase tracking-wide py-2 whitespace-nowrap"
+                  >
+                    {item.label}
+                    {item.children && <ChevronDown className="h-3 w-3" />}
+                  </button>
+                  {item.children && openDropdown === item.label && (
+                    <div className="absolute top-full left-0 pt-1 min-w-[240px] z-50">
+                      <div className="bg-section-dark border border-white/10 py-2 shadow-lg">
+                        {item.children.map((child) => (
+                          <button
+                            key={child.to}
+                            onClick={() => handleAnchorNav(child.to)}
+                            className="block w-full text-left px-4 py-2 text-xs text-white/70 hover:text-accent hover:bg-white/5 transition-colors uppercase tracking-wide"
+                          >
+                            {child.label}
+                          </button>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                )}
-              </div>
-            ))}
+                  )}
+                </div>
+              ))}
             <Button
               onClick={() => navigate("/contact")}
-              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold uppercase tracking-wide text-xs whitespace-nowrap"
+              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold uppercase tracking-wide text-[11px] lg:text-xs whitespace-nowrap"
+              size="sm"
             >
               Free Assessment
             </Button>
@@ -123,7 +126,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="xl:hidden p-2 text-white"
+            className="md:hidden p-2 text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -133,7 +136,8 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="xl:hidden py-4 border-t border-white/10 max-h-[80vh] overflow-y-auto">
+          <nav className="md:hidden py-4 border-t border-white/10 max-h-[80vh] overflow-y-auto">
+
             <div className="flex flex-col">
               {navItems.map((item) => (
                 <div key={item.label} className="border-b border-white/5">
