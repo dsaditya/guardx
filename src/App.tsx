@@ -12,6 +12,10 @@ import Services from "./pages/Services";
 import WhyGuardX360 from "./pages/WhyGuardX360";
 import CaseStudies from "./pages/CaseStudies";
 import KnowledgeCenter from "./pages/KnowledgeCenter";
+import BlogIndex from "./pages/BlogIndex";
+import BlogPost from "./pages/BlogPost";
+import ChecklistsIndex from "./pages/ChecklistsIndex";
+import ChecklistDetail from "./pages/ChecklistDetail";
 import Contact from "./pages/Contact";
 import PartnerWithUs from "./pages/PartnerWithUs";
 import NotFound from "./pages/NotFound";
@@ -35,6 +39,11 @@ const App = () => (
               <Route path="/why-guardx360" element={<WhyGuardX360 />} />
               <Route path="/case-studies" element={<CaseStudies />} />
               <Route path="/knowledge-center" element={<KnowledgeCenter />} />
+              <Route path="/knowledge-center/blog" element={<BlogIndex />} />
+              <Route path="/knowledge-center/blog/:slug" element={<BlogPost />} />
+              <Route path="/knowledge-center/checklists-guides" element={<ChecklistsIndex />} />
+              <Route path="/knowledge-center/checklists-guides/:slug" element={<ChecklistDetail />} />
+
               <Route path="/contact" element={<Contact />} />
               <Route path="/partner-with-us" element={<PartnerWithUs />} />
               <Route path="*" element={<NotFound />} />
