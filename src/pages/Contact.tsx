@@ -1,9 +1,20 @@
+import { useEffect } from "react";
 import { Phone, Mail, MapPin } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import AnimatedSection from "@/components/AnimatedSection";
-import LeadForm from "@/components/LeadForm";
 
 const Contact = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src =
+      "https://desk.zoho.in/portal/api/feedbackwidget/268581000000364001?orgId=60076795968&displayType=popout";
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <>
       <PageHero
@@ -20,7 +31,17 @@ const Contact = () => {
 
           <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
             <AnimatedSection className="lg:col-span-2">
-              <LeadForm showEmail submitLabel="Request a Free Security Assessment" />
+              <div className="bg-section-alt border border-border p-8 md:p-12">
+                <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4 font-heading">
+                  Request a Free Security Assessment
+                </h2>
+                <p className="text-secondary text-base leading-relaxed mb-8">
+                  Use the feedback widget on this page to send us your community's requirements. A GuardX360 engineer will respond within 24 hours on working days.
+                </p>
+                <p className="text-sm text-secondary">
+                  Click the feedback button on the edge of your screen to open the form. If it doesn't appear, please use the direct contact details on the right.
+                </p>
+              </div>
             </AnimatedSection>
 
             <AnimatedSection delay={0.2} className="lg:col-span-1">
