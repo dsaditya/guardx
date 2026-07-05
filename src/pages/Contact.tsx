@@ -10,8 +10,23 @@ const Contact = () => {
       "https://desk.zoho.in/portal/api/feedbackwidget/268581000000364001?orgId=60076795968&displayType=popout";
     script.async = true;
     document.body.appendChild(script);
+
+    const relabel = () => {
+      document.querySelectorAll<HTMLElement>("body *").forEach((el) => {
+        if (el.childNodes.length === 1 && el.childNodes[0].nodeType === Node.TEXT_NODE) {
+          const txt = el.textContent?.trim().toLowerCase();
+          if (txt === "feedback") el.textContent = "Contact Us";
+        }
+      });
+    };
+    const observer = new MutationObserver(relabel);
+    observer.observe(document.body, { childList: true, subtree: true, characterData: true });
+    const interval = window.setInterval(relabel, 1000);
+
     return () => {
-      document.body.removeChild(script);
+      observer.disconnect();
+      window.clearInterval(interval);
+      if (script.parentNode) document.body.removeChild(script);
     };
   }, []);
 
