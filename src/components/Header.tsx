@@ -48,7 +48,15 @@ const navItems: NavItem[] = [
     ],
   },
   { label: "Contact Us", to: "/contact" },
-  { label: "Partner With Us", to: "/partner-with-us" },
+  {
+    label: "Partner With Us",
+    to: "/partner-with-us",
+    children: [
+      { label: "Join Our Team", to: "/partner-with-us/join-our-team" },
+      { label: "Become Our Channel Partner", to: "/partner-with-us/channel-partner" },
+      { label: "Become a Dealer", to: "/partner-with-us/become-a-dealer" },
+    ],
+  },
 ];
 
 const Header = () => {
@@ -89,9 +97,7 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-3 lg:gap-5">
-            {navItems
-              .filter((item) => item.label !== "Partner With Us")
-              .map((item) => (
+            {navItems.map((item) => (
                 <div
                   key={item.label}
                   className="relative"
