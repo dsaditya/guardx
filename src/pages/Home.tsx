@@ -33,7 +33,7 @@ const Home = () => {
               Gated Community Security Infrastructure • Hyderabad
             </p>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 font-heading">
-              Integrated Security Infrastructure for Safer Gated Societies in Hyderabad
+              Security systems that work when they're needed most.
             </h1>
             <p className="text-lg md:text-xl text-white/70 max-w-3xl mb-10 leading-relaxed">
               GuardX360 designs, implements, and maintains complete security systems —
