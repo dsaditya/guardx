@@ -18,6 +18,9 @@ import ChecklistsIndex from "./pages/ChecklistsIndex";
 import ChecklistDetail from "./pages/ChecklistDetail";
 import Contact from "./pages/Contact";
 import PartnerWithUs from "./pages/PartnerWithUs";
+import JoinOurTeam from "./pages/JoinOurTeam";
+import ChannelPartner from "./pages/ChannelPartner";
+import BecomeADealer from "./pages/BecomeADealer";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -46,6 +49,9 @@ const App = () => (
 
               <Route path="/contact" element={<Contact />} />
               <Route path="/partner-with-us" element={<PartnerWithUs />} />
+              <Route path="/partner-with-us/join-our-team" element={<JoinOurTeam />} />
+              <Route path="/partner-with-us/channel-partner" element={<ChannelPartner />} />
+              <Route path="/partner-with-us/become-a-dealer" element={<BecomeADealer />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
