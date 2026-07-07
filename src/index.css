@@ -133,12 +133,6 @@
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
-  /* Hero container — matches Header's full-width container so hero
-     text aligns with the logo's left edge on every page. */
-  .container-hero {
-    @apply w-full px-4 sm:px-6 lg:px-8;
-  }
-
   /* Dark section utility */
   .section-dark {
     background-color: hsl(var(--section-dark));

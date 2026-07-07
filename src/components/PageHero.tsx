@@ -6,7 +6,7 @@ interface PageHeroProps {
 
 const PageHero = ({ eyebrow, title, subtitle }: PageHeroProps) => (
   <section className="bg-section-dark py-12 md:py-20 flex items-center min-h-[280px] md:min-h-[360px]">
-    <div className="container-hero">
+    <div className="container-narrow">
       <div className="max-w-4xl">
         {eyebrow && (
           <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-4">
