@@ -121,7 +121,7 @@ const KnowledgeCenter = () => {
       <section className="section-padding bg-background">
         <div className="container-narrow">
           <AnimatedSection>
-            <div className="max-w-4xl mb-16">
+            <div className="max-w-4xl mb-10 md:mb-12">
               <p className="text-xs text-secondary uppercase tracking-wide mb-6 leading-relaxed" aria-label="Primary keywords">
                 Gated community security guide · RWA security checklist · Housing society security tips Hyderabad
               </p>
@@ -149,7 +149,7 @@ const KnowledgeCenter = () => {
             </div>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-10 md:mb-12">
             {checklists.map((title, i) => (
               <AnimatedSection key={i} delay={i * 0.05}>
                 <div className="bg-section-alt border border-border p-6 h-full flex flex-col">

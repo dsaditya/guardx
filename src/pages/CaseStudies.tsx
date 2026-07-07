@@ -49,7 +49,7 @@ const CaseStudies = () => {
             </div>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 gap-4 mb-16">
+          <div className="grid md:grid-cols-2 gap-4 mb-10 md:mb-12">
             {caseStudyFormat.map((f, i) => (
               <AnimatedSection key={i} delay={i * 0.05}>
                 <div className="flex items-start gap-4 bg-section-alt border border-border p-5">
