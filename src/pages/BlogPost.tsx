@@ -52,7 +52,7 @@ const BlogPostPage = () => {
     <>
       {/* HERO */}
       <section className="bg-section-dark py-12 md:py-20">
-        <div className="container-narrow max-w-4xl">
+        <div className="container-hero max-w-4xl">
           <p className="text-accent font-semibold text-xs uppercase tracking-widest mb-4">
             {post.category}
           </p>
