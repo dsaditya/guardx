@@ -85,8 +85,8 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-section-dark border-b border-white/10">
-      <div className="container-narrow">
-        <div className="flex items-center justify-between h-16 md:h-20">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center gap-6 h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 flex-shrink-0">
             <Shield className="h-6 w-6 md:h-7 md:w-7 text-white" strokeWidth={2} />
@@ -95,8 +95,8 @@ const Header = () => {
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-3 lg:gap-5">
+          {/* Desktop Navigation - centered */}
+          <nav className="hidden md:flex flex-1 items-center justify-center gap-5 lg:gap-8">
             {navItems.map((item) => (
                 <div
                   key={item.label}
@@ -106,7 +106,7 @@ const Header = () => {
                 >
                   <button
                     onClick={() => navigate(item.to)}
-                    className="flex items-center gap-1 text-white/80 hover:text-white transition-colors text-[11px] lg:text-xs font-medium uppercase tracking-wide py-2 whitespace-nowrap"
+                    className="flex items-center gap-1 text-white/80 hover:text-white transition-colors text-[11px] lg:text-xs font-medium uppercase tracking-wide py-4 whitespace-nowrap"
                   >
                     {item.label}
                     {item.children && <ChevronDown className="h-3 w-3" />}
@@ -128,6 +128,9 @@ const Header = () => {
                   )}
                 </div>
               ))}
+          </nav>
+
+          <div className="hidden md:flex flex-shrink-0">
             <Button
               onClick={() => navigate("/contact")}
               className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold uppercase tracking-wide text-[11px] lg:text-xs whitespace-nowrap"
@@ -135,7 +138,7 @@ const Header = () => {
             >
               Free Assessment
             </Button>
-          </nav>
+          </div>
 
           {/* Mobile Menu Button */}
           <button
