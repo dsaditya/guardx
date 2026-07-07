@@ -27,7 +27,7 @@ const Home = () => {
     <>
       {/* HERO */}
       <section className="bg-section-dark py-16 md:py-24 flex items-center min-h-[520px] md:min-h-[600px]">
-        <div className="container-narrow">
+        <div className="container-hero">
           <div className="max-w-4xl">
             <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-6">
               Gated Community Security Infrastructure • Hyderabad
