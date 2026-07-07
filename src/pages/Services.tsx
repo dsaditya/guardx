@@ -101,7 +101,7 @@ const Services = () => {
       <PageHero
         eyebrow="Services"
         title="End-to-end security infrastructure services for gated communities in Hyderabad."
-        subtitle="From security assessment and solution design through installation, integration, and long-term maintenance, we manage the complete lifecycle of your community's security systems under one accountable partner."
+        subtitle="Guardx360 provides end-to-end security infrastructure services for gated communities across Hyderabad. From security assessment and solution design through installation, integration, and long-term maintenance, we manage the complete lifecycle of your community's security systems under one accountable partner."
       />
 
       {/* On-page nav */}
