@@ -27,12 +27,12 @@ const Home = () => {
     <>
       {/* HERO */}
       <section className="bg-section-dark py-16 md:py-24 flex items-center min-h-[520px] md:min-h-[600px]">
-        <div className="container-narrow">
-          <div className="max-w-4xl">
+        <div className="container-narrow w-full min-w-0">
+          <div className="max-w-4xl min-w-0">
             <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-6">
               Gated Community Security Infrastructure • Hyderabad
             </p>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 font-heading">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 font-heading break-words">
               Security systems that work when they're needed most.
             </h1>
             <p className="text-lg md:text-xl text-white/70 max-w-3xl mb-10 leading-relaxed">
@@ -41,13 +41,13 @@ const Home = () => {
               control, and solar fencing — built as one reliable infrastructure for your community.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-base px-8 py-6 font-semibold uppercase tracking-wide">
+              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-base px-6 sm:px-8 py-6 font-semibold uppercase tracking-wide h-auto whitespace-normal text-center">
                 <Link to="/contact">
                   Request a Free Security Assessment
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className="ml-2 h-5 w-5 flex-shrink-0" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white border-2 text-white bg-transparent hover:bg-white hover:text-primary text-base px-8 py-6 font-medium">
+              <Button asChild size="lg" variant="outline" className="border-white border-2 text-white bg-transparent hover:bg-white hover:text-primary text-base px-6 sm:px-8 py-6 font-medium h-auto whitespace-normal text-center">
                 <Link to="/services">Explore Our Services</Link>
               </Button>
             </div>
