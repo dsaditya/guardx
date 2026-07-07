@@ -21,7 +21,7 @@ const PartnerWithUs = () => {
 
       <section className="section-padding bg-background">
         <div className="container-narrow">
-          <div className="grid md:grid-cols-3 gap-4 md:gap-6 mb-16">
+          <div className="grid md:grid-cols-3 gap-4 md:gap-6 mb-10 md:mb-12">
             {partnerTracks.map((track, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
                 <div className="bg-section-alt border border-border p-6 md:p-8 h-full">

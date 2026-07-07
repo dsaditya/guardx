@@ -56,7 +56,7 @@ const BecomeADealer = () => {
           </div>
 
           <AnimatedSection>
-            <div className="bg-section-alt border border-border p-6 md:p-10 mb-16 max-w-3xl mx-auto">
+            <div className="bg-section-alt border border-border p-6 md:p-10 mb-10 md:mb-12 max-w-3xl mx-auto">
               <h2 className="text-xl md:text-2xl font-bold text-primary mb-4 font-heading uppercase tracking-wide">
                 Dealer Requirements
               </h2>
