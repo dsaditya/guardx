@@ -1,50 +1,19 @@
-import { useEffect } from "react";
+import { useState } from "react";
 import { Phone, Mail, MapPin, MessageSquare } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Button } from "@/components/ui/button";
+import LeadForm from "@/components/LeadForm";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
 
 const Contact = () => {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src =
-      "https://desk.zoho.in/portal/api/feedbackwidget/268581000000364001?orgId=60076795968&displayType=popout";
-    script.async = true;
-    document.body.appendChild(script);
-
-    // Hide the auto-injected floating launcher; we trigger it from our own button
-    const style = document.createElement("style");
-    style.setAttribute("data-zoho-hide", "true");
-    style.innerHTML = `
-      #feedbcli_div, [id^="feedbcli"], [id*="zsalesiq"][class*="feedback"] { 
-        left: -9999px !important; 
-        top: -9999px !important; 
-        position: fixed !important;
-      }
-    `;
-    document.head.appendChild(style);
-
-    return () => {
-      if (script.parentNode) document.body.removeChild(script);
-      if (style.parentNode) document.head.removeChild(style);
-    };
-  }, []);
-
-  const openZohoWidget = () => {
-    const candidates = document.querySelectorAll<HTMLElement>(
-      '#feedbcli_div, [id^="feedbcli"] a, [id^="feedbcli"] button, [id^="feedbcli"] div'
-    );
-    for (const el of candidates) {
-      const txt = el.textContent?.trim().toLowerCase();
-      if (txt && (txt.includes("feedback") || txt.includes("contact"))) {
-        el.click();
-        return;
-      }
-    }
-    // Fallback: click the container
-    const container = document.getElementById("feedbcli_div");
-    container?.click();
-  };
+  const [open, setOpen] = useState(false);
 
   return (
     <>
@@ -71,14 +40,14 @@ const Contact = () => {
                 </p>
                 <Button
                   size="lg"
-                  onClick={openZohoWidget}
+                  onClick={() => setOpen(true)}
                   className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 font-semibold uppercase tracking-wide"
                 >
                   <MessageSquare className="mr-2 h-5 w-5" />
                   Contact Us
                 </Button>
                 <p className="text-xs text-secondary mt-6">
-                  The form opens in a secure popup. If nothing happens, please use the direct contact details on the right.
+                  The form opens in a secure popup. If it does not open, please use the direct contact details on the right.
                 </p>
               </div>
             </AnimatedSection>
@@ -131,6 +100,22 @@ const Contact = () => {
           </div>
         </div>
       </section>
+
+      <Dialog open={open} onOpenChange={setOpen}>
+        <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold text-primary font-heading">
+              Request a Free Security Assessment
+            </DialogTitle>
+            <DialogDescription className="text-secondary">
+              Share your community's requirements. A GuardX360 engineer will respond within 24 hours on working days.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="pt-4">
+            <LeadForm showEmail submitLabel="Submit Request" />
+          </div>
+        </DialogContent>
+      </Dialog>
     </>
   );
 };
