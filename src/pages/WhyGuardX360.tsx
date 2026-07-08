@@ -123,7 +123,7 @@ const WhyGuardX360 = () => {
                     className="hidden md:block absolute left-0 top-1/2 text-xs tracking-[0.35em] uppercase text-secondary/70 font-medium"
                     style={{ writingMode: "vertical-rl", transform: "translateY(-50%) rotate(180deg)" }}
                   >
-                    Why Choose GuardX360
+                    WHYCHOOSEGUARDX360
                   </span>
                   {/* Accent bar - centered, fixed height */}
                   <div className="hidden md:block absolute left-8 top-1/2 -translate-y-1/2 w-[3px] h-40 bg-accent" />
