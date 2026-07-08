@@ -1,4 +1,4 @@
-import { Shield } from "lucide-react";
+import logo from "@/assets/guardx360-logo.png";
 import { Link } from "react-router-dom";
 
 const footerCols = [
