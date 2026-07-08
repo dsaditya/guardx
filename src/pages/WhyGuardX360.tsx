@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import {
   ArrowRight,
+  Heart,
   Users,
   Focus,
   Layers,
@@ -28,41 +29,27 @@ import LeadForm from "@/components/LeadForm";
 
 const reasons = [
   {
-    icon: Users,
     title: "One Vendor. One Accountability.",
-    body: "Instead of managing five different vendors for five different systems, communities work with GuardX360 as a single point of responsibility across design, implementation, maintenance, and support.",
+    body: "Single point of responsibility across design, implementation, maintenance, and support.",
   },
   {
-    icon: Focus,
     title: "Specialized in Gated Communities",
-    body: "We do not serve every industry. We focus exclusively on apartment communities, villa communities, and residential townships — which means we understand the operational, resident, and committee-level challenges that general security vendors do not.",
+    body: "We focus exclusively on residential communities, so we understand the operational, resident, and committee-level challenges that general security vendors don't.",
   },
   {
-    icon: Layers,
     title: "Security Infrastructure, Not Individual Products",
-    body: "We design complete security ecosystems — not standalone CCTV systems or isolated boom barriers. Every component is planned to work together as an integrated system.",
+    body: "We design complete security ecosystems where every component works together as an integrated system.",
   },
   {
-    icon: Award,
-    title: "10 Years of Industry Experience",
-    body: "The GuardX360 team brings nearly a decade of hands-on experience across security technologies, community projects, and maintenance operations.",
-  },
-  {
-    icon: Wrench,
     title: "Maintenance-First Business Model",
-    body: "We invest in long-term relationships through AMC programs, preventive maintenance, modernization projects, and lifecycle support. Your security system will keep working, not just at commissioning but years down the line.",
+    body: "We invest in long-term relationships through AMC, preventive maintenance, modernization, and lifecycle support.",
   },
   {
-    icon: FileCheck,
-    title: "Structured, Documented Delivery",
-    body: "Every project is documented with system design, equipment inventory, cable schedules, and maintenance records — giving your community full visibility and control.",
-  },
-  {
-    icon: BarChart3,
     title: "Standardized, Measurable Outcomes",
-    body: "Every GuardX360 engagement runs on the same Standardization Framework and is measured against the same benchmarks, so quality never depends on which technician shows up — it depends on the system GuardX360 has built.",
+    body: "Every engagement follows our framework and benchmarks — so quality is built into the system, not left to chance.",
   },
 ];
+
 
 const healthScoreParams = [
   { icon: Camera, label: "Camera coverage & uptime" },
@@ -126,23 +113,49 @@ const WhyGuardX360 = () => {
       {/* Why choose us */}
       <section className="section-padding bg-background">
         <div className="container-narrow">
-          <div className="grid md:grid-cols-2 gap-4 md:gap-6">
-            {reasons.map((r, i) => (
-              <AnimatedSection key={i} delay={i * 0.05}>
-                <div className="bg-section-alt border border-border p-6 md:p-8 h-full flex gap-5">
-                  <r.icon className="h-6 w-6 text-accent flex-shrink-0 mt-1" strokeWidth={1.5} />
-                  <div>
-                    <h3 className="text-base md:text-lg font-semibold text-primary mb-3 uppercase tracking-wide font-heading">
-                      {r.title}
-                    </h3>
-                    <p className="text-secondary text-sm leading-relaxed">{r.body}</p>
-                  </div>
+          <AnimatedSection>
+            <div className="bg-section-alt rounded-2xl md:rounded-3xl p-6 sm:p-10 md:p-14 lg:p-16">
+              <div className="grid md:grid-cols-2 gap-10 md:gap-12 lg:gap-16">
+                {/* Left column */}
+                <div className="relative flex md:pl-16">
+                  {/* Vertical rotated label */}
+                  <span
+                    className="hidden md:block absolute left-0 top-0 bottom-0 text-xs tracking-[0.35em] uppercase text-secondary/70 font-medium"
+                    style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
+                  >
+                    Why Choose GuardX360
+                  </span>
+                  {/* Accent bar */}
+                  <div className="hidden md:block absolute left-8 top-0 bottom-0 w-[3px] bg-accent" />
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary font-heading leading-[1.15]">
+                    Few solid reasons that you don't get anywhere else
+                  </h2>
                 </div>
-              </AnimatedSection>
-            ))}
-          </div>
+
+                {/* Right column */}
+                <div className="flex flex-col gap-7 md:gap-8">
+                  {reasons.map((r, i) => (
+                    <div key={i} className="flex gap-4 md:gap-5">
+                      <div className="flex-shrink-0 mt-1 w-8 h-8 rounded-full bg-accent flex items-center justify-center">
+                        <Heart className="h-4 w-4 text-accent-foreground fill-current" strokeWidth={2} />
+                      </div>
+                      <div>
+                        <h3 className="text-base md:text-lg font-bold text-primary mb-1 font-heading">
+                          {r.title}
+                        </h3>
+                        <p className="text-secondary text-sm md:text-[15px] leading-relaxed">
+                          {r.body}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
+
 
       {/* Security Health Score */}
       <section id="health-score" className="section-padding bg-section-dark scroll-mt-24">
