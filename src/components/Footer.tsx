@@ -1,4 +1,4 @@
-import { Shield } from "lucide-react";
+import logo from "@/assets/guardx360-logo.png";
 import { Link } from "react-router-dom";
 
 const footerCols = [
@@ -38,11 +38,8 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <Shield className="h-7 w-7 text-accent" />
-              <span className="text-xl font-bold tracking-tight text-white font-heading uppercase">
-                GUARDX360
-              </span>
+            <div className="flex items-center mb-4">
+              <img src={logo} alt="GuardX360 logo" className="h-12 w-auto" />
             </div>
             <p className="text-white/60 max-w-md text-sm leading-relaxed">
               Integrated security infrastructure for gated communities in Hyderabad —

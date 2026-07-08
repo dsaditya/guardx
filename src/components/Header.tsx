@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { Menu, X, Shield, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
+import logo from "@/assets/guardx360-logo.png";
 import { Button } from "@/components/ui/button";
 
 type NavItem = {
@@ -88,11 +89,12 @@ const Header = () => {
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-6 h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 flex-shrink-0">
-            <Shield className="h-6 w-6 md:h-7 md:w-7 text-white" strokeWidth={2} />
-            <span className="text-base md:text-lg font-bold text-white tracking-tight font-heading uppercase">
-              GUARDX360
-            </span>
+          <Link to="/" className="flex items-center flex-shrink-0" aria-label="GuardX360 home">
+            <img
+              src={logo}
+              alt="GuardX360 logo"
+              className="h-10 md:h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation - centered */}
