@@ -28,41 +28,27 @@ import LeadForm from "@/components/LeadForm";
 
 const reasons = [
   {
-    icon: Users,
     title: "One Vendor. One Accountability.",
-    body: "Instead of managing five different vendors for five different systems, communities work with GuardX360 as a single point of responsibility across design, implementation, maintenance, and support.",
+    body: "Single point of responsibility across design, implementation, maintenance, and support.",
   },
   {
-    icon: Focus,
     title: "Specialized in Gated Communities",
-    body: "We do not serve every industry. We focus exclusively on apartment communities, villa communities, and residential townships — which means we understand the operational, resident, and committee-level challenges that general security vendors do not.",
+    body: "We focus exclusively on residential communities, so we understand the operational, resident, and committee-level challenges that general security vendors don't.",
   },
   {
-    icon: Layers,
     title: "Security Infrastructure, Not Individual Products",
-    body: "We design complete security ecosystems — not standalone CCTV systems or isolated boom barriers. Every component is planned to work together as an integrated system.",
+    body: "We design complete security ecosystems where every component works together as an integrated system.",
   },
   {
-    icon: Award,
-    title: "10 Years of Industry Experience",
-    body: "The GuardX360 team brings nearly a decade of hands-on experience across security technologies, community projects, and maintenance operations.",
-  },
-  {
-    icon: Wrench,
     title: "Maintenance-First Business Model",
-    body: "We invest in long-term relationships through AMC programs, preventive maintenance, modernization projects, and lifecycle support. Your security system will keep working, not just at commissioning but years down the line.",
+    body: "We invest in long-term relationships through AMC, preventive maintenance, modernization, and lifecycle support.",
   },
   {
-    icon: FileCheck,
-    title: "Structured, Documented Delivery",
-    body: "Every project is documented with system design, equipment inventory, cable schedules, and maintenance records — giving your community full visibility and control.",
-  },
-  {
-    icon: BarChart3,
     title: "Standardized, Measurable Outcomes",
-    body: "Every GuardX360 engagement runs on the same Standardization Framework and is measured against the same benchmarks, so quality never depends on which technician shows up — it depends on the system GuardX360 has built.",
+    body: "Every engagement follows our framework and benchmarks — so quality is built into the system, not left to chance.",
   },
 ];
+
 
 const healthScoreParams = [
   { icon: Camera, label: "Camera coverage & uptime" },
