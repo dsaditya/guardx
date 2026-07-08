@@ -115,18 +115,18 @@ const WhyGuardX360 = () => {
         <div className="container-narrow">
           <AnimatedSection>
             <div className="bg-section-alt rounded-2xl md:rounded-3xl p-6 sm:p-10 md:p-14 lg:p-16">
-              <div className="grid md:grid-cols-2 gap-10 md:gap-12 lg:gap-16">
+              <div className="grid md:grid-cols-2 gap-10 md:gap-12 lg:gap-16 items-center">
                 {/* Left column */}
-                <div className="relative flex md:pl-16">
-                  {/* Vertical rotated label */}
+                <div className="relative flex items-center md:pl-16 md:min-h-[420px]">
+                  {/* Vertical rotated label - centered */}
                   <span
-                    className="hidden md:block absolute left-0 top-0 bottom-0 text-xs tracking-[0.35em] uppercase text-secondary/70 font-medium"
-                    style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
+                    className="hidden md:block absolute left-0 top-1/2 text-xs tracking-[0.35em] uppercase text-secondary/70 font-medium"
+                    style={{ writingMode: "vertical-rl", transform: "translateY(-50%) rotate(180deg)" }}
                   >
                     Why Choose GuardX360
                   </span>
-                  {/* Accent bar */}
-                  <div className="hidden md:block absolute left-8 top-0 bottom-0 w-[3px] bg-accent" />
+                  {/* Accent bar - centered, fixed height */}
+                  <div className="hidden md:block absolute left-8 top-1/2 -translate-y-1/2 w-[3px] h-40 bg-accent" />
                   <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary font-heading leading-[1.15]">
                     Few solid reasons that you don't get anywhere else
                   </h2>
