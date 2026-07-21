@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Shield, MapPin, CheckCircle2, Wrench, Camera, Car, Fingerprint, Zap, ScanLine, ClipboardCheck, ShieldCheck } from "lucide-react";
+import { ArrowRight, Shield, MapPin, CheckCircle2, Wrench, Camera, Car, Fingerprint, Zap, ScanLine, ClipboardCheck, ShieldCheck, Network, Cable, FileText, Server, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
 
@@ -19,6 +19,14 @@ const services = [
   { icon: Wrench, title: "Annual Maintenance Contracts", hash: "amc" },
   { icon: ClipboardCheck, title: "Assessment & Modernization", hash: "assessment" },
   { icon: ShieldCheck, title: "Annual Security Audit", hash: "audit" },
+];
+
+const failurePoints = [
+  { icon: Network, text: "Incorrect network and switch design" },
+  { icon: Cable, text: "Poor-quality cabling, connectors and power arrangements" },
+  { icon: FileText, text: "No camera-to-switch mapping or documentation" },
+  { icon: Server, text: "Equipment added without considering network capacity" },
+  { icon: Users, text: "Multiple vendors with nobody taking complete responsibility" },
 ];
 
 const Home = () => {
@@ -128,6 +136,41 @@ const Home = () => {
                 </p>
               </div>
             </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* WHY SECURITY SYSTEMS FAIL */}
+      <section className="section-padding bg-background">
+        <div className="container-narrow">
+          <AnimatedSection>
+            <div className="text-center mb-12">
+              <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
+                Common Failure Points
+              </p>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4 font-heading">
+                Why Security Systems Fail After Installation
+              </h2>
+            </div>
+          </AnimatedSection>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 md:gap-8 mb-10">
+            {failurePoints.map((point, i) => (
+              <AnimatedSection key={i} delay={i * 0.05}>
+                <div className="flex flex-col items-center text-center gap-3">
+                  <div className="h-12 w-12 rounded-full border border-border bg-section-alt flex items-center justify-center">
+                    <point.icon className="h-5 w-5 text-primary" strokeWidth={1.5} />
+                  </div>
+                  <p className="text-xs uppercase tracking-wide text-secondary leading-relaxed font-medium">
+                    {point.text}
+                  </p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+          <AnimatedSection>
+            <p className="text-center text-lg md:text-xl font-semibold text-primary max-w-3xl mx-auto">
+              GuardX360 solves the entire infrastructure—not just the faulty camera.
+            </p>
           </AnimatedSection>
         </div>
       </section>
