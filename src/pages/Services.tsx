@@ -4,6 +4,17 @@ import { Button } from "@/components/ui/button";
 import PageHero from "@/components/PageHero";
 import AnimatedSection from "@/components/AnimatedSection";
 
+const slugMap: Record<string, string> = {
+  cctv: "cctv-surveillance",
+  "boom-barrier": "boom-barrier-vehicle-access",
+  biometric: "biometric-access-control",
+  "solar-fencing": "solar-fencing",
+  "anpr-uhf": "anpr-uhf-vehicle-access",
+  amc: "annual-maintenance-contracts",
+  assessment: "security-assessment-modernization",
+  audit: "security-health-score",
+};
+
 const services = [
   {
     id: "cctv",
@@ -150,12 +161,19 @@ const Services = () => {
                     {service.paragraphs.map((p, i) => (
                       <p key={i}>{p}</p>
                     ))}
-                    <div className="pt-4">
+                    <div className="pt-4 flex flex-wrap gap-3">
                       <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold uppercase tracking-wide">
                         <Link to="/contact">
                           Request a Community Security Assessment <ArrowRight className="ml-2 h-4 w-4" />
                         </Link>
                       </Button>
+                      {slugMap[service.id] && (
+                        <Button asChild variant="outline" className="font-semibold uppercase tracking-wide">
+                          <Link to={`/services/${slugMap[service.id]}`}>
+                            View full details <ArrowRight className="ml-2 h-4 w-4" />
+                          </Link>
+                        </Button>
+                      )}
                     </div>
                   </div>
                 </div>

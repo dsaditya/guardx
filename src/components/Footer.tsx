@@ -14,11 +14,11 @@ const footerCols = [
   {
     title: "Services",
     links: [
-      { label: "CCTV Surveillance", to: "/services#cctv" },
-      { label: "Boom Barrier & Access", to: "/services#boom-barrier" },
-      { label: "Biometric Access", to: "/services#biometric" },
-      { label: "Solar Fencing", to: "/services#solar-fencing" },
-      { label: "Annual Maintenance", to: "/services#amc" },
+      { label: "CCTV Surveillance", to: "/services/cctv-surveillance" },
+      { label: "Boom Barrier & Access", to: "/services/boom-barrier-vehicle-access" },
+      { label: "Biometric Access", to: "/services/biometric-access-control" },
+      { label: "Solar Fencing", to: "/services/solar-fencing" },
+      { label: "Annual Maintenance", to: "/services/annual-maintenance-contracts" },
     ],
   },
   {
