@@ -140,6 +140,41 @@ const Home = () => {
         </div>
       </section>
 
+      {/* WHY SECURITY SYSTEMS FAIL */}
+      <section className="section-padding bg-background">
+        <div className="container-narrow">
+          <AnimatedSection>
+            <div className="text-center mb-12">
+              <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
+                Common Failure Points
+              </p>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4 font-heading">
+                Why Security Systems Fail After Installation
+              </h2>
+            </div>
+          </AnimatedSection>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 md:gap-8 mb-10">
+            {failurePoints.map((point, i) => (
+              <AnimatedSection key={i} delay={i * 0.05}>
+                <div className="flex flex-col items-center text-center gap-3">
+                  <div className="h-12 w-12 rounded-full border border-border bg-section-alt flex items-center justify-center">
+                    <point.icon className="h-5 w-5 text-primary" strokeWidth={1.5} />
+                  </div>
+                  <p className="text-xs uppercase tracking-wide text-secondary leading-relaxed font-medium">
+                    {point.text}
+                  </p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+          <AnimatedSection>
+            <p className="text-center text-lg md:text-xl font-semibold text-primary max-w-3xl mx-auto">
+              GuardX360 solves the entire infrastructure—not just the faulty camera.
+            </p>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* SERVICES SNAPSHOT */}
       <section className="section-padding bg-background">
         <div className="container-narrow">
