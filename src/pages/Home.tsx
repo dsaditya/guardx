@@ -157,7 +157,7 @@ const Home = () => {
             {failurePoints.map((point, i) => (
               <AnimatedSection key={i} delay={i * 0.05}>
                 <div className="flex flex-col items-center text-center gap-3">
-                  <div className="h-12 w-12 rounded-full border border-border bg-section-alt flex items-center justify-center">
+                  <div className="h-12 w-12 rounded-full border border-accent bg-accent flex items-center justify-center">
                     <point.icon className="h-5 w-5 text-primary" strokeWidth={1.5} />
                   </div>
                   <p className="text-xs uppercase tracking-wide text-secondary leading-relaxed font-medium">
