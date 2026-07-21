@@ -55,7 +55,7 @@ const Home = () => {
       {/* TRUST BAR */}
       <section className="bg-background border-b border-border">
         <div className="container-narrow py-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {trustPoints.map((point, i) => (
               <AnimatedSection key={i} delay={i * 0.05}>
                 <div className="flex items-start gap-3">
