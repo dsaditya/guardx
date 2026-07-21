@@ -21,6 +21,14 @@ const services = [
   { icon: ShieldCheck, title: "Annual Security Audit", hash: "audit" },
 ];
 
+const failurePoints = [
+  { icon: Network, text: "Incorrect network and switch design" },
+  { icon: Cable, text: "Poor-quality cabling, connectors and power arrangements" },
+  { icon: FileText, text: "No camera-to-switch mapping or documentation" },
+  { icon: Server, text: "Equipment added without considering network capacity" },
+  { icon: Users, text: "Multiple vendors with nobody taking complete responsibility" },
+];
+
 const Home = () => {
   return (
     <>
