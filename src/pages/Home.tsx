@@ -33,7 +33,7 @@ const Home = () => {
   return (
     <>
       {/* HERO */}
-      <section className="bg-section-dark py-16 md:py-24 flex items-center min-h-[520px] md:min-h-[600px]">
+      <section className="bg-section-dark py-12 md:py-16 flex items-center min-h-[420px] md:min-h-[480px]">
         <div className="container-narrow w-full min-w-0">
           <div className="max-w-4xl min-w-0">
             <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-6">
