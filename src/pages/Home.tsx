@@ -70,6 +70,30 @@ const Home = () => {
         </div>
       </section>
 
+      {/* STATS */}
+      <section className="bg-background section-padding">
+        <div className="container-narrow">
+          <div className="grid grid-cols-2 gap-8 md:gap-12 max-w-3xl mx-auto text-center">
+            <AnimatedSection>
+              <div>
+                <p className="text-4xl md:text-5xl font-bold text-accent font-heading mb-2">10+</p>
+                <p className="text-sm uppercase tracking-wide text-secondary font-medium">
+                  Years of Security Industry Experience
+                </p>
+              </div>
+            </AnimatedSection>
+            <AnimatedSection delay={0.1}>
+              <div>
+                <p className="text-4xl md:text-5xl font-bold text-accent font-heading mb-2">1,000+</p>
+                <p className="text-sm uppercase tracking-wide text-secondary font-medium">
+                  Customers Served Across Telangana & Andhra Pradesh
+                </p>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
       {/* INTRODUCTION */}
       <section className="section-padding bg-section-alt">
         <div className="container-narrow">
