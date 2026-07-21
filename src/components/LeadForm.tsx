@@ -47,7 +47,7 @@ interface LeadFormProps {
   submitLabel?: string;
 }
 
-const LeadForm = ({ showEmail = false, submitLabel = "Request a Free Security Assessment" }: LeadFormProps) => {
+const LeadForm = ({ showEmail = false, submitLabel = "Request a Community Security Assessment" }: LeadFormProps) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
 

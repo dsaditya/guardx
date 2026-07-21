@@ -33,7 +33,7 @@ const Contact = () => {
             <AnimatedSection className="lg:col-span-2">
               <div className="bg-section-alt border border-border p-8 md:p-12">
                 <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4 font-heading">
-                  Request a Free Security Assessment
+                  Request a Community Security Assessment
                 </h2>
                 <p className="text-secondary text-base leading-relaxed mb-8">
                   Share your community's requirements with the GuardX360 team. A senior engineer will review your request and respond within 24 hours on working days.
@@ -105,7 +105,7 @@ const Contact = () => {
         <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle className="text-2xl font-bold text-primary font-heading">
-              Request a Free Security Assessment
+              Request a Community Security Assessment
             </DialogTitle>
             <DialogDescription className="text-secondary">
               Share your community's requirements. A GuardX360 engineer will respond within 24 hours on working days.

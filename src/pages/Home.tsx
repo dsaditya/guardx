@@ -41,7 +41,7 @@ const Home = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-base px-6 sm:px-8 py-6 font-semibold uppercase tracking-wide h-auto whitespace-normal text-center">
                 <Link to="/contact">
-                  Request a Free Security Assessment
+                  Request a Community Security Assessment
                   <ArrowRight className="ml-2 h-5 w-5 flex-shrink-0" />
                 </Link>
               </Button>
@@ -163,7 +163,7 @@ const Home = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-base px-8 py-6 font-semibold uppercase tracking-wide">
                 <Link to="/contact">
-                  Request a Free Security Assessment
+                  Request a Community Security Assessment
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
