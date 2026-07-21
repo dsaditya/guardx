@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Shield, Users, MapPin, CheckCircle2, Wrench, Camera, Car, Fingerprint, Zap, ScanLine, ClipboardCheck, ShieldCheck } from "lucide-react";
+import { ArrowRight, Shield, MapPin, CheckCircle2, Wrench, Camera, Car, Fingerprint, Zap, ScanLine, ClipboardCheck, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
 
