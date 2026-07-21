@@ -138,7 +138,7 @@ const Header = () => {
               className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold uppercase tracking-wide text-[11px] lg:text-xs whitespace-nowrap"
               size="sm"
             >
-              Free Assessment
+              Request a Community Security Assessment
             </Button>
           </div>
 
