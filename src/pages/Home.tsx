@@ -5,8 +5,8 @@ import AnimatedSection from "@/components/AnimatedSection";
 
 const trustPoints = [
   { icon: ShieldCheck, text: "Transparency & visibility of the service" },
-  { icon: Shield, text: "10+ years of security industry experience" },
-  { icon: Users, text: "1,000+ customers served across Telangana & Andhra Pradesh" },
+  { icon: Shield, text: "\u00a0YEARS OF SECURITY INDUSTRY EXPERIENCE" },
+  { icon: Users, text: "\n" },
   { icon: CheckCircle2, text: "One vendor. One accountability. End-to-end." },
   { icon: Wrench, text: "AMC support with preventive maintenance & priority response" },
 ];
