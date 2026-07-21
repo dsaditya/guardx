@@ -11,14 +11,14 @@ const trustPoints = [
 ];
 
 const services = [
-  { icon: Camera, title: "CCTV Surveillance", hash: "cctv" },
-  { icon: Car, title: "Boom Barrier & Vehicle Access", hash: "boom-barrier" },
-  { icon: Fingerprint, title: "Biometric & Access Control", hash: "biometric" },
-  { icon: Zap, title: "Solar Fencing", hash: "solar-fencing" },
-  { icon: ScanLine, title: "ANPR & UHF Vehicle Access", hash: "anpr-uhf" },
-  { icon: Wrench, title: "Annual Maintenance Contracts", hash: "amc" },
-  { icon: ClipboardCheck, title: "Assessment & Modernization", hash: "assessment" },
-  { icon: ShieldCheck, title: "Annual Security Audit", hash: "audit" },
+  { icon: Camera, title: "CCTV Surveillance", path: "/services/cctv-surveillance" },
+  { icon: Car, title: "Boom Barrier & Vehicle Access", path: "/services/boom-barrier-vehicle-access" },
+  { icon: Fingerprint, title: "Biometric & Access Control", path: "/services/biometric-access-control" },
+  { icon: Zap, title: "Solar Fencing", path: "/services/solar-fencing" },
+  { icon: ScanLine, title: "ANPR & UHF Vehicle Access", path: "/services/anpr-uhf-vehicle-access" },
+  { icon: Wrench, title: "Annual Maintenance Contracts", path: "/services/annual-maintenance-contracts" },
+  { icon: ClipboardCheck, title: "Assessment & Modernization", path: "/services/security-assessment-modernization" },
+  { icon: ShieldCheck, title: "Security Health Score", path: "/services/security-health-score" },
 ];
 
 const failurePoints = [
@@ -193,9 +193,9 @@ const Home = () => {
           </AnimatedSection>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {services.map((s, i) => (
-              <AnimatedSection key={s.hash} delay={i * 0.05}>
+              <AnimatedSection key={s.path} delay={i * 0.05}>
                 <Link
-                  to={`/services#${s.hash}`}
+                  to={s.path}
                   className="flex flex-col gap-3 p-5 bg-section-alt border border-border h-full hover:border-primary transition-colors group"
                 >
                   <s.icon className="h-6 w-6 text-primary" strokeWidth={1.5} />
