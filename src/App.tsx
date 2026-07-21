@@ -22,6 +22,14 @@ import JoinOurTeam from "./pages/JoinOurTeam";
 import ChannelPartner from "./pages/ChannelPartner";
 import BecomeADealer from "./pages/BecomeADealer";
 import NotFound from "./pages/NotFound";
+import CCTVSurveillance from "./pages/services/CCTVSurveillance";
+import BoomBarrier from "./pages/services/BoomBarrier";
+import BiometricAccess from "./pages/services/BiometricAccess";
+import SolarFencing from "./pages/services/SolarFencing";
+import AnprUhf from "./pages/services/AnprUhf";
+import AMC from "./pages/services/AMC";
+import AssessmentModernization from "./pages/services/AssessmentModernization";
+import HealthScore from "./pages/services/HealthScore";
 
 const queryClient = new QueryClient();
 
@@ -39,6 +47,14 @@ const App = () => (
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
+              <Route path="/services/cctv-surveillance" element={<CCTVSurveillance />} />
+              <Route path="/services/boom-barrier-vehicle-access" element={<BoomBarrier />} />
+              <Route path="/services/biometric-access-control" element={<BiometricAccess />} />
+              <Route path="/services/solar-fencing" element={<SolarFencing />} />
+              <Route path="/services/anpr-uhf-vehicle-access" element={<AnprUhf />} />
+              <Route path="/services/annual-maintenance-contracts" element={<AMC />} />
+              <Route path="/services/security-assessment-modernization" element={<AssessmentModernization />} />
+              <Route path="/services/security-health-score" element={<HealthScore />} />
               <Route path="/why-guardx360" element={<WhyGuardX360 />} />
               <Route path="/case-studies" element={<CaseStudies />} />
               <Route path="/knowledge-center" element={<KnowledgeCenter />} />
