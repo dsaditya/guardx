@@ -190,7 +190,7 @@ const About = () => {
           <div className="text-center mt-12">
             <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold uppercase tracking-wide">
               <Link to="/contact">
-                Request a Free Security Assessment <ArrowRight className="ml-2 h-5 w-5" />
+                Request a Community Security Assessment <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
           </div>

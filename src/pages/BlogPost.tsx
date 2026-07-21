@@ -198,7 +198,7 @@ const BlogPostPage = () => {
                   </p>
                   <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground uppercase tracking-wide font-semibold">
                     <Link to="/contact">
-                      Request a Free Security Assessment
+                      Request a Community Security Assessment
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>

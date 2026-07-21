@@ -33,17 +33,15 @@ const Home = () => {
               Gated Community Security Infrastructure • Hyderabad
             </p>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 font-heading break-words">
-              Security systems that work when they're needed most.
+              Security Infrastructure That Keeps Gated Communities Operational
             </h1>
             <p className="text-lg md:text-xl text-white/70 max-w-3xl mb-10 leading-relaxed">
-              GuardX360 designs, implements, and maintains complete security systems —
-              CCTV surveillance, boom barriers, UHF reader, ANPR camera, biometric access
-              control, and solar fencing — built as one reliable infrastructure for your community.
+              GuardX360 audits, designs, implements and maintains CCTV, access control, boom barriers and perimeter security—with documented networks, accountable service and one point of contact.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-base px-6 sm:px-8 py-6 font-semibold uppercase tracking-wide h-auto whitespace-normal text-center">
                 <Link to="/contact">
-                  Request a Free Security Assessment
+                  Request a Community Security Assessment
                   <ArrowRight className="ml-2 h-5 w-5 flex-shrink-0" />
                 </Link>
               </Button>
@@ -165,7 +163,7 @@ const Home = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-base px-8 py-6 font-semibold uppercase tracking-wide">
                 <Link to="/contact">
-                  Request a Free Security Assessment
+                  Request a Community Security Assessment
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>

@@ -153,7 +153,7 @@ const Services = () => {
                     <div className="pt-4">
                       <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold uppercase tracking-wide">
                         <Link to="/contact">
-                          Request a Free Assessment <ArrowRight className="ml-2 h-4 w-4" />
+                          Request a Community Security Assessment <ArrowRight className="ml-2 h-4 w-4" />
                         </Link>
                       </Button>
                     </div>
