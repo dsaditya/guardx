@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Shield, Users, MapPin, CheckCircle2, Wrench, Camera, Car, Fingerprint, Zap, ScanLine, ClipboardCheck, ShieldCheck } from "lucide-react";
+import { ArrowRight, Shield, MapPin, CheckCircle2, Wrench, Camera, Car, Fingerprint, Zap, ScanLine, ClipboardCheck, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
 
 const trustPoints = [
   { icon: ShieldCheck, text: "Transparency & visibility of the service" },
-  { icon: Shield, text: "\u00a0YEARS OF SECURITY INDUSTRY EXPERIENCE" },
-  { icon: Users, text: "\n" },
+  { icon: Shield, text: "YEARS OF SECURITY INDUSTRY EXPERIENCE" },
   { icon: CheckCircle2, text: "One vendor. One accountability. End-to-end." },
   { icon: Wrench, text: "AMC support with preventive maintenance & priority response" },
 ];
@@ -56,7 +55,7 @@ const Home = () => {
       {/* TRUST BAR */}
       <section className="bg-background border-b border-border">
         <div className="container-narrow py-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {trustPoints.map((point, i) => (
               <AnimatedSection key={i} delay={i * 0.05}>
                 <div className="flex items-start gap-3">
