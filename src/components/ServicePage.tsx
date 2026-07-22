@@ -68,6 +68,8 @@ const ServicePage = ({
         </div>
       </section>
 
+      {afterContent}
+
       <section className="section-padding bg-section-alt">
         <div className="container-narrow text-center">
           <AnimatedSection>
