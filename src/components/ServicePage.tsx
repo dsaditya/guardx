@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { ReactNode } from "react";
 import { Button } from "@/components/ui/button";
 import PageHero from "@/components/PageHero";
 import AnimatedSection from "@/components/AnimatedSection";
 import { useSEO } from "@/hooks/use-seo";
 
 export interface ServicePageProps {
+  afterContent?: ReactNode;
   eyebrow?: string;
   title: string;
   description: string;
