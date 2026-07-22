@@ -1,4 +1,5 @@
 import ServicePage from "@/components/ServicePage";
+import HealthScoreQuiz from "@/components/HealthScoreQuiz";
 
 const HealthScore = () => (
   <ServicePage
@@ -16,7 +17,9 @@ const HealthScore = () => (
       "Written report to the committee with a prioritized action plan.",
       "Keeps security spending planned and evidence-based, not reactive.",
     ]}
+    afterContent={<HealthScoreQuiz />}
   />
 );
 
 export default HealthScore;
+

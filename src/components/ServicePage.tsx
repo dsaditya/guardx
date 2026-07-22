@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { ReactNode } from "react";
 import { Button } from "@/components/ui/button";
 import PageHero from "@/components/PageHero";
 import AnimatedSection from "@/components/AnimatedSection";
 import { useSEO } from "@/hooks/use-seo";
 
 export interface ServicePageProps {
+  afterContent?: ReactNode;
   eyebrow?: string;
   title: string;
   description: string;
@@ -29,6 +31,7 @@ const ServicePage = ({
   closing,
   seoTitle,
   seoDescription,
+  afterContent,
 }: ServicePageProps) => {
   useSEO({ title: seoTitle, description: seoDescription });
 
@@ -64,6 +67,8 @@ const ServicePage = ({
           </AnimatedSection>
         </div>
       </section>
+
+      {afterContent}
 
       <section className="section-padding bg-section-alt">
         <div className="container-narrow text-center">
