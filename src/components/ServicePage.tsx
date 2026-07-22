@@ -31,6 +31,7 @@ const ServicePage = ({
   closing,
   seoTitle,
   seoDescription,
+  afterContent,
 }: ServicePageProps) => {
   useSEO({ title: seoTitle, description: seoDescription });
 
