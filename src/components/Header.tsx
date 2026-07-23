@@ -46,6 +46,7 @@ const navItems: NavItem[] = [
     children: [
       { label: "Blog", to: "/knowledge-center/blog" },
       { label: "Checklists & Guides", to: "/knowledge-center/checklists-guides" },
+      { label: "Checklist Hub", to: "/resources" },
     ],
   },
   { label: "Contact Us", to: "/contact" },
