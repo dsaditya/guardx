@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 
-type Option = { label: string; pts: 20 | 10 | 0 };
+type Option = { label: string; pts: 10 | 5 | 0 };
 type Question = { category: string; text: string; options: [Option, Option, Option] };
 
 const QUESTIONS: Question[] = [
@@ -12,8 +12,8 @@ const QUESTIONS: Question[] = [
     category: "Perimeter & Access",
     text: "Are all entry/exit points monitored by CCTV?",
     options: [
-      { label: "All points", pts: 20 },
-      { label: "Main gate only", pts: 10 },
+      { label: "All points", pts: 10 },
+      { label: "Main gate only", pts: 5 },
       { label: "None", pts: 0 },
     ],
   },
@@ -21,8 +21,8 @@ const QUESTIONS: Question[] = [
     category: "Perimeter & Access",
     text: "Boom barriers or automated gates at vehicle entry?",
     options: [
-      { label: "Yes, automated", pts: 20 },
-      { label: "Manual only", pts: 10 },
+      { label: "Yes, automated", pts: 10 },
+      { label: "Manual only", pts: 5 },
       { label: "No barrier", pts: 0 },
     ],
   },
@@ -30,8 +30,8 @@ const QUESTIONS: Question[] = [
     category: "Surveillance Coverage",
     text: "CCTV coverage of common areas (clubhouse, parking, playground)?",
     options: [
-      { label: "Fully covered", pts: 20 },
-      { label: "Partially", pts: 10 },
+      { label: "Fully covered", pts: 10 },
+      { label: "Partially", pts: 5 },
       { label: "Not covered", pts: 0 },
     ],
   },
@@ -39,8 +39,8 @@ const QUESTIONS: Question[] = [
     category: "Surveillance Coverage",
     text: "CCTV footage retention period?",
     options: [
-      { label: "30+ days", pts: 20 },
-      { label: "7–15 days", pts: 10 },
+      { label: "30+ days", pts: 10 },
+      { label: "7–15 days", pts: 5 },
       { label: "Less than 7 days or none", pts: 0 },
     ],
   },
@@ -48,8 +48,8 @@ const QUESTIONS: Question[] = [
     category: "Access Control",
     text: "Biometric/RFID access for residents at main gate?",
     options: [
-      { label: "Yes", pts: 20 },
-      { label: "Manual register only", pts: 10 },
+      { label: "Yes", pts: 10 },
+      { label: "Manual register only", pts: 5 },
       { label: "No system", pts: 0 },
     ],
   },
@@ -57,8 +57,8 @@ const QUESTIONS: Question[] = [
     category: "Access Control",
     text: "Visitors logged before entry?",
     options: [
-      { label: "Digital", pts: 20 },
-      { label: "Manual register", pts: 10 },
+      { label: "Digital", pts: 10 },
+      { label: "Manual register", pts: 5 },
       { label: "No log", pts: 0 },
     ],
   },
@@ -66,8 +66,8 @@ const QUESTIONS: Question[] = [
     category: "Manpower & Response",
     text: "Guards present 24/7 at all access points?",
     options: [
-      { label: "Yes, all points", pts: 20 },
-      { label: "Only main gate", pts: 10 },
+      { label: "Yes, all points", pts: 10 },
+      { label: "Only main gate", pts: 5 },
       { label: "No dedicated guards", pts: 0 },
     ],
   },
@@ -75,8 +75,8 @@ const QUESTIONS: Question[] = [
     category: "Manpower & Response",
     text: "Documented emergency response protocol?",
     options: [
-      { label: "Yes, documented + drilled", pts: 20 },
-      { label: "Informal only", pts: 10 },
+      { label: "Yes, documented + drilled", pts: 10 },
+      { label: "Informal only", pts: 5 },
       { label: "None", pts: 0 },
     ],
   },
@@ -84,8 +84,8 @@ const QUESTIONS: Question[] = [
     category: "Maintenance & Uptime",
     text: "Last AMC service on equipment?",
     options: [
-      { label: "Within 6 months", pts: 20 },
-      { label: "6–12 months", pts: 10 },
+      { label: "Within 6 months", pts: 10 },
+      { label: "6–12 months", pts: 5 },
       { label: "Over a year or never", pts: 0 },
     ],
   },
@@ -93,8 +93,8 @@ const QUESTIONS: Question[] = [
     category: "Maintenance & Uptime",
     text: "Equipment downtime in the last 3 months?",
     options: [
-      { label: "No downtime", pts: 20 },
-      { label: "Minor, resolved", pts: 10 },
+      { label: "No downtime", pts: 10 },
+      { label: "Minor, resolved", pts: 5 },
       { label: "Frequent, unresolved", pts: 0 },
     ],
   },
@@ -247,7 +247,7 @@ const HealthScoreQuiz = () => {
                     </p>
                     <p className="text-xl font-bold text-primary font-heading">
                       {c.score}
-                      <span className="text-sm text-secondary font-normal">/40</span>
+                      <span className="text-sm text-secondary font-normal">/20</span>
                     </p>
                   </div>
                 ))}
