@@ -30,6 +30,7 @@ import AnprUhf from "./pages/services/AnprUhf";
 import AMC from "./pages/services/AMC";
 import AssessmentModernization from "./pages/services/AssessmentModernization";
 import HealthScore from "./pages/services/HealthScore";
+import ChecklistHub from "./pages/ChecklistHub";
 
 const queryClient = new QueryClient();
 
@@ -62,6 +63,8 @@ const App = () => (
               <Route path="/knowledge-center/blog/:slug" element={<BlogPost />} />
               <Route path="/knowledge-center/checklists-guides" element={<ChecklistsIndex />} />
               <Route path="/knowledge-center/checklists-guides/:slug" element={<ChecklistDetail />} />
+              <Route path="/resources" element={<ChecklistHub />} />
+
 
               <Route path="/contact" element={<Contact />} />
               <Route path="/partner-with-us" element={<PartnerWithUs />} />
