@@ -53,8 +53,16 @@ const GetInTouchButton = () => {
     }
 
     setSubmitting(true);
+    const data = {
+      name: form.name.trim(),
+      phone: form.phone.trim(),
+      email: form.email.trim(),
+      community: form.community.trim(),
+      message: form.message.trim(),
+    };
     try {
-      submitZohoLead(parsed.data);
+      submitZohoLead(data);
+
 
       await supabase.functions.invoke("send-checklist-lead", {
         body: {
