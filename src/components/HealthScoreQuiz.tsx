@@ -165,8 +165,16 @@ const HealthScoreQuiz = () => {
       toast({ title: "Missing details", description: "Name and phone are required." });
       return;
     }
-    console.log("Health Score lead:", { ...lead, totalScore, categoryScores });
+    submitZohoLead({
+      name: lead.name.trim(),
+      phone: lead.phone.trim(),
+      email: (lead.email ?? "").trim(),
+      message: `Security Health Score: ${totalScore}/100 — ${categoryScores
+        .map((c) => `${c.category}: ${c.score}/20`)
+        .join(", ")}`,
+    });
     setLeadSubmitted(true);
+
     toast({
       title: "Request received",
       description: "The GuardX360 team will share your recommendations within 24 hours.",
