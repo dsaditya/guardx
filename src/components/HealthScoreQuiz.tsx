@@ -3,6 +3,8 @@ import { ArrowRight, RotateCcw, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
+import { submitZohoLead } from "@/lib/zoho";
+
 
 type Option = { label: string; pts: 10 | 5 | 0 };
 type Question = { category: string; text: string; options: [Option, Option, Option] };
