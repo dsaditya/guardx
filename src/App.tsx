@@ -77,6 +77,8 @@ const App = () => (
             </Routes>
           </main>
           <Footer />
+          <GetInTouchButton />
+
         </div>
       </BrowserRouter>
     </TooltipProvider>
