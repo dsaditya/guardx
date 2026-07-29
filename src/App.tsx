@@ -5,6 +5,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToHash from "@/components/ScrollToHash";
 import Header from "@/components/Header";
+import GetInTouchButton from "@/components/GetInTouchButton";
+
 import Footer from "@/components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";

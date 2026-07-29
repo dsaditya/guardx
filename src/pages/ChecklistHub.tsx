@@ -10,6 +10,8 @@ import { Label } from "@/components/ui/label";
 import { toast } from "@/hooks/use-toast";
 import { useSEO } from "@/hooks/use-seo";
 import { supabase } from "@/integrations/supabase/client";
+import { submitZohoLead } from "@/lib/zoho";
+
 import cctvAsset from "@/assets/checklists/GuardX360-CCTV-Surveillance-Readiness-Checklist.pdf.asset.json";
 import boomAsset from "@/assets/checklists/GuardX360-Boom-Barrier-Installation-Checklist.pdf.asset.json";
 import bioAsset from "@/assets/checklists/GuardX360-Biometric-Access-Control-Checklist.pdf.asset.json";
@@ -129,6 +131,14 @@ const ChecklistHub = () => {
 
     setSubmitting(true);
     try {
+      submitZohoLead({
+        name: parsed.data.name,
+        phone: parsed.data.phone,
+        email: parsed.data.email,
+        community: parsed.data.community,
+        message: `Checklist download: ${selected.label}`,
+      });
+
       const { error } = await supabase.functions.invoke("send-checklist-lead", {
         body: {
           ...parsed.data,
@@ -136,6 +146,7 @@ const ChecklistHub = () => {
         },
       });
       if (error) throw error;
+
 
       // Trigger download
       const a = document.createElement("a");

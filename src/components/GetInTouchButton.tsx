@@ -66,15 +66,14 @@ const GetInTouchButton = () => {
 
       await supabase.functions.invoke("send-checklist-lead", {
         body: {
-          name: parsed.data.name,
-          phone: parsed.data.phone,
-          email: parsed.data.email,
-          community: parsed.data.community,
-          checklistName: `Get in Touch enquiry${
-            parsed.data.message ? ` — ${parsed.data.message}` : ""
-          }`,
+          name: data.name,
+          phone: data.phone,
+          email: data.email,
+          community: data.community,
+          checklistName: `Get in Touch enquiry${data.message ? ` — ${data.message}` : ""}`,
         },
       });
+
 
       toast({ title: "Thanks! We'll be in touch shortly." });
       setForm({ name: "", phone: "", email: "", community: "", message: "" });
