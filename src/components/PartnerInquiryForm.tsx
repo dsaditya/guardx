@@ -15,6 +15,8 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+import { submitZohoLead } from "@/lib/zoho";
 
 export type PartnerField = {
   name: string;
@@ -54,8 +56,33 @@ const PartnerInquiryForm = ({ fields, submitLabel = "Submit Inquiry", formName }
     defaultValues: defaults,
   });
 
-  const onSubmit = (data: Record<string, string>) => {
-    console.log(`${formName} submitted:`, data);
+  const onSubmit = async (data: Record<string, string>) => {
+    const name = data.contact || data.name || data.company || "Website enquiry";
+    const phone = data.phone || "";
+    const email = data.email || "";
+    const community = data.company || data.city || formName;
+    const message = Object.entries(data)
+      .filter(([k]) => !["contact", "name", "phone", "email", "company"].includes(k))
+      .map(([k, v]) => `${k}: ${v}`)
+      .filter((s) => !s.endsWith(": "))
+      .join(" | ");
+
+    try {
+      submitZohoLead({ name, phone, email, community, message: `${formName} — ${message}` });
+
+      await supabase.functions.invoke("send-checklist-lead", {
+        body: {
+          name,
+          phone,
+          email: email || "not-provided@guardx360.com",
+          community,
+          checklistName: `${formName} inquiry — ${message}`,
+        },
+      });
+    } catch (err) {
+      console.error(`${formName} submit failed`, err);
+    }
+
     setSubmitted(true);
     toast({
       title: "Inquiry received",
