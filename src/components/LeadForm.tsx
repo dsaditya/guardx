@@ -22,6 +22,8 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+import { submitZohoLead } from "@/lib/zoho";
 
 const schema = z.object({
   name: z.string().trim().min(2, "Name is required").max(100),
@@ -64,8 +66,37 @@ const LeadForm = ({ showEmail = false, submitLabel = "Request a Community Securi
     },
   });
 
-  const onSubmit = (data: FormData) => {
-    console.log("Lead submitted:", data);
+  const onSubmit = async (data: FormData) => {
+    const message = [
+      `Community Type: ${data.communityType}`,
+      `Location: ${data.location}`,
+      data.requirement ? `Requirement: ${data.requirement}` : "",
+    ]
+      .filter(Boolean)
+      .join(" | ");
+
+    try {
+      submitZohoLead({
+        name: data.name,
+        phone: data.phone,
+        email: data.email || "",
+        community: data.community,
+        message,
+      });
+
+      await supabase.functions.invoke("send-checklist-lead", {
+        body: {
+          name: data.name,
+          phone: data.phone,
+          email: data.email || "not-provided@guardx360.com",
+          community: data.community,
+          checklistName: `Community Security Assessment — ${message}`,
+        },
+      });
+    } catch (err) {
+      console.error("Lead submit failed", err);
+    }
+
     setIsSubmitted(true);
     toast({
       title: "Request received",
