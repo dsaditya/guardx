@@ -46,6 +46,9 @@ const Footer = () => {
               CCTV, boom barriers, biometric access control, solar fencing and AMC,
               delivered under one accountable partner.
             </p>
+            <p className="text-white/50 text-sm mt-4 leading-relaxed">
+              GUARDX360 — 3rd Floor, MIG 46/A, KPHB Phase 1, Kukatpally, Hyderabad, Telangana 500072
+            </p>
             <p className="text-white/40 text-sm mt-4 italic">
               Security as a Standard™
             </p>

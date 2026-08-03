@@ -33,6 +33,7 @@ import AMC from "./pages/services/AMC";
 import AssessmentModernization from "./pages/services/AssessmentModernization";
 import HealthScore from "./pages/services/HealthScore";
 import ChecklistHub from "./pages/ChecklistHub";
+import SecurityAssessment from "./pages/SecurityAssessment";
 
 const queryClient = new QueryClient();
 
@@ -66,6 +67,7 @@ const App = () => (
               <Route path="/knowledge-center/checklists-guides" element={<ChecklistsIndex />} />
               <Route path="/knowledge-center/checklists-guides/:slug" element={<ChecklistDetail />} />
               <Route path="/resources" element={<ChecklistHub />} />
+              <Route path="/security-assessment" element={<SecurityAssessment />} />
 
 
               <Route path="/contact" element={<Contact />} />
