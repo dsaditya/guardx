@@ -33,6 +33,7 @@ import AMC from "./pages/services/AMC";
 import AssessmentModernization from "./pages/services/AssessmentModernization";
 import HealthScore from "./pages/services/HealthScore";
 import ChecklistHub from "./pages/ChecklistHub";
+import SecurityAssessment from "./pages/SecurityAssessment";
 
 const queryClient = new QueryClient();
 
