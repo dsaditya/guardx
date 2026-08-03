@@ -67,6 +67,7 @@ const App = () => (
               <Route path="/knowledge-center/checklists-guides" element={<ChecklistsIndex />} />
               <Route path="/knowledge-center/checklists-guides/:slug" element={<ChecklistDetail />} />
               <Route path="/resources" element={<ChecklistHub />} />
+              <Route path="/security-assessment" element={<SecurityAssessment />} />
 
 
               <Route path="/contact" element={<Contact />} />
