@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Camera,
   ParkingCircle,
@@ -53,13 +54,13 @@ const deliverables = [
 ];
 
 const services = [
-  { icon: Camera, title: "CCTV Surveillance" },
-  { icon: ParkingCircle, title: "Boom Barrier & Vehicle Access" },
-  { icon: Fingerprint, title: "Biometric & Access Control" },
-  { icon: Sun, title: "Solar Fencing" },
-  { icon: ScanLine, title: "ANPR & UHF Vehicle Access" },
-  { icon: Wrench, title: "Annual Maintenance Contracts" },
-  { icon: ClipboardCheck, title: "Security Assessment & Modernization" },
+  { icon: Camera, title: "CCTV Surveillance", to: "/services/cctv-surveillance" },
+  { icon: ParkingCircle, title: "Boom Barrier & Vehicle Access", to: "/services/boom-barrier-vehicle-access" },
+  { icon: Fingerprint, title: "Biometric & Access Control", to: "/services/biometric-access-control" },
+  { icon: Sun, title: "Solar Fencing", to: "/services/solar-fencing" },
+  { icon: ScanLine, title: "ANPR & UHF Vehicle Access", to: "/services/anpr-uhf-vehicle-access" },
+  { icon: Wrench, title: "Annual Maintenance Contracts", to: "/services/annual-maintenance-contracts" },
+  { icon: ClipboardCheck, title: "Security Assessment & Modernization", to: "/services/security-assessment-modernization" },
 ];
 
 const projectIncludes = [
@@ -194,14 +195,17 @@ const SecurityAssessment = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((s, i) => (
               <AnimatedSection key={s.title} delay={i * 0.05}>
-                <div className="bg-section-alt border border-border p-6 h-full flex items-start gap-4">
-                  <div className="bg-primary p-3">
+                <Link
+                  to={s.to}
+                  className="bg-section-alt border border-border p-6 h-full flex items-start gap-4 hover:border-accent transition-colors group block"
+                >
+                  <div className="bg-primary p-3 group-hover:bg-accent transition-colors">
                     <s.icon className="h-5 w-5 text-white" strokeWidth={1.5} />
                   </div>
                   <h3 className="text-base font-semibold text-primary font-heading leading-snug">
                     {s.title}
                   </h3>
-                </div>
+                </Link>
               </AnimatedSection>
             ))}
           </div>
