@@ -195,14 +195,17 @@ const SecurityAssessment = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((s, i) => (
               <AnimatedSection key={s.title} delay={i * 0.05}>
-                <div className="bg-section-alt border border-border p-6 h-full flex items-start gap-4">
-                  <div className="bg-primary p-3">
+                <Link
+                  to={s.to}
+                  className="bg-section-alt border border-border p-6 h-full flex items-start gap-4 hover:border-accent transition-colors group block"
+                >
+                  <div className="bg-primary p-3 group-hover:bg-accent transition-colors">
                     <s.icon className="h-5 w-5 text-white" strokeWidth={1.5} />
                   </div>
                   <h3 className="text-base font-semibold text-primary font-heading leading-snug">
                     {s.title}
                   </h3>
-                </div>
+                </Link>
               </AnimatedSection>
             ))}
           </div>
