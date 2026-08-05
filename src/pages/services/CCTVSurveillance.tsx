@@ -1,4 +1,5 @@
 import ServicePage from "@/components/ServicePage";
+import serviceImage from "@/assets/services/cctv-surveillance.jpg";
 
 const CCTVSurveillance = () => (
   <ServicePage
@@ -7,7 +8,7 @@ const CCTVSurveillance = () => (
     eyebrow="Service 01"
     title="CCTV Surveillance Systems"
     description="High-definition IP surveillance designed around your site — not sold from a catalogue."
-    image="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1600&q=80"
+    image={serviceImage}
     imageAlt="Dome CCTV camera mounted on an exterior wall"
     intro="A CCTV system is only as reliable as the quality of its design and the consistency of its maintenance. A camera at the wrong angle, a recorder with insufficient storage or a network dropping frames under load will all fail at the moment the footage matters most."
     bullets={[

@@ -1,4 +1,5 @@
 import ServicePage from "@/components/ServicePage";
+import serviceImage from "@/assets/services/amc.jpg";
 
 const AMC = () => (
   <ServicePage
@@ -7,7 +8,7 @@ const AMC = () => (
     eyebrow="Service 06"
     title="Annual Maintenance Contracts (AMC)"
     description="Preventive maintenance and breakdown support with a defined scope — for systems we installed and for systems we didn't."
-    image="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1600&q=80"
+    image={serviceImage}
     imageAlt="Technician servicing electronic security equipment"
     intro="A security system that is not maintained is a security liability. Camera faults, boom barrier failures, access control outages and solar fence downtime are almost always the result of deferred maintenance — not equipment failure."
     bullets={[

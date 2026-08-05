@@ -1,4 +1,5 @@
 import ServicePage from "@/components/ServicePage";
+import serviceImage from "@/assets/services/solar-fencing.jpg";
 
 const SolarFencing = () => (
   <ServicePage
@@ -7,7 +8,7 @@ const SolarFencing = () => (
     eyebrow="Service 04"
     title="Solar Fencing Systems"
     description="Perimeter deterrent that runs quietly on solar — day and night."
-    image="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=80"
+    image={serviceImage}
     imageAlt="Solar panels powering a perimeter security installation"
     intro="Perimeter protection is the first and most critical layer of a community's security infrastructure. A weak or unmaintained perimeter fence creates an easy entry point for intruders — regardless of how sophisticated your internal surveillance or access control systems are."
     bullets={[
