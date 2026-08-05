@@ -1,4 +1,5 @@
 import ServicePage from "@/components/ServicePage";
+import serviceImage from "@/assets/services/biometric-access.jpg";
 
 const BiometricAccess = () => (
   <ServicePage
@@ -7,7 +8,7 @@ const BiometricAccess = () => (
     eyebrow="Service 03"
     title="Biometric & Access Control Systems"
     description="Digital audit trails for every entry — no more paper registers."
-    image="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1600&q=80"
+    image={serviceImage}
     imageAlt="Person using a fingerprint biometric access reader"
     intro="Controlling who enters your community and when is the foundation of physical security. Access control eliminates dependence on manual registers and guard judgment for routine access, and creates a reliable digital audit trail of every entry and exit event."
     bullets={[

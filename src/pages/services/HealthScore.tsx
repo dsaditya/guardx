@@ -1,4 +1,5 @@
 import ServicePage from "@/components/ServicePage";
+import serviceImage from "@/assets/services/health-score.jpg";
 import HealthScoreQuiz from "@/components/HealthScoreQuiz";
 
 const HealthScore = () => (
@@ -8,7 +9,7 @@ const HealthScore = () => (
     eyebrow="Service 08"
     title="Security Health Score"
     description="A yearly, benchmarked view of your community's security readiness — in writing."
-    image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80"
+    image={serviceImage}
     imageAlt="Analytics report showing security performance indicators"
     intro="An AMC keeps individual systems running. The Security Health Score steps back and evaluates the whole infrastructure — coverage, integration, documentation, compliance and readiness — against last year's baseline."
     bullets={[

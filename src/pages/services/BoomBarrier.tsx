@@ -1,4 +1,5 @@
 import ServicePage from "@/components/ServicePage";
+import serviceImage from "@/assets/services/boom-barrier.jpg";
 
 const BoomBarrier = () => (
   <ServicePage
@@ -7,7 +8,7 @@ const BoomBarrier = () => (
     eyebrow="Service 02"
     title="Boom Barrier & Vehicle Access Management"
     description="Controlled, auditable vehicle movement at every community gate."
-    image="https://images.unsplash.com/photo-1573348722427-f1d6819fdf98?auto=format&fit=crop&w=1600&q=80"
+    image={serviceImage}
     imageAlt="Boom barrier at a controlled vehicle entry gate"
     intro="Uncontrolled vehicle movement is one of the most common security complaints in gated communities. Manual registers, ad-hoc guard decisions and broken barriers create gaps that expose residents to unauthorized access, parking disputes and incidents."
     bullets={[
