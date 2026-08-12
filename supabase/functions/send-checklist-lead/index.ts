@@ -42,6 +42,8 @@ Deno.serve(async (req) => {
       <p><strong>Community Name:</strong> ${community}</p>
     `;
 
+    console.log('RESEND key shape:', RESEND_API_KEY.slice(0, 3), 'len', RESEND_API_KEY.length);
+
     const res = await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: {
