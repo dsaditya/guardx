@@ -1,4 +1,5 @@
 import { useState } from "react";
+import securityHero from "@/assets/security-hero.jpg";
 import { Link } from "react-router-dom";
 import {
   Camera,
@@ -100,8 +101,21 @@ const SecurityAssessment = () => {
   return (
     <>
       {/* Hero */}
-      <section className="bg-section-dark py-12 md:py-16">
-        <div className="container-narrow">
+      <section className="relative min-h-[520px] md:min-h-[600px] flex items-center">
+        {/* Background image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src={securityHero}
+            alt="Gated community security entrance with CCTV and boom barrier at night"
+            className="w-full h-full object-cover"
+            loading="eager"
+            width={1920}
+            height={1080}
+          />
+        </div>
+        {/* Dark overlay */}
+        <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/80 via-black/70 to-black/50" />
+        <div className="container-narrow relative z-20 py-16 md:py-24">
           <div className="max-w-4xl">
             <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-4">
               GATED COMMUNITY SECURITY INFRASTRUCTURE • HYDERABAD
@@ -109,7 +123,7 @@ const SecurityAssessment = () => {
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-6 font-heading">
               The 5-Layer Security Standard for Gated Communities in Hyderabad
             </h1>
-            <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl mb-8">
+            <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-3xl mb-8">
               GuardX360 audits, designs, installs and maintains CCTV, boom barriers, ANPR,
               biometric access and perimeter security for gated communities in Hyderabad — with a
               focus on reliability, preventive maintenance, and disciplined execution.
@@ -117,13 +131,13 @@ const SecurityAssessment = () => {
             {cta}
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 mt-12">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 mt-12 backdrop-blur-sm">
             {stats.map((s) => (
-              <div key={s.value} className="bg-section-dark p-6">
+              <div key={s.value} className="bg-black/50 p-6">
                 <p className="text-2xl md:text-3xl font-bold text-accent font-heading mb-2">
                   {s.value}
                 </p>
-                <p className="text-sm text-white/60 leading-relaxed">{s.label}</p>
+                <p className="text-sm text-white/70 leading-relaxed">{s.label}</p>
               </div>
             ))}
           </div>
