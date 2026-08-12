@@ -1,4 +1,5 @@
 import { useState } from "react";
+import securityHero from "@/assets/security-hero.jpg";
 import { Link } from "react-router-dom";
 import {
   Camera,
