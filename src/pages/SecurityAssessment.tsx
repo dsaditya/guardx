@@ -134,10 +134,7 @@ const SecurityAssessment = () => {
       <section className="section-padding bg-background">
         <div className="container-narrow">
           <AnimatedSection>
-            <SectionLabel>
-              Quoted directly from the "Fears" column of your funnel research (New / Acquisition
-              stage).
-            </SectionLabel>
+            <SectionLabel>Common concerns we hear</SectionLabel>
             <h2 className="text-2xl md:text-3xl font-bold text-primary mb-8 font-heading">
               Concerns We Address
             </h2>
@@ -146,10 +143,7 @@ const SecurityAssessment = () => {
             {concerns.map((q, i) => (
               <AnimatedSection key={q} delay={i * 0.05}>
                 <div className="bg-section-alt border border-border p-6 h-full">
-                  <span className="text-[10px] font-semibold uppercase tracking-widest text-accent">
-                    From research doc
-                  </span>
-                  <p className="text-foreground text-base leading-relaxed mt-3">{q}</p>
+                  <p className="text-foreground text-base leading-relaxed">{q}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -161,10 +155,7 @@ const SecurityAssessment = () => {
       <section className="section-padding bg-section-alt">
         <div className="container-narrow">
           <AnimatedSection>
-            <SectionLabel>
-              Quoted directly from the "Needs" column of your funnel research (New / Acquisition
-              stage).
-            </SectionLabel>
+            <SectionLabel>Our approach</SectionLabel>
             <h2 className="text-2xl md:text-3xl font-bold text-primary mb-8 font-heading">
               What We Deliver
             </h2>
@@ -188,7 +179,7 @@ const SecurityAssessment = () => {
       <section className="section-padding bg-background">
         <div className="container-narrow">
           <AnimatedSection>
-            <SectionLabel>Exactly as listed in your approved content-buckets document.</SectionLabel>
+            <SectionLabel>What we offer</SectionLabel>
             <h2 className="text-2xl md:text-3xl font-bold text-primary mb-8 font-heading">
               Services
             </h2>
@@ -217,10 +208,7 @@ const SecurityAssessment = () => {
       <section className="section-padding bg-section-alt">
         <div className="container-narrow">
           <AnimatedSection>
-            <SectionLabel>
-              Quoted directly from the "Needs" column of your funnel research (Qualified / Site
-              Visit stage).
-            </SectionLabel>
+            <SectionLabel>Our process</SectionLabel>
             <h2 className="text-2xl md:text-3xl font-bold text-primary mb-8 font-heading">
               What Every Project Includes
             </h2>
@@ -261,7 +249,7 @@ const SecurityAssessment = () => {
       <section className="section-padding bg-background">
         <div className="container-narrow">
           <AnimatedSection>
-            <SectionLabel>As published on the GuardX360 website.</SectionLabel>
+            
             <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6 font-heading">
               Coverage
             </h2>
@@ -271,9 +259,6 @@ const SecurityAssessment = () => {
                 <p className="text-foreground text-lg leading-relaxed">
                   GuardX360 serves gated communities and industrial sites in Hyderabad.
                 </p>
-                <span className="inline-block mt-4 text-[10px] font-semibold uppercase tracking-widest text-accent">
-                  From guardx360.com
-                </span>
               </div>
             </div>
             <div className="mt-10">{cta}</div>
