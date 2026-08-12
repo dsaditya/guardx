@@ -142,8 +142,8 @@ const SecurityAssessment = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {concerns.map((q, i) => (
               <AnimatedSection key={q} delay={i * 0.05}>
-                <div className="bg-section-alt border border-border p-6 h-full">
-                  <p className="text-foreground text-base leading-relaxed">{q}</p>
+                <div className="bg-accent border border-border p-6 h-full">
+                  <p className="text-white text-base leading-relaxed">{q}</p>
                 </div>
               </AnimatedSection>
             ))}
