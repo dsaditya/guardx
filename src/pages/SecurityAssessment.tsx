@@ -32,10 +32,11 @@ import {
 
 const stats = [
   { value: "10+ Years", label: "Team Experience (as briefed)" },
-  { value: "10,000+", label: "Homes & Communities Served (as briefed)" },
+  { value: "1,000+", label: "Homes & Communities Served (as briefed)" },
   { value: "Dual Sector", label: "Gated Communities + Industrial Sites" },
   { value: "Hyderabad", label: "Locally Based" },
 ];
+
 
 const concerns = [
   "What if our system is failing silently?",
