@@ -104,10 +104,10 @@ const SecurityAssessment = () => {
         <div className="container-narrow">
           <div className="max-w-4xl">
             <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-4">
-              Gated community &amp; industrial security · Hyderabad
+              GATED COMMUNITY SECURITY INFRASTRUCTURE • HYDERABAD
             </p>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-6 font-heading">
-              Reliable Security Systems for Gated Communities &amp; Industrial Sites
+              The 5-Layer Security Standard for Gated Communities in Hyderabad
             </h1>
             <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl mb-8">
               GuardX360 audits, designs, installs and maintains CCTV, boom barriers, ANPR,
