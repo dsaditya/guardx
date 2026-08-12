@@ -256,8 +256,8 @@ const SecurityAssessment = () => {
             <div className="bg-section-alt border border-border p-8 flex items-start gap-4 max-w-3xl">
               <Map className="h-6 w-6 text-accent flex-shrink-0 mt-1" strokeWidth={1.5} />
               <div>
-                <p className="text-foreground text-lg leading-relaxed">
-                  GuardX360 serves gated communities and industrial sites in Hyderabad.
+                <p className="text-foreground text-lg leading-relaxed whitespace-pre-line">
+                  GuardX360 serves gated communities and&nbsp;Infrastructure&nbsp;in Hyderabad.{"\n"}
                 </p>
               </div>
             </div>
