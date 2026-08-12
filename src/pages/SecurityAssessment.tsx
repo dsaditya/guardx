@@ -239,6 +239,23 @@ const SecurityAssessment = () => {
         </div>
       </section>
 
+      {/* Inline Assessment Form */}
+      <section className="section-padding bg-background">
+        <div className="container-narrow">
+          <AnimatedSection>
+            <SectionLabel>Start your assessment</SectionLabel>
+            <h2 className="text-2xl md:text-3xl font-bold text-primary mb-8 font-heading">
+              Request a Security Assessment
+            </h2>
+          </AnimatedSection>
+          <AnimatedSection delay={0.05}>
+            <div className="max-w-4xl">
+              <LeadForm showEmail submitLabel="Submit Request" />
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* Coverage */}
       <section className="section-padding bg-background">
         <div className="container-narrow">
