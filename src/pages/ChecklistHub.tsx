@@ -139,13 +139,16 @@ const ChecklistHub = () => {
         message: `Checklist download: ${selected.label}`,
       });
 
-      const { error } = await supabase.functions.invoke("send-checklist-lead", {
+      // Email notification is best-effort — never block the download
+      const { error: mailError } = await supabase.functions.invoke("send-checklist-lead", {
         body: {
           ...parsed.data,
           checklistName: selected.label,
         },
       });
-      if (error) throw error;
+      if (mailError) console.error("Lead email failed:", mailError);
+
+
 
 
       // Trigger download
