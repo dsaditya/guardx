@@ -21,7 +21,7 @@ import {
 } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Button } from "@/components/ui/button";
-import LeadForm from "@/components/LeadForm";
+import SimpleLeadForm from "@/components/SimpleLeadForm";
 import { useSEO } from "@/hooks/use-seo";
 import {
   Dialog,
@@ -253,7 +253,7 @@ const SecurityAssessment = () => {
           </AnimatedSection>
           <AnimatedSection delay={0.05}>
             <div className="max-w-4xl">
-              <LeadForm showEmail submitLabel="Submit Request" />
+              <SimpleLeadForm submitLabel="Submit Request" />
             </div>
           </AnimatedSection>
         </div>
@@ -302,7 +302,7 @@ const SecurityAssessment = () => {
             </DialogDescription>
           </DialogHeader>
           <div className="pt-4">
-            <LeadForm showEmail submitLabel="Submit Request" />
+            <SimpleLeadForm submitLabel="Submit Request" />
           </div>
         </DialogContent>
       </Dialog>
