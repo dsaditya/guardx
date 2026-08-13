@@ -77,7 +77,7 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-section-dark border-b border-white/10">
       <div className="w-full px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center gap-6 h-16">
+        <div className="flex items-center gap-4 h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center flex-shrink-0" aria-label="GuardX360 home">
             <img
