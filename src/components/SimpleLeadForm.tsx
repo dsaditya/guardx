@@ -51,7 +51,7 @@ const SimpleLeadForm = ({ submitLabel = "Submit Request" }: SimpleLeadFormProps)
           name: data.name,
           phone: data.phone,
           email: data.email,
-          community: "",
+          community: "Not provided",
           checklistName: "Security Assessment Request",
         },
       });
