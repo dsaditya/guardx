@@ -11,7 +11,6 @@ type NavItem = {
 };
 
 const navItems: NavItem[] = [
-  { label: "Home", to: "/" },
   {
     label: "About Us",
     to: "/about",
@@ -40,24 +39,13 @@ const navItems: NavItem[] = [
     to: "/why-guardx360",
     children: [{ label: "Delivery Process", to: "/why-guardx360#delivery-process" }],
   },
-  { label: "Case Studies", to: "/case-studies" },
-  {
-    label: "Knowledge Center",
-    to: "/knowledge-center",
-    children: [
-      { label: "Blog", to: "/knowledge-center/blog" },
-      { label: "Checklists & Guides", to: "/knowledge-center/checklists-guides" },
-      { label: "Checklist Hub", to: "/resources" },
-    ],
-  },
+  { label: "Blog", to: "/knowledge-center/blog" },
   { label: "Contact Us", to: "/contact" },
   {
     label: "Partner With Us",
     to: "/partner-with-us",
     children: [
       { label: "Join Our Team", to: "/partner-with-us/join-our-team" },
-      { label: "Become Our Channel Partner", to: "/partner-with-us/channel-partner" },
-      { label: "Become a Dealer", to: "/partner-with-us/become-a-dealer" },
     ],
   },
 ];
@@ -89,7 +77,7 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-section-dark border-b border-white/10">
       <div className="w-full px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center gap-6 h-16">
+        <div className="flex items-center gap-4 h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center flex-shrink-0" aria-label="GuardX360 home">
             <img
@@ -100,7 +88,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation - centered */}
-          <nav className="hidden md:flex flex-1 items-center justify-center gap-5 lg:gap-8">
+          <nav className="hidden md:flex flex-1 items-center justify-center gap-4 lg:gap-6">
             {navItems.map((item) => (
                 <div
                   key={item.label}
@@ -137,10 +125,9 @@ const Header = () => {
           <div className="hidden md:flex flex-shrink-0">
             <Button
               onClick={() => navigate("/contact")}
-              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold uppercase tracking-wide text-[11px] lg:text-xs whitespace-nowrap"
-              size="sm"
+              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold uppercase tracking-wide text-[10px] lg:text-[11px] px-3 py-2 h-9 whitespace-nowrap"
             >
-              Request a Community Security Assessment
+              Request Assessment
             </Button>
           </div>
 
@@ -205,7 +192,7 @@ const Header = () => {
                 onClick={() => navigate("/contact")}
                 className="bg-accent hover:bg-accent/90 text-accent-foreground mt-4 font-semibold uppercase tracking-wide"
               >
-                Request a Community Security Assessment
+                Request Assessment
               </Button>
             </div>
           </nav>
