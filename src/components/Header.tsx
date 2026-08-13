@@ -125,10 +125,9 @@ const Header = () => {
           <div className="hidden md:flex flex-shrink-0">
             <Button
               onClick={() => navigate("/contact")}
-              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold uppercase tracking-wide text-[11px] lg:text-xs whitespace-nowrap"
-              size="sm"
+              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold uppercase tracking-wide text-[10px] lg:text-[11px] px-3 py-2 h-9 whitespace-nowrap"
             >
-              Request a Community Security Assessment
+              Request Assessment
             </Button>
           </div>
 
