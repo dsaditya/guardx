@@ -88,7 +88,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation - centered */}
-          <nav className="hidden md:flex flex-1 items-center justify-center gap-5 lg:gap-8">
+          <nav className="hidden md:flex flex-1 items-center justify-center gap-4 lg:gap-6">
             {navItems.map((item) => (
                 <div
                   key={item.label}
