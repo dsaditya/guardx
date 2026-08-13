@@ -111,15 +111,15 @@ const GetInTouchButton = () => {
           </DialogHeader>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <Label htmlFor="git-name" className="text-xs uppercase tracking-wide">Name</Label>
+              <Label htmlFor="git-name" className="text-xs uppercase tracking-wide">Name *</Label>
               <Input id="git-name" value={form.name} onChange={update("name")} required maxLength={100} className="mt-1" />
             </div>
             <div>
-              <Label htmlFor="git-phone" className="text-xs uppercase tracking-wide">Phone</Label>
+              <Label htmlFor="git-phone" className="text-xs uppercase tracking-wide">Phone *</Label>
               <Input id="git-phone" type="tel" value={form.phone} onChange={update("phone")} required maxLength={20} className="mt-1" />
             </div>
             <div>
-              <Label htmlFor="git-email" className="text-xs uppercase tracking-wide">Email</Label>
+              <Label htmlFor="git-email" className="text-xs uppercase tracking-wide">Email *</Label>
               <Input id="git-email" type="email" value={form.email} onChange={update("email")} required maxLength={255} className="mt-1" />
             </div>
             <div>
