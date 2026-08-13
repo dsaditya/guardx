@@ -192,7 +192,7 @@ const Header = () => {
                 onClick={() => navigate("/contact")}
                 className="bg-accent hover:bg-accent/90 text-accent-foreground mt-4 font-semibold uppercase tracking-wide"
               >
-                Request a Community Security Assessment
+                Request Assessment
               </Button>
             </div>
           </nav>
