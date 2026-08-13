@@ -11,7 +11,6 @@ type NavItem = {
 };
 
 const navItems: NavItem[] = [
-  { label: "Home", to: "/" },
   {
     label: "About Us",
     to: "/about",
@@ -40,24 +39,13 @@ const navItems: NavItem[] = [
     to: "/why-guardx360",
     children: [{ label: "Delivery Process", to: "/why-guardx360#delivery-process" }],
   },
-  { label: "Case Studies", to: "/case-studies" },
-  {
-    label: "Knowledge Center",
-    to: "/knowledge-center",
-    children: [
-      { label: "Blog", to: "/knowledge-center/blog" },
-      { label: "Checklists & Guides", to: "/knowledge-center/checklists-guides" },
-      { label: "Checklist Hub", to: "/resources" },
-    ],
-  },
+  { label: "Blog", to: "/knowledge-center/blog" },
   { label: "Contact Us", to: "/contact" },
   {
     label: "Partner With Us",
     to: "/partner-with-us",
     children: [
       { label: "Join Our Team", to: "/partner-with-us/join-our-team" },
-      { label: "Become Our Channel Partner", to: "/partner-with-us/channel-partner" },
-      { label: "Become a Dealer", to: "/partner-with-us/become-a-dealer" },
     ],
   },
 ];
