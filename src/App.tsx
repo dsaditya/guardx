@@ -34,6 +34,7 @@ import AssessmentModernization from "./pages/services/AssessmentModernization";
 import HealthScore from "./pages/services/HealthScore";
 import ChecklistHub from "./pages/ChecklistHub";
 import SecurityAssessment from "./pages/SecurityAssessment";
+import GatedCommunitySecurityHyderabad from "./pages/GatedCommunitySecurityHyderabad";
 
 const queryClient = new QueryClient();
 
@@ -68,6 +69,7 @@ const App = () => (
               <Route path="/knowledge-center/checklists-guides/:slug" element={<ChecklistDetail />} />
               <Route path="/resources" element={<ChecklistHub />} />
               <Route path="/security-assessment" element={<SecurityAssessment />} />
+              <Route path="/gated-community-security-hyderabad" element={<GatedCommunitySecurityHyderabad />} />
 
 
               <Route path="/contact" element={<Contact />} />
