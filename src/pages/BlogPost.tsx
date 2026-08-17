@@ -192,6 +192,19 @@ const BlogPostPage = () => {
                       {s.quote}
                     </blockquote>
                   )}
+                  {s.subsections?.map((sub) => (
+                    <div key={sub.id} id={sub.id} className="mt-8 scroll-mt-24">
+                      <h3 className="text-xl md:text-2xl font-bold text-primary mb-3 font-heading">
+                        {sub.heading}
+                      </h3>
+                      <div className="space-y-4 text-secondary text-base leading-relaxed">
+                        {sub.body.map((p, i) => (
+                          <p key={i}>{p}</p>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+
                 </section>
               ))}
 
