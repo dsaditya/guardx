@@ -71,6 +71,7 @@ const App = () => (
               <Route path="/resources" element={<ChecklistHub />} />
               <Route path="/security-assessment" element={<SecurityAssessment />} />
               <Route path="/gated-community-security-hyderabad" element={<GatedCommunitySecurityHyderabad />} />
+              <Route path="/security-as-a-standard" element={<SecurityAsAStandard />} />
 
 
               <Route path="/contact" element={<Contact />} />
