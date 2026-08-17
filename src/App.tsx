@@ -35,6 +35,7 @@ import HealthScore from "./pages/services/HealthScore";
 import ChecklistHub from "./pages/ChecklistHub";
 import SecurityAssessment from "./pages/SecurityAssessment";
 import GatedCommunitySecurityHyderabad from "./pages/GatedCommunitySecurityHyderabad";
+import SecurityAsAStandard from "./pages/SecurityAsAStandard";
 
 const queryClient = new QueryClient();
 
