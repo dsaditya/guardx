@@ -79,11 +79,22 @@ const BlogPostPage = () => {
       {/* Featured image */}
       <section className="bg-background pt-10">
         <div className="container-narrow max-w-5xl">
-          <div className="aspect-[16/7] bg-section-alt border border-border flex items-center justify-center">
-            <Camera className="h-12 w-12 text-primary/30" strokeWidth={1.5} />
+          <div className="aspect-[16/7] bg-section-alt border border-border flex items-center justify-center overflow-hidden">
+            {post.image ? (
+              <img
+                src={post.image}
+                alt={post.title}
+                width={1600}
+                height={900}
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <Camera className="h-12 w-12 text-primary/30" strokeWidth={1.5} />
+            )}
           </div>
         </div>
       </section>
+
 
       {/* ARTICLE + TOC */}
       <section className="pt-10 pb-20 bg-background">
