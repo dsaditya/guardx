@@ -245,8 +245,12 @@ const BlogPostPage = () => {
           <div className="grid md:grid-cols-3 gap-6">
             {related.map((r) => (
               <article key={r.slug} className="bg-background border border-border flex flex-col">
-                <div className="aspect-[16/9] bg-section-alt border-b border-border flex items-center justify-center">
-                  <Camera className="h-8 w-8 text-primary/30" strokeWidth={1.5} />
+                <div className="aspect-[16/9] bg-section-alt border-b border-border flex items-center justify-center overflow-hidden">
+                  {r.image ? (
+                    <img src={r.image} alt={r.title} loading="lazy" className="w-full h-full object-cover" />
+                  ) : (
+                    <Camera className="h-8 w-8 text-primary/30" strokeWidth={1.5} />
+                  )}
                 </div>
                 <div className="p-5 flex flex-col flex-1">
                   <span className="text-[10px] uppercase tracking-widest text-accent font-semibold mb-2">
