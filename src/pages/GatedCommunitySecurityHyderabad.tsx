@@ -46,7 +46,7 @@ import {
 } from "@/components/ui/accordion";
 import heroImage from "@/assets/lp/gated-entrance.jpg";
 import rackImage from "@/assets/lp/network-rack.jpg";
-import founderAsset from "@/assets/guardx360-founder.png.asset.json";
+import founderImage from "@/assets/lp/founder.png";
 
 const trustStats = [
   { value: "10+ Years", label: "Security industry experience" },
@@ -584,7 +584,7 @@ const GatedCommunitySecurityHyderabad = () => {
             <AnimatedSection className="lg:col-span-4">
               <div>
                 <img
-                  src={founderAsset.url}
+                  src={founderImage}
                   alt="Founder of GuardX360"
                   className="w-full max-w-sm object-cover"
                   width={772}
