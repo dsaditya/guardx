@@ -110,10 +110,14 @@ const BlogIndex = () => {
                       <article className="bg-section-alt border border-border h-full flex flex-col">
                         <Link
                           to={`/knowledge-center/blog/${post.slug}`}
-                          className="aspect-[16/9] bg-primary/5 border-b border-border flex items-center justify-center text-secondary"
+                          className="aspect-[16/9] bg-primary/5 border-b border-border flex items-center justify-center text-secondary overflow-hidden"
                           aria-label={post.title}
                         >
-                          <Camera className="h-8 w-8 text-primary/30" strokeWidth={1.5} />
+                          {post.image ? (
+                            <img src={post.image} alt={post.title} loading="lazy" className="w-full h-full object-cover" />
+                          ) : (
+                            <Camera className="h-8 w-8 text-primary/30" strokeWidth={1.5} />
+                          )}
                         </Link>
                         <div className="p-5 flex flex-col flex-1">
                           <span className="text-[10px] uppercase tracking-widest text-accent font-semibold mb-3">

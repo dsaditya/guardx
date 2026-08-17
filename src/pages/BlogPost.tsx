@@ -79,11 +79,22 @@ const BlogPostPage = () => {
       {/* Featured image */}
       <section className="bg-background pt-10">
         <div className="container-narrow max-w-5xl">
-          <div className="aspect-[16/7] bg-section-alt border border-border flex items-center justify-center">
-            <Camera className="h-12 w-12 text-primary/30" strokeWidth={1.5} />
+          <div className="aspect-[16/7] bg-section-alt border border-border flex items-center justify-center overflow-hidden">
+            {post.image ? (
+              <img
+                src={post.image}
+                alt={post.title}
+                width={1600}
+                height={900}
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <Camera className="h-12 w-12 text-primary/30" strokeWidth={1.5} />
+            )}
           </div>
         </div>
       </section>
+
 
       {/* ARTICLE + TOC */}
       <section className="pt-10 pb-20 bg-background">
@@ -181,6 +192,19 @@ const BlogPostPage = () => {
                       {s.quote}
                     </blockquote>
                   )}
+                  {s.subsections?.map((sub) => (
+                    <div key={sub.id} id={sub.id} className="mt-8 scroll-mt-24">
+                      <h3 className="text-xl md:text-2xl font-bold text-primary mb-3 font-heading">
+                        {sub.heading}
+                      </h3>
+                      <div className="space-y-4 text-secondary text-base leading-relaxed">
+                        {sub.body.map((p, i) => (
+                          <p key={i}>{p}</p>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+
                 </section>
               ))}
 
@@ -221,8 +245,12 @@ const BlogPostPage = () => {
           <div className="grid md:grid-cols-3 gap-6">
             {related.map((r) => (
               <article key={r.slug} className="bg-background border border-border flex flex-col">
-                <div className="aspect-[16/9] bg-section-alt border-b border-border flex items-center justify-center">
-                  <Camera className="h-8 w-8 text-primary/30" strokeWidth={1.5} />
+                <div className="aspect-[16/9] bg-section-alt border-b border-border flex items-center justify-center overflow-hidden">
+                  {r.image ? (
+                    <img src={r.image} alt={r.title} loading="lazy" className="w-full h-full object-cover" />
+                  ) : (
+                    <Camera className="h-8 w-8 text-primary/30" strokeWidth={1.5} />
+                  )}
                 </div>
                 <div className="p-5 flex flex-col flex-1">
                   <span className="text-[10px] uppercase tracking-widest text-accent font-semibold mb-2">
