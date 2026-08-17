@@ -23,6 +23,7 @@ const navItems: NavItem[] = [
     label: "Services",
     to: "/services",
     children: [
+      { label: "Gated Community Security Hyderabad", to: "/gated-community-security-hyderabad" },
       { label: "CCTV Surveillance", to: "/services/cctv-surveillance" },
       { label: "Boom Barrier & Vehicle Access", to: "/services/boom-barrier-vehicle-access" },
       { label: "Biometric & Access Control", to: "/services/biometric-access-control" },
