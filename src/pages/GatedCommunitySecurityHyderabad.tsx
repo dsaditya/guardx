@@ -581,8 +581,8 @@ const GatedCommunitySecurityHyderabad = () => {
       <section className="section-padding bg-section-alt">
         <div className="container-narrow">
           <div className="grid lg:grid-cols-12 gap-10 items-center">
-            <AnimatedSection>
-              <div className="lg:col-span-4">
+            <AnimatedSection className="lg:col-span-4">
+              <div>
                 <img
                   src={founderAsset.url}
                   alt="Founder of GuardX360"
@@ -593,8 +593,8 @@ const GatedCommunitySecurityHyderabad = () => {
                 />
               </div>
             </AnimatedSection>
-            <AnimatedSection delay={0.05}>
-              <div className="lg:col-span-8">
+            <AnimatedSection delay={0.05} className="lg:col-span-8">
+              <div>
                 <Label>Founder story</Label>
                 <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading mb-6">
                   Built by people who service what they install
