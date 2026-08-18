@@ -37,7 +37,7 @@ export const blogPosts: BlogPost[] = [
     metaDescription:
       "Most gated community security systems cover 1-2 layers, not 5. See what a properly planned, integrated system actually includes and what's missing.",
     intro:
-      "Ask a committee what security they have, and you'll usually get a list. CCTV. A boom barrier. Maybe biometric access. Solar fencing if the budget stretched that far. That list looks complete on paper. It usually isn't. Owning five security products and having one working gated community security systems setup are not the same thing. The gap between the two is where most real-world security failures start — it rarely shows up until something has already gone wrong: a gate that didn't stop the right vehicle, footage that turned out to be missing, or an access log nobody can actually produce.",
+      "Ask a committee what security they have, and you'll usually get a list. CCTV. A <strong>boom barrier</strong>. Maybe <strong>biometric access</strong>. <strong>Solar fencing</strong> if the budget stretched that far. That list looks complete on paper. It usually isn't. Owning five security products and having one working <strong>gated community security systems</strong> setup are not the same thing. The gap between the two is where most real-world security failures start — it rarely shows up until something has already gone wrong: a gate that didn't stop the right vehicle, footage that turned out to be missing, or an access log nobody can actually produce.",
     sections: [
       {
         id: "products-vs-system",
@@ -45,8 +45,8 @@ export const blogPosts: BlogPost[] = [
         body: [
           "Most committees never actually sit down and answer this question: do all these systems, together, address the risks your community actually faces?",
           "A community can have sharp cameras, a working gate, and biometric entry, and still have serious holes. Not because any single device is faulty. Because nobody designed how they connect.",
-          "The CCTV vendor installed cameras. The boom barrier came from someone else. Biometrics, a third contractor. A fourth handled the network or the power backup. Each piece works on its own. Nobody owns how they work together, and when something breaks between two systems, both vendors tend to point at each other instead of at the actual cause.",
-          "That's how residential security solutions turn into a pile of separate purchases instead of one planned system.",
+          "The CCTV vendor installed cameras. The <strong>boom barrier</strong> came from someone else. Biometrics, a third contractor. A fourth handled the network or the power backup. Each piece works on its own. Nobody owns how they work together, and when something breaks between two systems, both vendors tend to point at each other instead of at the actual cause.",
+          "That's how <strong>residential security solutions</strong> turn into a pile of separate purchases instead of one planned system.",
         ],
       },
       {
@@ -61,15 +61,15 @@ export const blogPosts: BlogPost[] = [
             heading: "Layer 1 — Perimeter security",
             body: [
               "The first question is simple: can someone get onto the property without going through a gate at all?",
-              "Boundary walls, fencing, and perimeter systems like solar fencing exist to close that gap. A locked main gate means very little if a stretch of wall or a badly lit boundary elsewhere on the property is easy to climb or cut through. Perimeter security is the layer that's easiest to overlook, because it isn't visible on a daily walk through the community.",
+              "Boundary walls, fencing, and perimeter systems like <strong>solar fencing</strong> exist to close that gap. A locked main gate means very little if a stretch of wall or a badly lit boundary elsewhere on the property is easy to climb or cut through. <strong>Perimeter security</strong> is the layer that's easiest to overlook, because it isn't visible on a daily walk through the community.",
             ],
           },
           {
             id: "layer-2-vehicle-entry",
             heading: "Layer 2 — Vehicle entry",
             body: [
-              "A boom barrier stops a vehicle. It doesn't know whether that vehicle should be let in.",
-              "That decision belongs to a separate identification layer: UHF, RFID, or ANPR. The barrier is just the physical arm. The system behind it needs to answer who's arriving, whether the vehicle is authorised, how visitors are handled, what happens when identification fails, and whether any of this is actually being logged anywhere retrievable.",
+              "A <strong>boom barrier</strong> stops a vehicle. It doesn't know whether that vehicle should be let in.",
+              "That decision belongs to a separate identification layer: UHF, RFID, or <strong>ANPR</strong>. The barrier is just the physical arm. The system behind it needs to answer who's arriving, whether the vehicle is authorised, how visitors are handled, what happens when identification fails, and whether any of this is actually being logged anywhere retrievable.",
               "Communities often discover this gap the hard way, when a barrier opens for anyone tailgating a resident's car because nothing downstream is actually verifying the vehicle.",
             ],
           },
@@ -96,7 +96,7 @@ export const blogPosts: BlogPost[] = [
             body: [
               "This is the layer almost everyone forgets, and it's the one that determines whether the other four keep working.",
               "Cameras stop recording. Switches develop faults. Barriers start acting up again for reasons nobody wrote down. Access devices drift out of sync. Without documentation, the next technician has to relearn the entire site from zero, every single time, which is exactly why the same complaint keeps coming back months later.",
-              "A functioning system needs equipment labelling, network mapping, recording checks, fault history, preventive maintenance, and clear service records. Security should stay understandable even when the vendor or the technician changes.",
+              "A functioning system needs equipment labelling, network mapping, recording checks, fault history, <strong>preventive maintenance</strong>, and clear service records. Security should stay understandable even when the vendor or the technician changes.",
             ],
           },
         ],
@@ -107,23 +107,23 @@ export const blogPosts: BlogPost[] = [
         body: [
           "Instead of buying security one device at a time, it helps to look at the full sequence: perimeter, vehicle entry, people entry, surveillance, monitoring and maintenance.",
           "Each layer answers a different question: can someone bypass the gates, which vehicles get in, who can access restricted areas, can activity actually be seen and recorded, and will any of this still be working in a year.",
-          "This doesn't mean every layer has to sit on one software platform. It means the planning has to be connected, even when the hardware isn't. A security system integrator looks at that whole flow before recommending anything. A dealer usually looks at whatever product they sell.",
+          "This doesn't mean every layer has to sit on one software platform. It means the planning has to be connected, even when the hardware isn't. A <strong>security system integrator</strong> looks at that whole flow before recommending anything. A dealer usually looks at whatever product they sell.",
         ],
       },
       {
         id: "one-product-at-a-time",
         heading: "The problem with buying security one product at a time",
         body: [
-          "A pattern that shows up constantly: a community installs CCTV first, a boom barrier gets added later, and biometric access comes after that. Each purchase made sense on its own, at the time it was made.",
+          "A pattern that shows up constantly: a community installs CCTV first, a <strong>boom barrier</strong> gets added later, and <strong>biometric access</strong> comes after that. Each purchase made sense on its own, at the time it was made.",
           "But nobody stopped to ask whether the CCTV actually captures every vehicle passing through the barrier. What happens when a resident's ID fails to scan? How are visitor vehicles logged? Is the biometric system controlling access, or just recording attendance for payroll? Are staff entry points even covered by a camera? And when one part of this fails, whose job is it to notice?",
-          "The community technically owns three security systems. What it may not have is one gated community security solution: three products sitting on the same property, unconnected, each with a different vendor to call when something goes wrong.",
+          "The community technically owns three security systems. What it may not have is one <strong>gated community security solution</strong>: three products sitting on the same property, unconnected, each with a different vendor to call when something goes wrong.",
         ],
       },
       {
         id: "new-developments",
         heading: "Why this matters even more for new developments",
         body: [
-          "For builders and developers, the smartest time to plan gated community security systems is before civil work, wiring, and networking are finalised — not after.",
+          "For builders and developers, the smartest time to plan <strong>gated community security systems</strong> is before civil work, wiring, and networking are finalised — not after.",
           "Wait too long and the important decisions are already locked in. Gate positions are fixed. Conduit routes are done. Network points fall short of what's actually needed. UPS and power planning gets skipped or treated as an afterthought. Camera mounting spots end up compromised by whatever's structurally left over once everything else is built.",
           "Planning early lets perimeter protection, vehicle flow, pedestrian access, surveillance, and networking get designed as one system instead of five separate retrofits stacked on top of each other later.",
         ],
@@ -150,7 +150,7 @@ export const blogPosts: BlogPost[] = [
         id: "guardx360-standard",
         heading: "The GuardX360 standard",
         body: [
-          "We don't start conversations with \"which camera should you buy\" or \"which boom barrier do you need.\"",
+          "We don't start conversations with \"which camera should you buy\" or \"which <strong>boom barrier</strong> do you need.\"",
           "We start with what gap in your security flow you're actually trying to close, and how a new system connects to what's already installed.",
           "Every community's risk profile is different, and not every property needs every technology on this list. But every community should be able to explain how its perimeter, vehicle access, people access, surveillance, and maintenance work together — not just list what it owns.",
           "That's the thinking behind Security as a Standard.",

@@ -163,9 +163,10 @@ const BlogPostPage = () => {
 
             {/* Body */}
             <article className="lg:col-span-9 order-1 lg:order-2 max-w-3xl">
-              <p className="text-lg md:text-xl text-primary leading-relaxed mb-10 font-medium">
-                {post.intro}
-              </p>
+              <p
+                className="text-lg md:text-xl text-primary leading-relaxed mb-10 font-medium"
+                dangerouslySetInnerHTML={{ __html: post.intro }}
+              />
 
               {post.sections.map((s) => (
                 <section key={s.id} id={s.id} className="mb-10 scroll-mt-24">
@@ -174,7 +175,7 @@ const BlogPostPage = () => {
                   </h2>
                   <div className="space-y-4 text-secondary text-base leading-relaxed">
                     {s.body.map((p, i) => (
-                      <p key={i}>{p}</p>
+                      <p key={i} dangerouslySetInnerHTML={{ __html: p }} />
                     ))}
                   </div>
                   {s.list && (
@@ -199,7 +200,7 @@ const BlogPostPage = () => {
                       </h3>
                       <div className="space-y-4 text-secondary text-base leading-relaxed">
                         {sub.body.map((p, i) => (
-                          <p key={i}>{p}</p>
+                          <p key={i} dangerouslySetInnerHTML={{ __html: p }} />
                         ))}
                       </div>
                     </div>
