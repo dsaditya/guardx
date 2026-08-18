@@ -3,6 +3,15 @@ import { ArrowRight, Camera, Car, Fingerprint, Zap, ScanLine, Wrench, ClipboardC
 import { Button } from "@/components/ui/button";
 import PageHero from "@/components/PageHero";
 import AnimatedSection from "@/components/AnimatedSection";
+import cctvImage from "@/assets/services/cctv-surveillance.jpg";
+import boomBarrierImage from "@/assets/services/boom-barrier.jpg";
+import biometricImage from "@/assets/services/biometric-access.jpg";
+import solarFencingImage from "@/assets/services/solar-fencing.jpg";
+import anprUhfImage from "@/assets/services/anpr-uhf.jpg";
+import amcImage from "@/assets/services/amc.jpg";
+import assessmentImage from "@/assets/services/assessment-modernization.jpg";
+import healthScoreImage from "@/assets/services/health-score.jpg";
+
 
 const slugMap: Record<string, string> = {
   cctv: "cctv-surveillance",
@@ -19,7 +28,9 @@ const services = [
   {
     id: "cctv",
     icon: Camera,
+    image: cctvImage,
     title: "CCTV Surveillance Systems",
+
     keywords: "CCTV installation Hyderabad · CCTV for gated community Hyderabad · IP camera installation apartment complex",
     paragraphs: [
       "A CCTV system is only as reliable as the quality of its design and the consistency of its maintenance. A camera positioned at the wrong angle, a recorder with insufficient storage, or a network dropping frames under load will all fail you at the exact moment you need the system most.",
@@ -31,7 +42,9 @@ const services = [
   {
     id: "boom-barrier",
     icon: Car,
+    image: boomBarrierImage,
     title: "Boom Barrier & Vehicle Access Management",
+
     keywords: "boom barrier for apartment Hyderabad · vehicle access management gated community · ANPR boom barrier Hyderabad",
     paragraphs: [
       "Uncontrolled vehicle movement is one of the most common security complaints in gated communities. Manual registers, ad-hoc guard decisions, and broken boom barriers create gaps that expose residents to unauthorized access, parking disputes, and security incidents.",
@@ -42,7 +55,9 @@ const services = [
   {
     id: "biometric",
     icon: Fingerprint,
+    image: biometricImage,
     title: "Biometric & Access Control Systems",
+
     keywords: "biometric access control Hyderabad · access control system for apartment · RFID access control gated community Hyderabad",
     paragraphs: [
       "Controlling who enters your community and when is the foundation of physical security. Access control systems eliminate dependence on manual entry registers and guard judgment for routine access decisions, and create a reliable digital audit trail of every entry and exit event.",
@@ -53,7 +68,9 @@ const services = [
   {
     id: "solar-fencing",
     icon: Zap,
+    image: solarFencingImage,
     title: "Solar Fencing Systems",
+
     keywords: "solar fencing for apartments Hyderabad · perimeter protection gated community · solar electric fence installation Hyderabad",
     paragraphs: [
       "Perimeter protection is the first and most critical layer of a community's security infrastructure. A weak or unmaintained perimeter fence creates an easy entry point for intruders — regardless of how sophisticated your internal surveillance or access control systems are.",
@@ -64,7 +81,9 @@ const services = [
   {
     id: "anpr-uhf",
     icon: ScanLine,
+    image: anprUhfImage,
     title: "ANPR & UHF Vehicle Access Systems",
+
     keywords: "ANPR system for apartments Hyderabad · UHF vehicle access gated community · automatic vehicle entry system Hyderabad",
     paragraphs: [
       "High-traffic residential communities require vehicle access management that is fast, accurate, and does not depend on manual verification at every gate. ANPR (Automatic Number Plate Recognition) and UHF long-range vehicle identification systems eliminate queues, reduce guard dependency, and create a verifiable digital record of every vehicle entering and exiting the community.",
@@ -74,7 +93,9 @@ const services = [
   {
     id: "amc",
     icon: Wrench,
+    image: amcImage,
     title: "Annual Maintenance Contracts (AMC)",
+
     keywords: "AMC for security systems Hyderabad · CCTV annual maintenance contract · security system maintenance gated community",
     paragraphs: [
       "A security system that is not maintained is a security liability. Camera faults, boom barrier failures, access control outages, and solar fence downtime are almost always the result of deferred maintenance — not equipment failure.",
@@ -86,7 +107,9 @@ const services = [
   {
     id: "assessment",
     icon: ClipboardCheck,
+    image: assessmentImage,
     title: "Security Infrastructure Assessment & Modernization",
+
     keywords: "security infrastructure audit Hyderabad · security system modernization gated community · legacy CCTV upgrade RWA",
     paragraphs: [
       "Many communities are running security systems that were installed years ago by multiple vendors, with no documentation, inconsistent maintenance history, and components that no longer integrate with each other. The result is a patchwork of systems that creates more operational burden than security value.",
@@ -97,7 +120,9 @@ const services = [
   {
     id: "audit",
     icon: ShieldCheck,
+    image: healthScoreImage,
     title: "Annual Security Audit",
+
     keywords: "annual security audit gated community · yearly security system audit Hyderabad · security infrastructure audit RWA",
     paragraphs: [
       "An AMC keeps individual systems running. An Annual Security Audit steps back and evaluates the whole infrastructure — coverage, integration, documentation, compliance, and readiness — against your community's current Security Health Score.",
@@ -158,9 +183,16 @@ const Services = () => {
                     </p>
                   </div>
                   <div className="md:col-span-8 space-y-4 text-secondary text-base leading-relaxed">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      loading="lazy"
+                      className="w-full h-64 object-cover border border-border"
+                    />
                     {service.paragraphs.map((p, i) => (
                       <p key={i}>{p}</p>
                     ))}
+
                     <div className="pt-4 flex flex-wrap gap-3">
                       <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold uppercase tracking-wide">
                         <Link to="/contact">
