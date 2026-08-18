@@ -49,7 +49,7 @@ const GetInTouchButton = () => {
         /* ignore */
       }
       setOpen(true);
-    }, 4000);
+    }, 2000);
     return () => window.clearTimeout(t);
   }, []);
 
