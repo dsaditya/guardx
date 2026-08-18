@@ -60,6 +60,35 @@ const Footer = () => {
             <p className="text-white/40 text-sm mt-4 italic">
               Security as a Standard™
             </p>
+            <div className="flex items-center gap-4 mt-6">
+              <a
+                href={socialLinks.instagram}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GuardX360 on Instagram"
+                className="text-white/60 hover:text-[#EC6F28] transition-colors"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a
+                href={socialLinks.facebook}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GuardX360 on Facebook"
+                className="text-white/60 hover:text-[#EC6F28] transition-colors"
+              >
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a
+                href={socialLinks.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GuardX360 on LinkedIn"
+                className="text-white/60 hover:text-[#EC6F28] transition-colors"
+              >
+                <Linkedin className="h-5 w-5" />
+              </a>
+            </div>
           </div>
 
           {footerCols.map((col) => (
