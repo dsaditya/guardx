@@ -3,6 +3,15 @@ import { ArrowRight, Camera, Car, Fingerprint, Zap, ScanLine, Wrench, ClipboardC
 import { Button } from "@/components/ui/button";
 import PageHero from "@/components/PageHero";
 import AnimatedSection from "@/components/AnimatedSection";
+import cctvImage from "@/assets/services/cctv-surveillance.jpg";
+import boomBarrierImage from "@/assets/services/boom-barrier.jpg";
+import biometricImage from "@/assets/services/biometric-access.jpg";
+import solarFencingImage from "@/assets/services/solar-fencing.jpg";
+import anprUhfImage from "@/assets/services/anpr-uhf.jpg";
+import amcImage from "@/assets/services/amc.jpg";
+import assessmentImage from "@/assets/services/assessment-modernization.jpg";
+import healthScoreImage from "@/assets/services/health-score.jpg";
+
 
 const slugMap: Record<string, string> = {
   cctv: "cctv-surveillance",
