@@ -1,4 +1,7 @@
 import fiveLayersImage from "@/assets/blog/five-layers-gated-community.jpg";
+import maintenanceImage from "@/assets/blog/preventive-maintenance.jpg";
+import residentsImage from "@/assets/blog/residents-expect-2026.jpg";
+import industrialImage from "@/assets/blog/industrial-site-uptime.jpg";
 
 export interface BlogSection {
   id: string;
@@ -180,6 +183,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "preventive-maintenance-security-system-vs-liability",
+    image: maintenanceImage,
     title:
       "Why Preventive Maintenance Is the Real Difference Between a Security System and a Security Liability",
     excerpt:
@@ -252,6 +256,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "gated-community-security-2026-residents-expect",
+    image: residentsImage,
     title:
       "Gated Community Security in 2026: What Residents Actually Expect vs. What Most Systems Deliver",
     excerpt:
@@ -308,6 +313,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "industrial-site-security-designing-for-uptime",
+    image: industrialImage,
     title:
       "Industrial Site Security: Designing for Uptime, Not Just Detection",
     excerpt:
