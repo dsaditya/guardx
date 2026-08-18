@@ -163,9 +163,10 @@ const BlogPostPage = () => {
 
             {/* Body */}
             <article className="lg:col-span-9 order-1 lg:order-2 max-w-3xl">
-              <p className="text-lg md:text-xl text-primary leading-relaxed mb-10 font-medium">
-                {post.intro}
-              </p>
+              <p
+                className="text-lg md:text-xl text-primary leading-relaxed mb-10 font-medium"
+                dangerouslySetInnerHTML={{ __html: post.intro }}
+              />
 
               {post.sections.map((s) => (
                 <section key={s.id} id={s.id} className="mb-10 scroll-mt-24">
