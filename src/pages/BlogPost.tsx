@@ -175,7 +175,7 @@ const BlogPostPage = () => {
                   </h2>
                   <div className="space-y-4 text-secondary text-base leading-relaxed">
                     {s.body.map((p, i) => (
-                      <p key={i}>{p}</p>
+                      <p key={i} dangerouslySetInnerHTML={{ __html: p }} />
                     ))}
                   </div>
                   {s.list && (
