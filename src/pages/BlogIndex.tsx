@@ -44,7 +44,6 @@ const BlogIndex = () => {
       <Breadcrumbs
         items={[
           { label: "Home", to: "/" },
-          { label: "Knowledge Center", to: "/knowledge-center" },
           { label: "Blog" },
         ]}
       />
