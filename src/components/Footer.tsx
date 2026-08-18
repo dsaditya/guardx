@@ -1,5 +1,13 @@
 import logo from "@/assets/guardx360-logo.png";
 import { Link } from "react-router-dom";
+import { Instagram, Facebook, Linkedin } from "lucide-react";
+
+const socialLinks = {
+  instagram: "https://www.instagram.com/guardx360?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+  facebook: "#",
+  linkedin: "#",
+};
+
 
 const footerCols = [
   {
