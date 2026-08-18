@@ -85,7 +85,7 @@ const App = () => (
           </main>
           <Footer />
           <GetInTouchButton />
-
+          <WhatsAppButton />
         </div>
       </BrowserRouter>
     </TooltipProvider>
