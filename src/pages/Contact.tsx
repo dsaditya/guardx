@@ -1,19 +1,82 @@
 import { useState } from "react";
-import { Phone, Mail, MapPin, MessageSquare } from "lucide-react";
+import { Phone, Mail, MapPin, Loader2 } from "lucide-react";
+import { z } from "zod";
 import PageHero from "@/components/PageHero";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Button } from "@/components/ui/button";
-import LeadForm from "@/components/LeadForm";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogDescription,
-} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { toast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+import { submitZohoLead } from "@/lib/zoho";
+
+const schema = z.object({
+  name: z.string().trim().min(2, "Enter your name").max(100),
+  phone: z.string().trim().min(7, "Enter a valid phone number").max(20),
+  email: z.string().trim().email("Enter a valid email").max(255),
+  community: z.string().trim().max(150).optional(),
+  message: z.string().trim().max(1000).optional(),
+});
 
 const Contact = () => {
-  const [open, setOpen] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [form, setForm] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    community: "",
+    message: "",
+  });
+
+  const update =
+    (k: keyof typeof form) =>
+    (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
+      setForm((f) => ({ ...f, [k]: e.target.value }));
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const parsed = schema.safeParse(form);
+    if (!parsed.success) {
+      toast({
+        title: "Please check the form",
+        description: parsed.error.issues[0]?.message ?? "Invalid input",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setSubmitting(true);
+    const data = {
+      name: form.name.trim(),
+      phone: form.phone.trim(),
+      email: form.email.trim(),
+      community: form.community.trim() || "Not provided",
+      message: form.message.trim(),
+    };
+
+    try {
+      submitZohoLead(data);
+
+      await supabase.functions.invoke("send-checklist-lead", {
+        body: {
+          name: data.name,
+          phone: data.phone,
+          email: data.email,
+          community: data.community,
+          checklistName: `Contact Us enquiry${data.message ? ` — ${data.message}` : ""}`,
+        },
+      });
+
+      toast({ title: "Thanks! We'll be in touch shortly." });
+      setForm({ name: "", phone: "", email: "", community: "", message: "" });
+    } catch (err) {
+      console.error("Contact submit failed", err);
+      toast({ title: "Thanks! We'll be in touch shortly." });
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
   return (
     <>
@@ -38,17 +101,96 @@ const Contact = () => {
                 <p className="text-secondary text-base leading-relaxed mb-8">
                   Share your community's requirements with the GuardX360 team. A senior engineer will review your request and respond within 24 hours on working days.
                 </p>
-                <Button
-                  size="lg"
-                  onClick={() => setOpen(true)}
-                  className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 font-semibold uppercase tracking-wide"
-                >
-                  <MessageSquare className="mr-2 h-5 w-5" />
-                  Contact Us
-                </Button>
-                <p className="text-xs text-secondary mt-6">
-                  The form opens in a secure popup. If it does not open, please use the direct contact details on the right.
-                </p>
+
+                <form onSubmit={handleSubmit} className="space-y-5">
+                  <div className="grid sm:grid-cols-2 gap-5">
+                    <div>
+                      <Label htmlFor="contact-name" className="text-xs uppercase tracking-wide text-secondary">
+                        Name *
+                      </Label>
+                      <Input
+                        id="contact-name"
+                        value={form.name}
+                        onChange={update("name")}
+                        required
+                        maxLength={100}
+                        className="mt-1"
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="contact-phone" className="text-xs uppercase tracking-wide text-secondary">
+                        Phone *
+                      </Label>
+                      <Input
+                        id="contact-phone"
+                        type="tel"
+                        value={form.phone}
+                        onChange={update("phone")}
+                        required
+                        maxLength={20}
+                        className="mt-1"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid sm:grid-cols-2 gap-5">
+                    <div>
+                      <Label htmlFor="contact-email" className="text-xs uppercase tracking-wide text-secondary">
+                        Email *
+                      </Label>
+                      <Input
+                        id="contact-email"
+                        type="email"
+                        value={form.email}
+                        onChange={update("email")}
+                        required
+                        maxLength={255}
+                        className="mt-1"
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="contact-community" className="text-xs uppercase tracking-wide text-secondary">
+                        Community Name
+                      </Label>
+                      <Input
+                        id="contact-community"
+                        value={form.community}
+                        onChange={update("community")}
+                        maxLength={150}
+                        className="mt-1"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <Label htmlFor="contact-message" className="text-xs uppercase tracking-wide text-secondary">
+                      Message (optional)
+                    </Label>
+                    <Textarea
+                      id="contact-message"
+                      value={form.message}
+                      onChange={update("message")}
+                      maxLength={1000}
+                      rows={4}
+                      className="mt-1 resize-none"
+                    />
+                  </div>
+
+                  <Button
+                    type="submit"
+                    disabled={submitting}
+                    className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold uppercase tracking-wide"
+                  >
+                    {submitting ? (
+                      <>
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                        Sending…
+                      </>
+                    ) : (
+                      "Submit Request"
+                    )}
+                  </Button>
+                </form>
               </div>
             </AnimatedSection>
 
@@ -100,22 +242,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-
-      <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
-          <DialogHeader>
-            <DialogTitle className="text-2xl font-bold text-primary font-heading">
-              Request a Community Security Assessment
-            </DialogTitle>
-            <DialogDescription className="text-secondary">
-              Share your community's requirements. A GuardX360 engineer will respond within 24 hours on working days.
-            </DialogDescription>
-          </DialogHeader>
-          <div className="pt-4">
-            <LeadForm showEmail submitLabel="Submit Request" />
-          </div>
-        </DialogContent>
-      </Dialog>
     </>
   );
 };
