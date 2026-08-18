@@ -37,7 +37,7 @@ export const blogPosts: BlogPost[] = [
     metaDescription:
       "Most gated community security systems cover 1-2 layers, not 5. See what a properly planned, integrated system actually includes and what's missing.",
     intro:
-      "Ask a committee what security they have, and you'll usually get a list. CCTV. A boom barrier. Maybe biometric access. Solar fencing if the budget stretched that far. That list looks complete on paper. It usually isn't. Owning five security products and having one working gated community security systems setup are not the same thing. The gap between the two is where most real-world security failures start — it rarely shows up until something has already gone wrong: a gate that didn't stop the right vehicle, footage that turned out to be missing, or an access log nobody can actually produce.",
+      "Ask a committee what security they have, and you'll usually get a list. CCTV. A <strong>boom barrier</strong>. Maybe <strong>biometric access</strong>. <strong>Solar fencing</strong> if the budget stretched that far. That list looks complete on paper. It usually isn't. Owning five security products and having one working <strong>gated community security systems</strong> setup are not the same thing. The gap between the two is where most real-world security failures start — it rarely shows up until something has already gone wrong: a gate that didn't stop the right vehicle, footage that turned out to be missing, or an access log nobody can actually produce.",
     sections: [
       {
         id: "products-vs-system",
