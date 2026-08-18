@@ -200,7 +200,7 @@ const BlogPostPage = () => {
                       </h3>
                       <div className="space-y-4 text-secondary text-base leading-relaxed">
                         {sub.body.map((p, i) => (
-                          <p key={i}>{p}</p>
+                          <p key={i} dangerouslySetInnerHTML={{ __html: p }} />
                         ))}
                       </div>
                     </div>
