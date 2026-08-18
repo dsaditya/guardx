@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { z } from "zod";
 import { MessageSquare, Loader2 } from "lucide-react";
 import {
@@ -34,6 +34,24 @@ const GetInTouchButton = () => {
     community: "",
     message: "",
   });
+
+  // Auto-open once per browser session
+  useEffect(() => {
+    try {
+      if (sessionStorage.getItem("gx-git-shown") === "1") return;
+    } catch {
+      return;
+    }
+    const t = window.setTimeout(() => {
+      try {
+        sessionStorage.setItem("gx-git-shown", "1");
+      } catch {
+        /* ignore */
+      }
+      setOpen(true);
+    }, 4000);
+    return () => window.clearTimeout(t);
+  }, []);
 
   const update =
     (k: keyof typeof form) =>
