@@ -37,7 +37,7 @@ const BlogIndex = () => {
   return (
     <>
       <PageHero
-        eyebrow="Knowledge Center · Blog"
+        eyebrow="\u00a0· BLOG"
         title="Insights from the GuardX360 engineering team"
         subtitle="Practical, non-marketing writing on how security systems for gated communities and industrial sites actually behave in the field."
       />
