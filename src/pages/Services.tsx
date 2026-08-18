@@ -183,9 +183,16 @@ const Services = () => {
                     </p>
                   </div>
                   <div className="md:col-span-8 space-y-4 text-secondary text-base leading-relaxed">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      loading="lazy"
+                      className="w-full h-64 object-cover border border-border"
+                    />
                     {service.paragraphs.map((p, i) => (
                       <p key={i}>{p}</p>
                     ))}
+
                     <div className="pt-4 flex flex-wrap gap-3">
                       <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold uppercase tracking-wide">
                         <Link to="/contact">
