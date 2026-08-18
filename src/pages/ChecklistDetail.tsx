@@ -12,6 +12,9 @@ import AnimatedSection from "@/components/AnimatedSection";
 import { resources, getResource } from "@/data/checklists";
 import { useSEO } from "@/hooks/use-seo";
 import { useToast } from "@/hooks/use-toast";
+import { submitZohoLead } from "@/lib/zoho";
+import { supabase } from "@/integrations/supabase/client";
+
 
 const leadSchema = z.object({
   name: z.string().trim().min(2, "Name required").max(100),
@@ -43,14 +46,36 @@ const ChecklistDetail = () => {
   const related = resources.filter((r) => r.slug !== resource.slug).slice(0, 3);
   const Icon = resource.type === "Checklist" ? ClipboardCheck : FileText;
 
-  const onSubmit = (data: LeadData) => {
-    console.log("PDF request:", { resource: resource.slug, ...data });
+  const onSubmit = async (data: LeadData) => {
+    try {
+      submitZohoLead({
+        name: data.name,
+        phone: "",
+        email: data.email,
+        community: data.company,
+        message: `Checklist PDF request — ${resource.title}`,
+      });
+
+      await supabase.functions.invoke("send-checklist-lead", {
+        body: {
+          name: data.name,
+          phone: "Not provided",
+          email: data.email,
+          community: data.company,
+          checklistName: resource.title,
+        },
+      });
+    } catch (err) {
+      console.error("Checklist lead submit failed", err);
+    }
+
     setSubmitted(true);
     toast({
       title: "Request received",
       description: "We'll email the PDF within one business day.",
     });
   };
+
 
   const handlePrint = () => window.print();
 
