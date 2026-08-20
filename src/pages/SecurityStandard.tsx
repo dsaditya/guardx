@@ -954,6 +954,136 @@ const SecurityStandard = () => {
         </div>
       </section>
 
+      {/* Case Studies */}
+      <section className="section-padding bg-section-alt">
+        <div className="container-narrow">
+          <AnimatedSection>
+            <Eyebrow>Case Studies</Eyebrow>
+            <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading mb-10">
+              Problems We Have Seen on Real Sites
+            </h2>
+          </AnimatedSection>
+
+          <div className="grid md:grid-cols-2 gap-6 mb-10">
+            {caseStudies.map((study, i) => (
+              <AnimatedSection key={study.title} delay={i * 0.1}>
+                <div className="bg-background border border-border p-6 md:p-8 h-full">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="bg-accent p-2">
+                      <FileText className="h-5 w-5 text-accent-foreground" strokeWidth={1.5} />
+                    </div>
+                    <h3 className="text-lg font-bold text-primary font-heading leading-snug">
+                      {study.title}
+                    </h3>
+                  </div>
+                  <div className="space-y-4 text-sm">
+                    <div>
+                      <p className="font-semibold text-primary mb-1">Problem</p>
+                      <p className="text-secondary leading-relaxed">{study.problem}</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-primary mb-1">Diagnosis</p>
+                      <p className="text-secondary leading-relaxed">{study.diagnosis}</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-primary mb-1">GuardX360 Approach</p>
+                      <p className="text-secondary leading-relaxed">{study.approach}</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-primary mb-1">Result</p>
+                      <p className="text-secondary leading-relaxed">{study.result}</p>
+                    </div>
+                    <div className="pt-3 border-t border-border">
+                      <p className="font-semibold text-accent mb-1">Lesson</p>
+                      <p className="text-secondary leading-relaxed">{study.lesson}</p>
+                    </div>
+                  </div>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+
+          <AnimatedSection delay={0.2}>
+            <div className="flex justify-center">
+              <Link to="/case-studies">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-primary text-primary hover:bg-primary hover:text-white px-8 py-6 h-auto font-semibold uppercase tracking-wide"
+                >
+                  View All Case Studies
+                  <ArrowRight className="ml-2 h-5 w-5 flex-shrink-0" />
+                </Button>
+              </Link>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Engineering Standards */}
+      <section className="section-padding bg-background">
+        <div className="container-narrow">
+          <AnimatedSection>
+            <Eyebrow>Engineering Standard</Eyebrow>
+            <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading mb-4">
+              The GuardX360 Installation & Engineering Standard
+            </h2>
+            <p className="text-secondary max-w-3xl leading-relaxed mb-10">
+              A security system should remain understandable and maintainable even years after
+              installation. That is why our projects follow structured installation standards
+              wherever applicable.
+            </p>
+          </AnimatedSection>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {engineeringStandards.map((item, i) => (
+              <AnimatedSection key={item.title} delay={i * 0.04}>
+                <div className="bg-section-alt border border-border p-6 h-full">
+                  <div className="bg-accent p-2 inline-flex mb-4">
+                    <item.icon className="h-5 w-5 text-accent-foreground" strokeWidth={1.5} />
+                  </div>
+                  <h3 className="text-base font-bold text-primary font-heading mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-secondary text-sm leading-relaxed">{item.desc}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits */}
+      <section className="section-padding bg-section-dark">
+        <div className="container-narrow">
+          <AnimatedSection>
+            <Eyebrow>Why It Matters</Eyebrow>
+            <h2 className="text-2xl md:text-3xl font-bold text-white font-heading mb-4">
+              Better Installation Is Not About Appearance. It Is About Reliability.
+            </h2>
+            <p className="text-white/70 max-w-3xl leading-relaxed mb-10">
+              Structured security infrastructure results in:
+            </p>
+          </AnimatedSection>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, i) => (
+              <AnimatedSection key={benefit.title} delay={i * 0.05}>
+                <div className="bg-primary border border-white/10 p-6 h-full">
+                  <div className="bg-accent p-2 inline-flex mb-4">
+                    <benefit.icon className="h-5 w-5 text-accent-foreground" strokeWidth={1.5} />
+                  </div>
+                  <h3 className="text-base font-bold text-white font-heading mb-2">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-white/70 text-sm leading-relaxed">{benefit.desc}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Lead form dialog */}
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="max-w-2xl">
