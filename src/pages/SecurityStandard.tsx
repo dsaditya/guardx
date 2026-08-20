@@ -56,7 +56,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import heroImage from "@/assets/lp2/standard-hero.jpg";
+import heroImage from "@/assets/lp2/standard-hero-new.jpg.asset.json";
 import controlRoomBg from "@/assets/lp2/bg-control-room.jpg";
 import perimeterBg from "@/assets/lp2/bg-perimeter.jpg";
 import communityAerialBg from "@/assets/lp2/bg-community-aerial.jpg";

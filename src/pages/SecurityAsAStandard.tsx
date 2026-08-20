@@ -36,7 +36,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import heroImage from "@/assets/lp2/standard-hero.jpg";
+import heroImage from "@/assets/lp2/standard-hero-new.jpg.asset.json";
 import rackImage from "@/assets/lp/network-rack.jpg";
 
 const stats = [
