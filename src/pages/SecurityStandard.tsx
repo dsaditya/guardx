@@ -49,6 +49,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import heroImage from "@/assets/lp2/standard-hero.jpg";
+import founderImg from "@/assets/lp/founder.png";
 import cctvImg from "@/assets/services/cctv-surveillance.jpg";
 import boomBarrierImg from "@/assets/services/boom-barrier.jpg";
 import anprImg from "@/assets/services/anpr-uhf.jpg";
