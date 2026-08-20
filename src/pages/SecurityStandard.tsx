@@ -7,6 +7,12 @@ import {
   Camera,
   Fingerprint,
   Server,
+  CameraOff,
+  RefreshCw,
+  Wifi,
+  FileQuestion,
+  UserX,
+  TrendingUp,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
