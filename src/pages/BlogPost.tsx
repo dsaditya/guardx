@@ -71,7 +71,7 @@ const BlogPostPage = () => {
         items={[
           { label: "Home", to: "/" },
           { label: "Knowledge Center", to: "/knowledge-center" },
-          { label: "Blog", to: "/knowledge-center/blog" },
+          { label: "BLOGS", to: "/knowledge-center/blog" },
           { label: post.title },
         ]}
       />
