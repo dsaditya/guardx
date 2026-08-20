@@ -57,6 +57,11 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import heroImage from "@/assets/lp2/standard-hero.jpg";
+import controlRoomBg from "@/assets/lp2/bg-control-room.jpg";
+import perimeterBg from "@/assets/lp2/bg-perimeter.jpg";
+import communityAerialBg from "@/assets/lp2/bg-community-aerial.jpg";
+import entranceNightBg from "@/assets/lp2/bg-entrance-night.jpg";
+import networkRackBg from "@/assets/lp/network-rack.jpg";
 import founderImg from "@/assets/lp/founder.png";
 import cctvImg from "@/assets/services/cctv-surveillance.jpg";
 import boomBarrierImg from "@/assets/services/boom-barrier.jpg";
@@ -762,8 +767,10 @@ const SecurityStandard = () => {
       </section>
 
       {/* 5-Layer Standard */}
-      <section id="five-layer-standard" className="section-padding bg-section-alt">
-        <div className="container-narrow">
+      <section id="five-layer-standard" className="section-padding bg-section-alt relative overflow-hidden">
+        <img src={perimeterBg} alt="" aria-hidden="true" loading="lazy" width={1600} height={900} className="absolute inset-0 w-full h-full object-cover opacity-10" />
+        <div className="absolute inset-0 bg-background/70" aria-hidden="true" />
+        <div className="container-narrow relative">
           <AnimatedSection>
             <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading mb-3 text-center">
               The GuardX360 5-Layer Security Standard
@@ -865,8 +872,9 @@ const SecurityStandard = () => {
       </section>
 
       {/* Comparison + Health Score */}
-      <section className="section-padding bg-section-dark">
-        <div className="container-narrow">
+      <section className="section-padding bg-section-dark relative overflow-hidden">
+        <img src={controlRoomBg} alt="" aria-hidden="true" loading="lazy" width={1600} height={900} className="absolute inset-0 w-full h-full object-cover opacity-20" />
+        <div className="container-narrow relative">
           <div className="grid lg:grid-cols-[1.4fr_1fr] gap-10 items-start">
             {/* Comparison */}
             <div>
@@ -1181,8 +1189,9 @@ const SecurityStandard = () => {
       </section>
 
       {/* Founder Story */}
-      <section className="section-padding bg-section-dark">
-        <div className="container-narrow grid lg:grid-cols-[200px_1.3fr_1fr] gap-8 items-center">
+      <section className="section-padding bg-section-dark relative overflow-hidden">
+        <img src={networkRackBg} alt="" aria-hidden="true" loading="lazy" width={1600} height={900} className="absolute inset-0 w-full h-full object-cover opacity-15" />
+        <div className="container-narrow grid lg:grid-cols-[200px_1.3fr_1fr] gap-8 items-center relative">
           <AnimatedSection>
             <div className="aspect-square w-full max-w-[220px]">
               <img
@@ -1315,8 +1324,10 @@ const SecurityStandard = () => {
       </section>
 
       {/* Coverage */}
-      <section className="section-padding bg-section-alt">
-        <div className="container-narrow text-center">
+      <section className="section-padding bg-section-alt relative overflow-hidden">
+        <img src={communityAerialBg} alt="" aria-hidden="true" loading="lazy" width={1600} height={900} className="absolute inset-0 w-full h-full object-cover opacity-15" />
+        <div className="absolute inset-0 bg-background/70" aria-hidden="true" />
+        <div className="container-narrow text-center relative">
           <AnimatedSection>
             <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading mb-4">
               Serving Gated Communities Across Hyderabad
@@ -1339,8 +1350,11 @@ const SecurityStandard = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="section-padding bg-primary">
-        <div className="container-narrow">
+      <section className="section-padding bg-primary relative overflow-hidden">
+        <img src={entranceNightBg} alt="" aria-hidden="true" loading="lazy" width={1600} height={900} className="absolute inset-0 w-full h-full object-cover opacity-25" />
+        <div className="absolute inset-0 bg-primary/80" aria-hidden="true" />
+        <div className="container-narrow relative">
+
           <AnimatedSection>
             <h2 className="text-2xl md:text-4xl font-bold text-primary-foreground font-heading mb-6 max-w-3xl">
               Your Security System Should Work Before You Need It.
