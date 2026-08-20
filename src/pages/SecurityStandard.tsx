@@ -729,6 +729,106 @@ const SecurityStandard = () => {
         </div>
       </section>
 
+      {/* Assessment Process */}
+      <section className="section-padding bg-section-alt">
+        <div className="container-narrow">
+          <AnimatedSection>
+            <Eyebrow>Process</Eyebrow>
+            <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading mb-10">
+              Our Security Assessment Process
+            </h2>
+          </AnimatedSection>
+
+          <div className="relative">
+            <div className="absolute left-6 md:left-10 top-0 bottom-0 w-px bg-border hidden md:block" />
+            <div className="space-y-8 md:space-y-12">
+              {processSteps.map((step, i) => (
+                <AnimatedSection key={step.num} delay={i * 0.08}>
+                  <div className="grid md:grid-cols-[120px_1fr] gap-6 items-start">
+                    <div className="flex items-center gap-4 md:gap-6">
+                      <div className="bg-accent p-3 relative z-10">
+                        <step.icon
+                          className="h-6 w-6 text-accent-foreground"
+                          strokeWidth={1.5}
+                        />
+                      </div>
+                      <p className="md:hidden text-xs font-bold text-accent tracking-widest uppercase">
+                        Step {step.num}
+                      </p>
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-3 mb-2">
+                        <p className="hidden md:block text-xs font-bold text-accent tracking-widest uppercase">
+                          Step {step.num}
+                        </p>
+                        <h3 className="text-lg font-bold text-primary font-heading">
+                          {step.title}
+                        </h3>
+                      </div>
+                      <p className="text-secondary leading-relaxed">{step.desc}</p>
+                    </div>
+                  </div>
+                </AnimatedSection>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Integrated Solutions */}
+      <section className="section-padding bg-background">
+        <div className="container-narrow">
+          <AnimatedSection>
+            <Eyebrow>Solutions</Eyebrow>
+            <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading mb-4">
+              Integrated Security Solutions for Gated Communities
+            </h2>
+            <p className="text-secondary max-w-3xl leading-relaxed mb-10">
+              Every layer of community security requires the right product, installed correctly,
+              connected reliably and maintained on schedule.
+            </p>
+          </AnimatedSection>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {serviceCards.map((card, i) => (
+              <AnimatedSection key={card.title} delay={i * 0.05}>
+                <Link to={card.to} className="group block bg-section-alt border border-border h-full hover:border-accent transition-colors">
+                  <div className="aspect-[16/10] overflow-hidden bg-primary/5">
+                    <img
+                      src={card.image}
+                      alt={card.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <div className="flex items-start gap-3 mb-3">
+                      <div className="bg-accent p-2 flex-shrink-0">
+                        <card.icon className="h-4 w-4 text-accent-foreground" strokeWidth={1.5} />
+                      </div>
+                      <h3 className="text-base font-bold text-primary font-heading leading-snug">
+                        {card.title}
+                      </h3>
+                    </div>
+                    <p className="text-secondary text-sm leading-relaxed mb-3">{card.desc}</p>
+                    {card.includes.length > 0 && (
+                      <ul className="space-y-1">
+                        {card.includes.slice(0, 4).map((item) => (
+                          <li key={item} className="text-xs text-secondary flex items-start gap-2">
+                            <span className="text-accent mt-0.5">—</span>
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                </Link>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Lead form dialog */}
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="max-w-2xl">
