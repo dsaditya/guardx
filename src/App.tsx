@@ -37,6 +37,7 @@ import ChecklistHub from "./pages/ChecklistHub";
 import SecurityAssessment from "./pages/SecurityAssessment";
 import GatedCommunitySecurityHyderabad from "./pages/GatedCommunitySecurityHyderabad";
 import SecurityAsAStandard from "./pages/SecurityAsAStandard";
+import SecurityStandard from "./pages/SecurityStandard";
 
 const queryClient = new QueryClient();
 
@@ -73,6 +74,7 @@ const App = () => (
               <Route path="/security-assessment" element={<SecurityAssessment />} />
               <Route path="/gated-community-security-hyderabad" element={<GatedCommunitySecurityHyderabad />} />
               <Route path="/security-as-a-standard" element={<SecurityAsAStandard />} />
+              <Route path="/security-standard" element={<SecurityStandard />} />
 
 
               <Route path="/contact" element={<Contact />} />
