@@ -17,6 +17,15 @@ import {
   Network,
   X,
   Check,
+  ClipboardList,
+  AlertTriangle,
+  BarChart3,
+  Map,
+  IndianRupee,
+  ScanLine,
+  Sun,
+  Wrench,
+  Search,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -30,6 +39,13 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import heroImage from "@/assets/lp2/standard-hero.jpg";
+import cctvImg from "@/assets/services/cctv-surveillance.jpg";
+import boomBarrierImg from "@/assets/services/boom-barrier.jpg";
+import anprImg from "@/assets/services/anpr-uhf.jpg";
+import biometricImg from "@/assets/services/biometric-access.jpg";
+import solarImg from "@/assets/services/solar-fencing.jpg";
+import amcImg from "@/assets/services/amc.jpg";
+import assessmentImg from "@/assets/services/assessment-modernization.jpg";
 
 const stats = [
   { value: "10+", label: "Years", sub: "Security Industry Experience" },
