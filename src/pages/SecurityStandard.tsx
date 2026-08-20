@@ -190,6 +190,44 @@ const layerDetails = [
   },
 ];
 
+const typicalInstallation = [
+  "Camera quantity becomes the main focus",
+  "Cheapest available network switch is selected",
+  "10/100 switches are used without checking network load",
+  "No structured network architecture",
+  "Cameras installed wherever mounting is convenient",
+  "No switch-port mapping",
+  "No camera naming standard",
+  "No documentation after installation",
+  "Complaints are handled individually",
+  "Equipment is replaced without root-cause analysis",
+  "Maintenance happens after breakdown",
+  "Complete system depends on one vendor or technician",
+];
+
+const guardxStandard = [
+  "Every camera has a defined security purpose",
+  "Network load is calculated before switch selection",
+  "Gigabit / OFC backbone is planned where required",
+  "Coverage and blind spots are assessed",
+  "Cameras, switches and ports are labeled",
+  "IP and network mapping is maintained",
+  "Root cause is identified before repeated replacement",
+  "Testing and commissioning checklist is completed",
+  "As-built documentation is handed over",
+  "Preventive maintenance is scheduled",
+  "System is designed for future troubleshooting",
+  "Recommendations are based on requirements, not product quantity",
+];
+
+const healthScores = [
+  { label: "CCTV Reliability", score: 72 },
+  { label: "Network Health", score: 48 },
+  { label: "Entry Security", score: 83 },
+  { label: "Perimeter Protection", score: 61 },
+  { label: "Documentation & Maintainability", score: 35 },
+];
+
 const Eyebrow = ({ children }: { children: React.ReactNode }) => (
   <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-4">
     {children}
