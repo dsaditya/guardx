@@ -645,7 +645,7 @@ const SecurityStandard = () => {
             height={1000}
             loading="eager"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/92 via-black/80 to-black/55" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/68 to-black/45" />
         </div>
         <div className="container-narrow relative py-16 md:py-24 lg:py-28">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -768,8 +768,8 @@ const SecurityStandard = () => {
 
       {/* 5-Layer Standard */}
       <section id="five-layer-standard" className="section-padding bg-section-alt relative overflow-hidden">
-        <img src={perimeterBg} alt="" aria-hidden="true" loading="lazy" width={1600} height={900} className="absolute inset-0 w-full h-full object-cover opacity-10" />
-        <div className="absolute inset-0 bg-background/70" aria-hidden="true" />
+        <img src={perimeterBg} alt="" aria-hidden="true" loading="lazy" width={1600} height={900} className="absolute inset-0 w-full h-full object-cover opacity-30" />
+        <div className="absolute inset-0 bg-background/50" aria-hidden="true" />
         <div className="container-narrow relative">
           <AnimatedSection>
             <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading mb-3 text-center">
@@ -873,7 +873,7 @@ const SecurityStandard = () => {
 
       {/* Comparison + Health Score */}
       <section className="section-padding bg-section-dark relative overflow-hidden">
-        <img src={controlRoomBg} alt="" aria-hidden="true" loading="lazy" width={1600} height={900} className="absolute inset-0 w-full h-full object-cover opacity-20" />
+        <img src={controlRoomBg} alt="" aria-hidden="true" loading="lazy" width={1600} height={900} className="absolute inset-0 w-full h-full object-cover opacity-45" />
         <div className="container-narrow relative">
           <div className="grid lg:grid-cols-[1.4fr_1fr] gap-10 items-start">
             {/* Comparison */}
@@ -1190,7 +1190,7 @@ const SecurityStandard = () => {
 
       {/* Founder Story */}
       <section className="section-padding bg-section-dark relative overflow-hidden">
-        <img src={networkRackBg} alt="" aria-hidden="true" loading="lazy" width={1600} height={900} className="absolute inset-0 w-full h-full object-cover opacity-15" />
+        <img src={networkRackBg} alt="" aria-hidden="true" loading="lazy" width={1600} height={900} className="absolute inset-0 w-full h-full object-cover opacity-40" />
         <div className="container-narrow grid lg:grid-cols-[200px_1.3fr_1fr] gap-8 items-center relative">
           <AnimatedSection>
             <div className="aspect-square w-full max-w-[220px]">
@@ -1325,8 +1325,8 @@ const SecurityStandard = () => {
 
       {/* Coverage */}
       <section className="section-padding bg-section-alt relative overflow-hidden">
-        <img src={communityAerialBg} alt="" aria-hidden="true" loading="lazy" width={1600} height={900} className="absolute inset-0 w-full h-full object-cover opacity-15" />
-        <div className="absolute inset-0 bg-background/70" aria-hidden="true" />
+        <img src={communityAerialBg} alt="" aria-hidden="true" loading="lazy" width={1600} height={900} className="absolute inset-0 w-full h-full object-cover opacity-35" />
+        <div className="absolute inset-0 bg-background/50" aria-hidden="true" />
         <div className="container-narrow text-center relative">
           <AnimatedSection>
             <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading mb-4">
@@ -1351,8 +1351,8 @@ const SecurityStandard = () => {
 
       {/* Final CTA */}
       <section className="section-padding bg-primary relative overflow-hidden">
-        <img src={entranceNightBg} alt="" aria-hidden="true" loading="lazy" width={1600} height={900} className="absolute inset-0 w-full h-full object-cover opacity-25" />
-        <div className="absolute inset-0 bg-primary/80" aria-hidden="true" />
+        <img src={entranceNightBg} alt="" aria-hidden="true" loading="lazy" width={1600} height={900} className="absolute inset-0 w-full h-full object-cover opacity-50" />
+        <div className="absolute inset-0 bg-primary/60" aria-hidden="true" />
         <div className="container-narrow relative">
 
           <AnimatedSection>
