@@ -340,18 +340,74 @@ const SecurityStandard = () => {
         </div>
       </section>
 
-      {/* Placeholder for anchor target */}
-      <section id="five-layer-standard" className="section-padding bg-background">
+      {/* 5-Layer Standard */}
+      <section id="five-layer-standard" className="section-padding bg-section-alt">
         <div className="container-narrow">
           <AnimatedSection>
-            <Eyebrow>The standard</Eyebrow>
+            <Eyebrow>The Framework</Eyebrow>
             <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading mb-4">
-              5-Layer Security Standard
+              The GuardX360 5-Layer Security Standard
             </h2>
-            <p className="text-secondary max-w-2xl">
-              Detailed framework content will follow in the next section.
+            <h3 className="text-lg md:text-xl font-semibold text-primary font-heading mb-4">
+              One Community. One Integrated Security System.
+            </h3>
+            <p className="text-secondary max-w-3xl leading-relaxed mb-12">
+              Security does not come from installing more cameras. Real security comes from making
+              multiple protection layers work together — while ensuring the underlying network,
+              power, documentation and maintenance are reliable.
             </p>
           </AnimatedSection>
+
+          <div className="space-y-8">
+            {layerDetails.map((layer, i) => (
+              <AnimatedSection key={layer.num} delay={i * 0.08}>
+                <div className="bg-background border border-border p-6 md:p-8">
+                  <div className="grid md:grid-cols-[80px_1fr] gap-6">
+                    <div className="flex md:flex-col items-center md:items-start gap-3">
+                      <div className="bg-accent p-3">
+                        <layer.icon
+                          className="h-6 w-6 text-accent-foreground"
+                          strokeWidth={1.5}
+                        />
+                      </div>
+                      <p className="text-xs font-bold text-accent tracking-widest uppercase">
+                        Layer {layer.num}
+                      </p>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-primary font-heading mb-2">
+                        {layer.title}
+                      </h3>
+                      <p className="text-secondary leading-relaxed mb-4">{layer.intro}</p>
+                      <div className="mb-4">
+                        <p className="text-xs font-semibold text-primary uppercase tracking-wide mb-2">
+                          {layer.num === "03"
+                            ? "Assessed"
+                            : layer.num === "05"
+                            ? "Evaluated"
+                            : "Typical systems include"}
+                        </p>
+                        <ul className="grid sm:grid-cols-2 gap-2">
+                          {layer.systems.map((s) => (
+                            <li
+                              key={s}
+                              className="text-sm text-secondary flex items-start gap-2"
+                            >
+                              <span className="text-accent mt-1">—</span>
+                              <span>{s}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <p className="text-sm font-semibold text-primary">
+                        Objective: <span className="font-normal text-secondary">{layer.objective}</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
         </div>
       </section>
 
