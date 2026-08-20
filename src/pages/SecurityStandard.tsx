@@ -510,6 +510,39 @@ const benefits = [
   },
 ];
 
+const deliverables = [
+  "Site security assessment report",
+  "CCTV coverage review",
+  "Blind-spot identification",
+  "Equipment health assessment",
+  "Network topology review",
+  "Switch loading analysis",
+  "Camera-to-switch mapping",
+  "Switch-port mapping",
+  "IP address documentation",
+  "Failure root-cause report",
+  "Improvement recommendations",
+  "Modernization roadmap",
+  "BOQ",
+  "Implementation plan",
+  "Testing checklist",
+  "Commissioning report",
+  "As-built documentation",
+  "Handover documentation",
+  "AMC recommendations",
+  "Preventive-maintenance schedule",
+  "Post-installation support",
+];
+
+const riskQuestions = [
+  "What are you trying to protect?",
+  "Where can a failure occur?",
+  "What already exists?",
+  "What is currently unreliable?",
+  "What can be retained?",
+  "What genuinely needs improvement?",
+];
+
 const Eyebrow = ({ children }: { children: React.ReactNode }) => (
   <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-4">
     {children}
