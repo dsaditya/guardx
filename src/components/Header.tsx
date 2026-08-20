@@ -41,7 +41,7 @@ const navItems: NavItem[] = [
     to: "/why-guardx360",
     children: [{ label: "Delivery Process", to: "/why-guardx360#delivery-process" }],
   },
-  { label: "Blog", to: "/knowledge-center/blog" },
+  { label: "BLOGS", to: "/knowledge-center/blog" },
   { label: "Contact Us", to: "/contact" },
   {
     label: "Partner With Us",
