@@ -40,6 +40,13 @@ import {
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
 import SimpleLeadForm from "@/components/SimpleLeadForm";
+import AssessmentLeadForm from "@/components/AssessmentLeadForm";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { useSEO } from "@/hooks/use-seo";
 import {
   Dialog,
