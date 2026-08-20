@@ -1267,6 +1267,110 @@ const SecurityStandard = () => {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="section-padding bg-section-alt">
+        <div className="container-narrow">
+          <AnimatedSection>
+            <Eyebrow>FAQ</Eyebrow>
+            <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading mb-10">
+              Frequently Asked Questions
+            </h2>
+          </AnimatedSection>
+          <AnimatedSection delay={0.1}>
+            <Accordion type="single" collapsible className="border-t border-border">
+              {faqs.map((faq, i) => (
+                <AccordionItem key={faq.q} value={`faq-${i}`} className="border-b border-border">
+                  <AccordionTrigger className="text-left text-primary font-semibold font-heading hover:no-underline py-5">
+                    {faq.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-secondary leading-relaxed pb-6">
+                    {faq.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Lead form */}
+      <section id="request-assessment" className="section-padding bg-background scroll-mt-24">
+        <div className="container-narrow">
+          <AnimatedSection>
+            <Eyebrow>Get Started</Eyebrow>
+            <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading mb-4">
+              Request a Security Assessment
+            </h2>
+            <p className="text-secondary max-w-3xl leading-relaxed mb-10">
+              Not sure whether your current security system is designed correctly? Tell us a little
+              about your community. Our team will understand your existing setup, current concerns
+              and requirement before recommending the next step.
+            </p>
+          </AnimatedSection>
+          <AnimatedSection delay={0.1}>
+            <div className="bg-section-alt border border-border p-6 md:p-10">
+              <AssessmentLeadForm />
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Coverage */}
+      <section className="section-padding bg-section-alt">
+        <div className="container-narrow text-center">
+          <AnimatedSection>
+            <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading mb-4">
+              Serving Gated Communities Across Hyderabad
+            </h2>
+            <p className="text-secondary max-w-3xl mx-auto leading-relaxed mb-8">
+              GuardX360 supports gated communities across Hyderabad with security assessment, CCTV,
+              entrance automation, access control, perimeter security, network correction,
+              modernization and AMC services.
+            </p>
+            <Button
+              size="lg"
+              onClick={scrollToForm}
+              className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 font-semibold uppercase tracking-wide"
+            >
+              Discuss Your Community Requirement
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="section-padding bg-primary">
+        <div className="container-narrow">
+          <AnimatedSection>
+            <h2 className="text-2xl md:text-4xl font-bold text-primary-foreground font-heading mb-6 max-w-3xl">
+              Your Security System Should Work Before You Need It.
+            </h2>
+            <p className="text-primary-foreground/70 max-w-3xl leading-relaxed mb-4">
+              Do not wait for an incident to discover: missing footage, blind spots, failing
+              switches, overloaded networks, inaccessible recordings, undocumented cabling, or
+              unreliable access systems.
+            </p>
+            <p className="text-primary-foreground/70 max-w-3xl leading-relaxed mb-10">
+              Let GuardX360 evaluate the complete security infrastructure and show your management
+              committee where the real risks are.
+            </p>
+            <Button
+              size="lg"
+              onClick={scrollToForm}
+              className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 font-semibold uppercase tracking-wide"
+            >
+              Request a Security Assessment
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+            <p className="text-primary-foreground font-heading text-xl md:text-2xl font-bold mt-12">
+              Security as a <span className="text-accent">Standard.</span>
+            </p>
+          </AnimatedSection>
+        </div>
+      </section>
+
+
       {/* Lead form dialog */}
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="max-w-2xl">
