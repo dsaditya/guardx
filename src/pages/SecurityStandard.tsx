@@ -17,6 +17,15 @@ import {
   Network,
   X,
   Check,
+  ClipboardList,
+  AlertTriangle,
+  BarChart3,
+  Map,
+  IndianRupee,
+  ScanLine,
+  Sun,
+  Wrench,
+  Search,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -30,6 +39,13 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import heroImage from "@/assets/lp2/standard-hero.jpg";
+import cctvImg from "@/assets/services/cctv-surveillance.jpg";
+import boomBarrierImg from "@/assets/services/boom-barrier.jpg";
+import anprImg from "@/assets/services/anpr-uhf.jpg";
+import biometricImg from "@/assets/services/biometric-access.jpg";
+import solarImg from "@/assets/services/solar-fencing.jpg";
+import amcImg from "@/assets/services/amc.jpg";
+import assessmentImg from "@/assets/services/assessment-modernization.jpg";
 
 const stats = [
   { value: "10+", label: "Years", sub: "Security Industry Experience" },
@@ -226,6 +242,146 @@ const healthScores = [
   { label: "Entry Security", score: 83 },
   { label: "Perimeter Protection", score: 61 },
   { label: "Documentation & Maintainability", score: 35 },
+];
+
+const processSteps = [
+  {
+    num: "01",
+    title: "System Audit",
+    icon: ClipboardList,
+    desc: "We inspect your existing security infrastructure including: CCTV, NVRs, switches, network architecture, entry systems, access control, perimeter systems, power backup, documentation.",
+  },
+  {
+    num: "02",
+    title: "Risk & Failure Identification",
+    icon: AlertTriangle,
+    desc: "We identify: recurring complaint patterns, blind spots, network bottlenecks, overloaded switches, cabling issues, recording gaps, poor equipment placement, maintenance risks, undocumented infrastructure.",
+  },
+  {
+    num: "03",
+    title: "Security Health Scoring",
+    icon: BarChart3,
+    desc: "The system is evaluated against defined parameters for: coverage, reliability, evidence availability, network health, maintainability, infrastructure quality, documentation, risk exposure.",
+  },
+  {
+    num: "04",
+    title: "Improvement Roadmap",
+    icon: Map,
+    desc: "We classify recommendations into: Immediate Attention (issues affecting reliability or security today), Planned Upgrade (areas that should be improved within the next phase), Future Modernization (long-term upgrades that improve scalability and performance).",
+  },
+  {
+    num: "05",
+    title: "Budget Prioritization",
+    icon: IndianRupee,
+    desc: "Your committee receives clarity on: what needs immediate expenditure, what can be repaired, what should be replaced, what can continue, and where unnecessary spending can be avoided.",
+  },
+];
+
+const serviceCards = [
+  {
+    icon: Camera,
+    title: "CCTV Surveillance",
+    desc: "IP CCTV systems designed around actual surveillance requirements, coverage, evidence quality and network capacity.",
+    includes: [
+      "IP cameras",
+      "NVR systems",
+      "CCTV modernization",
+      "Camera relocation",
+      "Blind-spot correction",
+      "Recording optimization",
+      "CCTV network redesign",
+    ],
+    image: cctvImg,
+    to: "/services/cctv-surveillance",
+  },
+  {
+    icon: ParkingCircle,
+    title: "Boom Barrier & Vehicle Access",
+    desc: "Structured vehicle entry and exit control for residents, staff, visitors and vendors.",
+    includes: [
+      "Boom barriers",
+      "RFID",
+      "UHF readers",
+      "Vehicle tags",
+      "Loop detectors",
+      "Entry/exit integration",
+    ],
+    image: boomBarrierImg,
+    to: "/services/boom-barrier-vehicle-access",
+  },
+  {
+    icon: ScanLine,
+    title: "ANPR & UHF Vehicle Access",
+    desc: "Automatic identification and controlled vehicle access using ANPR and long-range UHF technology. Ideal for communities requiring faster, traceable and automated entry management.",
+    includes: [],
+    image: anprImg,
+    to: "/services/anpr-uhf-vehicle-access",
+  },
+  {
+    icon: Fingerprint,
+    title: "Biometric & Access Control",
+    desc: "Control staff movement and restricted-area access through structured access-control systems.",
+    includes: [
+      "Housekeeping",
+      "Maintenance staff",
+      "Security teams",
+      "Office areas",
+      "Restricted rooms",
+      "Employee attendance",
+    ],
+    image: biometricImg,
+    to: "/services/biometric-access-control",
+  },
+  {
+    icon: Sun,
+    title: "Solar Fencing",
+    desc: "Perimeter protection designed to deter unauthorized entry and strengthen community boundary security.",
+    includes: [],
+    image: solarImg,
+    to: "/services/solar-fencing",
+  },
+  {
+    icon: Network,
+    title: "Network & Security Infrastructure",
+    desc: "The performance of CCTV depends heavily on its underlying infrastructure.",
+    includes: [
+      "Network switches",
+      "Gigabit uplinks",
+      "OFC backbone",
+      "Racks",
+      "Structured cabling",
+      "Power distribution",
+      "UPS",
+      "Camera addressing",
+      "Switch architecture",
+    ],
+    image: assessmentImg,
+    to: "/services/security-assessment-modernization",
+  },
+  {
+    icon: Wrench,
+    title: "Annual Maintenance Contracts",
+    desc: "Preventive maintenance designed to reduce repeated complaints and improve system uptime.",
+    includes: [
+      "Preventive checks",
+      "Complaint response",
+      "Recurring-fault identification",
+      "Equipment health",
+      "Network health",
+      "Documentation",
+      "Recommendation tracking",
+    ],
+    image: amcImg,
+    to: "/services/annual-maintenance-contracts",
+  },
+  {
+    icon: Search,
+    title: "Security Assessment & Modernization",
+    desc: "Already have an existing system? We audit the installation before recommending replacement. Where possible, existing infrastructure is retained, corrected or upgraded instead of replacing everything.",
+    includes: [],
+    image: assessmentImg,
+    to: "/services/security-assessment-modernization",
+  },
 ];
 
 const Eyebrow = ({ children }: { children: React.ReactNode }) => (
@@ -569,6 +725,106 @@ const SecurityStandard = () => {
                 </div>
               </div>
             </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Assessment Process */}
+      <section className="section-padding bg-section-alt">
+        <div className="container-narrow">
+          <AnimatedSection>
+            <Eyebrow>Process</Eyebrow>
+            <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading mb-10">
+              Our Security Assessment Process
+            </h2>
+          </AnimatedSection>
+
+          <div className="relative">
+            <div className="absolute left-6 md:left-10 top-0 bottom-0 w-px bg-border hidden md:block" />
+            <div className="space-y-8 md:space-y-12">
+              {processSteps.map((step, i) => (
+                <AnimatedSection key={step.num} delay={i * 0.08}>
+                  <div className="grid md:grid-cols-[120px_1fr] gap-6 items-start">
+                    <div className="flex items-center gap-4 md:gap-6">
+                      <div className="bg-accent p-3 relative z-10">
+                        <step.icon
+                          className="h-6 w-6 text-accent-foreground"
+                          strokeWidth={1.5}
+                        />
+                      </div>
+                      <p className="md:hidden text-xs font-bold text-accent tracking-widest uppercase">
+                        Step {step.num}
+                      </p>
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-3 mb-2">
+                        <p className="hidden md:block text-xs font-bold text-accent tracking-widest uppercase">
+                          Step {step.num}
+                        </p>
+                        <h3 className="text-lg font-bold text-primary font-heading">
+                          {step.title}
+                        </h3>
+                      </div>
+                      <p className="text-secondary leading-relaxed">{step.desc}</p>
+                    </div>
+                  </div>
+                </AnimatedSection>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Integrated Solutions */}
+      <section className="section-padding bg-background">
+        <div className="container-narrow">
+          <AnimatedSection>
+            <Eyebrow>Solutions</Eyebrow>
+            <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading mb-4">
+              Integrated Security Solutions for Gated Communities
+            </h2>
+            <p className="text-secondary max-w-3xl leading-relaxed mb-10">
+              Every layer of community security requires the right product, installed correctly,
+              connected reliably and maintained on schedule.
+            </p>
+          </AnimatedSection>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {serviceCards.map((card, i) => (
+              <AnimatedSection key={card.title} delay={i * 0.05}>
+                <Link to={card.to} className="group block bg-section-alt border border-border h-full hover:border-accent transition-colors">
+                  <div className="aspect-[16/10] overflow-hidden bg-primary/5">
+                    <img
+                      src={card.image}
+                      alt={card.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <div className="flex items-start gap-3 mb-3">
+                      <div className="bg-accent p-2 flex-shrink-0">
+                        <card.icon className="h-4 w-4 text-accent-foreground" strokeWidth={1.5} />
+                      </div>
+                      <h3 className="text-base font-bold text-primary font-heading leading-snug">
+                        {card.title}
+                      </h3>
+                    </div>
+                    <p className="text-secondary text-sm leading-relaxed mb-3">{card.desc}</p>
+                    {card.includes.length > 0 && (
+                      <ul className="space-y-1">
+                        {card.includes.slice(0, 4).map((item) => (
+                          <li key={item} className="text-xs text-secondary flex items-start gap-2">
+                            <span className="text-accent mt-0.5">—</span>
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                </Link>
+              </AnimatedSection>
+            ))}
           </div>
         </div>
       </section>
