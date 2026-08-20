@@ -139,7 +139,91 @@ const problems = [
 ];
 
 
-
+const layerDetails = [
+  {
+    num: "01",
+    title: "Perimeter Security",
+    icon: Shield,
+    intro: "Protect the community at its outermost boundary.",
+    systems: [
+      "Solar fencing",
+      "Intrusion deterrence",
+      "Boundary protection",
+      "Entry-point risk identification",
+      "Vulnerable perimeter-zone assessment",
+    ],
+    objective: "Detect, deter or delay unauthorized access before it reaches residential areas.",
+  },
+  {
+    num: "02",
+    title: "Entry & Exit Control",
+    icon: ParkingCircle,
+    intro: "Know who and what is entering the community.",
+    systems: [
+      "Boom barriers",
+      "ANPR",
+      "UHF vehicle access",
+      "RFID-based access",
+      "Visitor vehicle control",
+      "Entry/exit CCTV integration",
+    ],
+    objective: "Create controlled, traceable and reliable vehicle movement at community entrances.",
+  },
+  {
+    num: "03",
+    title: "Surveillance & Evidence",
+    icon: Camera,
+    intro: "Coverage is not enough. Evidence must be available when required.",
+    systems: [
+      "Camera placement",
+      "Blind spots",
+      "Image quality",
+      "Night performance",
+      "Recording health",
+      "Storage retention",
+      "Network stability",
+      "Camera availability",
+      "Critical-zone coverage",
+    ],
+    objective: "Ensure CCTV is not merely installed — but actually useful during an incident.",
+  },
+  {
+    num: "04",
+    title: "People & Access Control",
+    icon: Fingerprint,
+    intro: "Control access to sensitive and restricted areas.",
+    systems: [
+      "Biometric attendance",
+      "Staff access control",
+      "Housekeeping access",
+      "Restricted-area control",
+      "Door access systems",
+      "Employee movement management",
+    ],
+    objective: "Ensure authorized people have the right access — and unauthorized access is restricted.",
+  },
+  {
+    num: "05",
+    title: "Network, Power & Reliability",
+    icon: Network,
+    intro: "The hidden infrastructure behind every reliable security system.",
+    systems: [
+      "Network architecture",
+      "Gigabit backbone",
+      "OFC requirements",
+      "Switch capacity",
+      "Uplink design",
+      "Structured cabling",
+      "UPS backup",
+      "Power distribution",
+      "Camera IP documentation",
+      "Switch and port labeling",
+      "Rack management",
+      "Preventive maintenance",
+    ],
+    objective: "Make the system reliable, scalable, easy to troubleshoot and less dependent on any single technician.",
+  },
+];
 
 const typicalInstallation = [
   "Camera quantity becomes the main focus",
@@ -530,7 +614,7 @@ const SecurityStandard = () => {
   });
 
   const scrollToApproach = () => {
-    document.getElementById("comparison")?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById("five-layer-standard")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -667,9 +751,111 @@ const SecurityStandard = () => {
         </div>
       </section>
 
+      {/* 5-Layer Standard */}
+      <section id="five-layer-standard" className="section-padding bg-section-alt">
+        <div className="container-narrow">
+          <AnimatedSection>
+            <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading mb-3 text-center">
+              The GuardX360 5-Layer Security Standard
+            </h2>
+            <p className="text-secondary text-center max-w-2xl mx-auto leading-relaxed mb-12">
+              We secure your community as an integrated system — not as individual products.
+            </p>
+          </AnimatedSection>
+
+          <div className="flex flex-col lg:flex-row items-stretch gap-4 mb-16">
+            {layerDetails.map((layer, i) => (
+              <div key={layer.num} className="flex items-center gap-4 flex-1">
+                <div className="bg-background border border-border p-5 h-full w-full">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="bg-accent text-accent-foreground text-xs font-bold h-6 w-6 flex items-center justify-center font-heading">
+                      {i + 1}
+                    </span>
+                    <h3 className="text-sm font-bold text-primary font-heading leading-snug">
+                      {layer.title}
+                    </h3>
+                  </div>
+                  <p className="text-xs text-secondary leading-relaxed">
+                    {layer.systems.slice(0, 3).join(", ")}.
+                  </p>
+                </div>
+                {i < layerDetails.length - 1 && (
+                  <ArrowRight
+                    className="h-5 w-5 text-secondary shrink-0 rotate-90 lg:rotate-0"
+                    strokeWidth={1.5}
+                  />
+                )}
+              </div>
+            ))}
+          </div>
+
+          <AnimatedSection>
+            <h3 className="text-lg md:text-xl font-semibold text-primary font-heading mb-4">
+              One Community. One Integrated Security System.
+            </h3>
+            <p className="text-secondary max-w-3xl leading-relaxed mb-12">
+              Security does not come from installing more cameras. Real security comes from making
+              multiple protection layers work together — while ensuring the underlying network,
+              power, documentation and maintenance are reliable.
+            </p>
+          </AnimatedSection>
+
+
+          <div className="space-y-8">
+            {layerDetails.map((layer, i) => (
+              <AnimatedSection key={layer.num} delay={i * 0.08}>
+                <div className="bg-background border border-border p-6 md:p-8">
+                  <div className="grid md:grid-cols-[80px_1fr] gap-6">
+                    <div className="flex md:flex-col items-center md:items-start gap-3">
+                      <div className="bg-accent p-3">
+                        <layer.icon
+                          className="h-6 w-6 text-accent-foreground"
+                          strokeWidth={1.5}
+                        />
+                      </div>
+                      <p className="text-xs font-bold text-accent tracking-widest uppercase">
+                        Layer {layer.num}
+                      </p>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-primary font-heading mb-2">
+                        {layer.title}
+                      </h3>
+                      <p className="text-secondary leading-relaxed mb-4">{layer.intro}</p>
+                      <div className="mb-4">
+                        <p className="text-xs font-semibold text-primary uppercase tracking-wide mb-2">
+                          {layer.num === "03"
+                            ? "Assessed"
+                            : layer.num === "05"
+                            ? "Evaluated"
+                            : "Typical systems include"}
+                        </p>
+                        <ul className="grid sm:grid-cols-2 gap-2">
+                          {layer.systems.map((s) => (
+                            <li
+                              key={s}
+                              className="text-sm text-secondary flex items-start gap-2"
+                            >
+                              <span className="text-accent mt-1">—</span>
+                              <span>{s}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <p className="text-sm font-semibold text-primary">
+                        Objective: <span className="font-normal text-secondary">{layer.objective}</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Comparison Section */}
-      <section id="comparison" className="section-padding bg-background">
+      <section className="section-padding bg-background">
         <div className="container-narrow">
           <AnimatedSection>
             <Eyebrow>Comparison</Eyebrow>
