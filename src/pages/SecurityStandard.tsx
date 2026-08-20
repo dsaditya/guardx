@@ -727,22 +727,23 @@ const SecurityStandard = () => {
       <section className="section-padding bg-background">
         <div className="container-narrow">
           <AnimatedSection>
-            <Eyebrow>Common Issues</Eyebrow>
-            <h2 className="text-2xl md:text-3xl font-bold text-primary mb-8 font-heading">
-              Is Your Community Facing Any of These Problems?
-            </h2>
+            <div className="flex items-center justify-center gap-4 mb-10">
+              <span className="hidden sm:block h-px w-16 bg-accent" />
+              <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading text-center">
+                Is Your Community Facing These Problems?
+              </h2>
+              <span className="hidden sm:block h-px w-16 bg-accent" />
+            </div>
           </AnimatedSection>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {problems.map((p, i) => (
               <AnimatedSection key={p.title} delay={i * 0.05}>
-                <div className="bg-accent border border-border p-6 h-full">
-                  <div className="bg-primary/20 p-3 w-fit mb-4">
-                    <p.icon className="h-5 w-5 text-white" strokeWidth={1.5} />
-                  </div>
-                  <h3 className="text-base font-bold text-white font-heading mb-2 leading-snug">
+                <div className="flex flex-col items-center text-center">
+                  <p.icon className="h-9 w-9 text-accent mb-4" strokeWidth={1.25} />
+                  <h3 className="text-sm font-bold text-primary font-heading mb-2 leading-snug">
                     {p.title}
                   </h3>
-                  <p className="text-white/85 text-sm leading-relaxed">{p.desc}</p>
+                  <p className="text-secondary text-xs leading-relaxed">{p.desc}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -754,10 +755,41 @@ const SecurityStandard = () => {
       <section id="five-layer-standard" className="section-padding bg-section-alt">
         <div className="container-narrow">
           <AnimatedSection>
-            <Eyebrow>The Framework</Eyebrow>
-            <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading mb-3 text-center">
               The GuardX360 5-Layer Security Standard
             </h2>
+            <p className="text-secondary text-center max-w-2xl mx-auto leading-relaxed mb-12">
+              We secure your community as an integrated system — not as individual products.
+            </p>
+          </AnimatedSection>
+
+          <div className="flex flex-col lg:flex-row items-stretch gap-4 mb-16">
+            {layerDetails.map((layer, i) => (
+              <div key={layer.num} className="flex items-center gap-4 flex-1">
+                <div className="bg-background border border-border p-5 h-full w-full">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="bg-accent text-accent-foreground text-xs font-bold h-6 w-6 flex items-center justify-center font-heading">
+                      {i + 1}
+                    </span>
+                    <h3 className="text-sm font-bold text-primary font-heading leading-snug">
+                      {layer.title}
+                    </h3>
+                  </div>
+                  <p className="text-xs text-secondary leading-relaxed">
+                    {layer.systems.slice(0, 3).join(", ")}.
+                  </p>
+                </div>
+                {i < layerDetails.length - 1 && (
+                  <ArrowRight
+                    className="h-5 w-5 text-secondary shrink-0 rotate-90 lg:rotate-0"
+                    strokeWidth={1.5}
+                  />
+                )}
+              </div>
+            ))}
+          </div>
+
+          <AnimatedSection>
             <h3 className="text-lg md:text-xl font-semibold text-primary font-heading mb-4">
               One Community. One Integrated Security System.
             </h3>
@@ -767,6 +799,7 @@ const SecurityStandard = () => {
               power, documentation and maintenance are reliable.
             </p>
           </AnimatedSection>
+
 
           <div className="space-y-8">
             {layerDetails.map((layer, i) => (
