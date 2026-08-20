@@ -7,6 +7,12 @@ import {
   Camera,
   Fingerprint,
   Server,
+  CameraOff,
+  RefreshCw,
+  Wifi,
+  FileQuestion,
+  UserX,
+  TrendingUp,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -58,6 +64,39 @@ const layers = [
     title: "Network, Power & Reliability",
     icon: Server,
     desc: "Build the infrastructure that keeps every security system connected, documented and maintainable.",
+  },
+];
+
+const problems = [
+  {
+    icon: CameraOff,
+    title: "Cameras Installed. But Footage Unavailable.",
+    desc: "Everything appears to be working until an incident happens — and the required recording cannot be found.",
+  },
+  {
+    icon: RefreshCw,
+    title: "The Same Complaints Keep Returning.",
+    desc: "A camera is replaced. Then a switch. Then a connector. But nobody investigates why the failures keep happening.",
+  },
+  {
+    icon: Wifi,
+    title: "CCTV Is Lagging or Buffering.",
+    desc: "The problem may not be the camera. Poor network design, overloaded switches, uplink limitations or incorrect architecture can affect the complete system.",
+  },
+  {
+    icon: FileQuestion,
+    title: "Nobody Has Complete System Documentation.",
+    desc: "There is no clear record of which camera connects to which switch, switch port, NVR or network segment.",
+  },
+  {
+    icon: UserX,
+    title: "Your System Is Vendor Dependent.",
+    desc: "If your existing technician or vendor disappears tomorrow, another engineer has to understand the entire installation from scratch.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Maintenance Costs Keep Increasing.",
+    desc: "Repeated replacements solve individual complaints — but not the structural reason behind them.",
   },
 ];
 
@@ -181,6 +220,33 @@ const SecurityStandard = () => {
                   <p className="text-xs text-white/50 leading-relaxed mt-1">{s.sub}</p>
                 )}
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Problems Section */}
+      <section className="section-padding bg-background">
+        <div className="container-narrow">
+          <AnimatedSection>
+            <Eyebrow>Common Issues</Eyebrow>
+            <h2 className="text-2xl md:text-3xl font-bold text-primary mb-8 font-heading">
+              Is Your Community Facing Any of These Problems?
+            </h2>
+          </AnimatedSection>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {problems.map((p, i) => (
+              <AnimatedSection key={p.title} delay={i * 0.05}>
+                <div className="bg-accent border border-border p-6 h-full">
+                  <div className="bg-primary/20 p-3 w-fit mb-4">
+                    <p.icon className="h-5 w-5 text-white" strokeWidth={1.5} />
+                  </div>
+                  <h3 className="text-base font-bold text-white font-heading mb-2 leading-snug">
+                    {p.title}
+                  </h3>
+                  <p className="text-white/85 text-sm leading-relaxed">{p.desc}</p>
+                </div>
+              </AnimatedSection>
             ))}
           </div>
         </div>
