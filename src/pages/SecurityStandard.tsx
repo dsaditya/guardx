@@ -638,11 +638,11 @@ const SecurityStandard = () => {
       <section className="relative bg-section-dark">
         <div className="absolute inset-0">
           <img
-            src={heroImage}
+            src={heroImage.url}
             alt="Gated community security entrance with CCTV and boom barrier infrastructure"
             className="w-full h-full object-cover"
-            width={1600}
-            height={1000}
+            width={1920}
+            height={1080}
             loading="eager"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/68 to-black/45" />

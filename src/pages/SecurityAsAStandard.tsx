@@ -159,11 +159,11 @@ const SecurityAsAStandard = () => {
       <section className="relative bg-section-dark">
         <div className="absolute inset-0">
           <img
-            src={heroImage}
+            src={heroImage.url}
             alt="CCTV camera and cabling on the boundary wall of a gated community in Hyderabad"
             className="w-full h-full object-cover"
-            width={1600}
-            height={1000}
+            width={1920}
+            height={1080}
             loading="eager"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/92 via-black/80 to-black/55" />
