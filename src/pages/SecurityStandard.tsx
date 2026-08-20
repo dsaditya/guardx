@@ -530,7 +530,7 @@ const SecurityStandard = () => {
   });
 
   const scrollToApproach = () => {
-    document.getElementById("five-layer-standard")?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById("comparison")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -669,7 +669,7 @@ const SecurityStandard = () => {
 
 
       {/* Comparison Section */}
-      <section className="section-padding bg-background">
+      <section id="comparison" className="section-padding bg-background">
         <div className="container-narrow">
           <AnimatedSection>
             <Eyebrow>Comparison</Eyebrow>
