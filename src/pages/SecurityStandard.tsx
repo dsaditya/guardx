@@ -49,6 +49,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import heroImage from "@/assets/lp2/standard-hero.jpg";
+import founderImg from "@/assets/lp/founder.png";
 import cctvImg from "@/assets/services/cctv-surveillance.jpg";
 import boomBarrierImg from "@/assets/services/boom-barrier.jpg";
 import anprImg from "@/assets/services/anpr-uhf.jpg";
@@ -507,6 +508,39 @@ const benefits = [
     title: "Easier Expansion",
     desc: "A structured network makes future camera or access-system additions easier.",
   },
+];
+
+const deliverables = [
+  "Site security assessment report",
+  "CCTV coverage review",
+  "Blind-spot identification",
+  "Equipment health assessment",
+  "Network topology review",
+  "Switch loading analysis",
+  "Camera-to-switch mapping",
+  "Switch-port mapping",
+  "IP address documentation",
+  "Failure root-cause report",
+  "Improvement recommendations",
+  "Modernization roadmap",
+  "BOQ",
+  "Implementation plan",
+  "Testing checklist",
+  "Commissioning report",
+  "As-built documentation",
+  "Handover documentation",
+  "AMC recommendations",
+  "Preventive-maintenance schedule",
+  "Post-installation support",
+];
+
+const riskQuestions = [
+  "What are you trying to protect?",
+  "Where can a failure occur?",
+  "What already exists?",
+  "What is currently unreliable?",
+  "What can be retained?",
+  "What genuinely needs improvement?",
 ];
 
 const Eyebrow = ({ children }: { children: React.ReactNode }) => (
@@ -1081,6 +1115,155 @@ const SecurityStandard = () => {
               </AnimatedSection>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Deliverables */}
+      <section className="section-padding bg-section-alt">
+        <div className="container-narrow">
+          <AnimatedSection>
+            <Eyebrow>Deliverables</Eyebrow>
+            <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading mb-4">
+              What You Receive
+            </h2>
+            <p className="text-secondary max-w-3xl leading-relaxed mb-10">
+              Depending on the scope of the assessment or project, your deliverables may include:
+            </p>
+          </AnimatedSection>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {deliverables.map((item, i) => (
+              <AnimatedSection key={item} delay={i * 0.02}>
+                <div className="flex items-start gap-3 bg-background border border-border p-4 h-full">
+                  <span className="bg-accent p-1 flex-shrink-0 mt-0.5">
+                    <Check className="h-3.5 w-3.5 text-accent-foreground" strokeWidth={2.5} />
+                  </span>
+                  <span className="text-sm text-secondary leading-snug">{item}</span>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonial */}
+      {/* Placeholder testimonial — replace with real customer testimonial once approval is received. */}
+      <section className="section-padding bg-background">
+        <div className="container-narrow">
+          <AnimatedSection>
+            <Eyebrow>Client Perspective</Eyebrow>
+            <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading mb-10">
+              What Our Clients Value
+            </h2>
+          </AnimatedSection>
+
+          <AnimatedSection delay={0.1}>
+            <div className="bg-section-alt border border-border p-8 md:p-12">
+              <blockquote className="text-lg md:text-xl text-primary leading-relaxed font-medium mb-6">
+                "GuardX360 did not approach our CCTV system as a camera-replacement exercise. They
+                reviewed the complete network, identified the underlying causes of recurring
+                complaints and gave us clarity on what actually required correction. The biggest
+                difference was that the recommendations were explained technically and the system was
+                documented for future maintenance."
+              </blockquote>
+              <p className="text-accent font-semibold text-sm uppercase tracking-wide">
+                — Gated Community Management Committee, Hyderabad
+              </p>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Founder Story */}
+      <section className="section-padding bg-section-dark">
+        <div className="container-narrow">
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <AnimatedSection>
+              <div className="relative aspect-[4/5] md:aspect-square bg-primary/10">
+                <img
+                  src={founderImg}
+                  alt="Sri Aditya Devalraju, Founder of GuardX360"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.1}>
+              <Eyebrow>Founder</Eyebrow>
+              <h2 className="text-2xl md:text-3xl font-bold text-white font-heading mb-6">
+                Why GuardX360 Was Started
+              </h2>
+              <div className="space-y-4 text-white/70 leading-relaxed">
+                <p>
+                  After more than 10 years of working across security installations, one pattern
+                  became very clear.
+                </p>
+                <p>
+                  Most recurring security-system problems were not caused by the camera, boom barrier
+                  or biometric device alone.
+                </p>
+                <p>
+                  They were usually caused by what surrounded the product: incorrect planning,
+                  unsuitable network architecture, improper installation, lack of documentation,
+                  reactive maintenance, repeated replacement without diagnosis, and decisions made
+                  only on the lowest quotation.
+                </p>
+                <p>
+                  Gated communities choose residential communities partly because they expect better
+                  safety and controlled infrastructure. Yet in many communities, the security system
+                  itself has never been designed as one complete system.
+                </p>
+                <p>
+                  GuardX360 was created to change that. Our objective is to bring a defined
+                  engineering and maintenance standard to gated-community security infrastructure.
+                </p>
+                <p className="text-white font-medium">
+                  We do not want security systems to merely be installed. We want them to work when
+                  they are actually needed.
+                </p>
+              </div>
+              <p className="mt-6 text-accent font-semibold text-sm uppercase tracking-wide">
+                Sri Aditya Devalraju, Founder, GuardX360
+              </p>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Risk-First */}
+      <section className="section-padding bg-background">
+        <div className="container-narrow">
+          <AnimatedSection>
+            <Eyebrow>Approach</Eyebrow>
+            <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading mb-4">
+              We Don't Start With Cameras. We Start With Risk.
+            </h2>
+            <p className="text-secondary max-w-3xl leading-relaxed mb-10">
+              We don't believe a security requirement should automatically become a product
+              quotation. First, we understand:
+            </p>
+          </AnimatedSection>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+            {riskQuestions.map((q, i) => (
+              <AnimatedSection key={q} delay={i * 0.05}>
+                <div className="bg-section-alt border border-border p-6 h-full flex items-start gap-3">
+                  <span className="text-accent font-bold text-sm mt-0.5">0{i + 1}</span>
+                  <p className="text-primary font-semibold leading-snug">{q}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+
+          <AnimatedSection delay={0.3}>
+            <p className="text-secondary text-center max-w-2xl mx-auto mb-10 leading-relaxed">
+              Only then should technology be selected.
+            </p>
+            <h3 className="text-3xl md:text-4xl font-bold text-center text-primary font-heading tracking-tight">
+              GuardX360 — <span className="text-accent">Security as a Standard.</span>
+            </h3>
+          </AnimatedSection>
         </div>
       </section>
 
