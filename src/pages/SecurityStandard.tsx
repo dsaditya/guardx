@@ -1,7 +1,8 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   ArrowRight,
+  Quote,
   Shield,
   Car,
   Camera,
@@ -551,6 +552,15 @@ const riskQuestions = [
   "What genuinely needs improvement?",
 ];
 
+const processShort = [
+  "We inspect CCTV, entry systems, access control, perimeter, network & power.",
+  "We identify blind spots, bottlenecks, recurring issues and cabling faults.",
+  "Your system is scored across reliability, coverage, evidence and risk.",
+  "Immediate fixes, planned upgrades and long-term modernization.",
+  "What needs attention now vs. what can wait.",
+];
+
+
 const Eyebrow = ({ children }: { children: React.ReactNode }) => (
   <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-4">
     {children}
@@ -959,44 +969,37 @@ const SecurityStandard = () => {
       <section className="section-padding bg-section-alt">
         <div className="container-narrow">
           <AnimatedSection>
-            <Eyebrow>Process</Eyebrow>
-            <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading mb-10">
-              Our Security Assessment Process
+            <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading mb-10 text-center">
+              Our Proven Security Assessment Process
             </h2>
           </AnimatedSection>
 
-          <div className="relative">
-            <div className="absolute left-6 md:left-10 top-0 bottom-0 w-px bg-border hidden md:block" />
-            <div className="space-y-8 md:space-y-12">
-              {processSteps.map((step, i) => (
-                <AnimatedSection key={step.num} delay={i * 0.08}>
-                  <div className="grid md:grid-cols-[120px_1fr] gap-6 items-start">
-                    <div className="flex items-center gap-4 md:gap-6">
-                      <div className="bg-accent p-3 relative z-10">
-                        <step.icon
-                          className="h-6 w-6 text-accent-foreground"
-                          strokeWidth={1.5}
-                        />
-                      </div>
-                      <p className="md:hidden text-xs font-bold text-accent tracking-widest uppercase">
-                        Step {step.num}
-                      </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr_auto_1fr] gap-x-2 gap-y-8 items-start">
+            {processSteps.map((step, i) => (
+              <React.Fragment key={step.num}>
+                <AnimatedSection delay={i * 0.06}>
+                  <div className="text-center px-2">
+                    <div className="flex items-center justify-center gap-2 mb-3">
+                      <span className="bg-accent text-accent-foreground w-6 h-6 flex items-center justify-center text-xs font-bold">
+                        {i + 1}
+                      </span>
+                      <step.icon className="h-6 w-6 text-primary" strokeWidth={1.5} />
                     </div>
-                    <div>
-                      <div className="flex items-center gap-3 mb-2">
-                        <p className="hidden md:block text-xs font-bold text-accent tracking-widest uppercase">
-                          Step {step.num}
-                        </p>
-                        <h3 className="text-lg font-bold text-primary font-heading">
-                          {step.title}
-                        </h3>
-                      </div>
-                      <p className="text-secondary leading-relaxed">{step.desc}</p>
-                    </div>
+                    <h3 className="text-sm font-bold text-primary font-heading mb-2">
+                      {step.title}
+                    </h3>
+                    <p className="text-xs text-secondary leading-relaxed">
+                      {processShort[i]}
+                    </p>
                   </div>
                 </AnimatedSection>
-              ))}
-            </div>
+                {i < processSteps.length - 1 && (
+                  <div className="hidden lg:flex items-center justify-center pt-2">
+                    <ArrowRight className="h-5 w-5 text-accent" strokeWidth={1.5} />
+                  </div>
+                )}
+              </React.Fragment>
+            ))}
           </div>
         </div>
       </section>
@@ -1005,49 +1008,26 @@ const SecurityStandard = () => {
       <section className="section-padding bg-background">
         <div className="container-narrow">
           <AnimatedSection>
-            <Eyebrow>Solutions</Eyebrow>
-            <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading mb-4">
-              Integrated Security Solutions for Gated Communities
+            <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading mb-10 text-center">
+              Our Integrated Security Solutions
             </h2>
-            <p className="text-secondary max-w-3xl leading-relaxed mb-10">
-              Every layer of community security requires the right product, installed correctly,
-              connected reliably and maintained on schedule.
-            </p>
           </AnimatedSection>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 border border-border">
             {serviceCards.map((card, i) => (
-              <AnimatedSection key={card.title} delay={i * 0.05}>
-                <Link to={card.to} className="group block bg-section-alt border border-border h-full hover:border-accent transition-colors">
-                  <div className="aspect-[16/10] overflow-hidden bg-primary/5">
-                    <img
-                      src={card.image}
-                      alt={card.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <div className="flex items-start gap-3 mb-3">
-                      <div className="bg-accent p-2 flex-shrink-0">
-                        <card.icon className="h-4 w-4 text-accent-foreground" strokeWidth={1.5} />
-                      </div>
-                      <h3 className="text-base font-bold text-primary font-heading leading-snug">
-                        {card.title}
-                      </h3>
-                    </div>
-                    <p className="text-secondary text-sm leading-relaxed mb-3">{card.desc}</p>
-                    {card.includes.length > 0 && (
-                      <ul className="space-y-1">
-                        {card.includes.slice(0, 4).map((item) => (
-                          <li key={item} className="text-xs text-secondary flex items-start gap-2">
-                            <span className="text-accent mt-0.5">—</span>
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
+              <AnimatedSection key={card.title} delay={i * 0.04}>
+                <Link
+                  to={card.to}
+                  className="group flex flex-col h-full p-4 border-r border-b border-border hover:bg-section-alt transition-colors"
+                >
+                  <card.icon
+                    className="h-7 w-7 text-primary mb-3 group-hover:text-accent transition-colors"
+                    strokeWidth={1.5}
+                  />
+                  <h3 className="text-xs font-bold text-primary font-heading leading-snug mb-1.5">
+                    {card.title}
+                  </h3>
+                  <p className="text-[11px] text-secondary leading-snug">{card.desc}</p>
                 </Link>
               </AnimatedSection>
             ))}
@@ -1059,94 +1039,79 @@ const SecurityStandard = () => {
       <section className="section-padding bg-section-alt">
         <div className="container-narrow">
           <AnimatedSection>
-            <Eyebrow>Case Studies</Eyebrow>
-            <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading mb-10">
-              Problems We Have Seen on Real Sites
-            </h2>
+            <div className="relative mb-10">
+              <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading text-center">
+                Success Stories from Real Communities
+              </h2>
+              <Link
+                to="/case-studies"
+                className="mt-4 lg:mt-0 flex lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 items-center justify-center gap-2 text-xs font-bold uppercase tracking-widest text-accent hover:underline"
+              >
+                View all case studies
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 gap-6 mb-10">
+          <div className="grid md:grid-cols-2 gap-6">
             {caseStudies.map((study, i) => (
               <AnimatedSection key={study.title} delay={i * 0.1}>
-                <div className="bg-background border border-border p-6 md:p-8 h-full">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="bg-accent p-2">
-                      <FileText className="h-5 w-5 text-accent-foreground" strokeWidth={1.5} />
-                    </div>
-                    <h3 className="text-lg font-bold text-primary font-heading leading-snug">
+                <div className="bg-background border border-border h-full grid sm:grid-cols-[40%_1fr]">
+                  <div className="relative min-h-[180px]">
+                    <img
+                      src={i === 0 ? cctvImg : assessmentImg}
+                      alt={study.title}
+                      className="absolute inset-0 w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-sm font-bold text-primary font-heading mb-3 leading-snug">
                       {study.title}
                     </h3>
-                  </div>
-                  <div className="space-y-4 text-sm">
-                    <div>
-                      <p className="font-semibold text-primary mb-1">Problem</p>
-                      <p className="text-secondary leading-relaxed">{study.problem}</p>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-primary mb-1">Diagnosis</p>
-                      <p className="text-secondary leading-relaxed">{study.diagnosis}</p>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-primary mb-1">GuardX360 Approach</p>
-                      <p className="text-secondary leading-relaxed">{study.approach}</p>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-primary mb-1">Result</p>
-                      <p className="text-secondary leading-relaxed">{study.result}</p>
-                    </div>
-                    <div className="pt-3 border-t border-border">
-                      <p className="font-semibold text-accent mb-1">Lesson</p>
-                      <p className="text-secondary leading-relaxed">{study.lesson}</p>
+                    <div className="space-y-2 text-xs">
+                      <p className="text-secondary leading-relaxed">
+                        <span className="font-bold text-primary">Problem: </span>
+                        {study.problem}
+                      </p>
+                      <p className="text-secondary leading-relaxed">
+                        <span className="font-bold text-primary">Diagnosis: </span>
+                        {study.diagnosis}
+                      </p>
+                      <p className="text-secondary leading-relaxed">
+                        <span className="font-bold text-primary">Outcome: </span>
+                        {study.result}
+                      </p>
+                      <p className="text-secondary leading-relaxed pt-2 border-t border-border">
+                        <span className="font-bold text-accent">Lesson: </span>
+                        {study.lesson}
+                      </p>
                     </div>
                   </div>
                 </div>
               </AnimatedSection>
             ))}
           </div>
-
-          <AnimatedSection delay={0.2}>
-            <div className="flex justify-center">
-              <Link to="/case-studies">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="border-primary text-primary hover:bg-primary hover:text-white px-8 py-6 h-auto font-semibold uppercase tracking-wide"
-                >
-                  View All Case Studies
-                  <ArrowRight className="ml-2 h-5 w-5 flex-shrink-0" />
-                </Button>
-              </Link>
-            </div>
-          </AnimatedSection>
         </div>
       </section>
 
       {/* Engineering Standards */}
-      <section className="section-padding bg-background">
+      <section className="section-padding bg-background pb-0">
         <div className="container-narrow">
           <AnimatedSection>
-            <Eyebrow>Engineering Standard</Eyebrow>
-            <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading mb-4">
-              The GuardX360 Installation & Engineering Standard
+            <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading mb-10 text-center">
+              Our Installation & Engineering Standards
             </h2>
-            <p className="text-secondary max-w-3xl leading-relaxed mb-10">
-              A security system should remain understandable and maintainable even years after
-              installation. That is why our projects follow structured installation standards
-              wherever applicable.
-            </p>
           </AnimatedSection>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 border-t border-l border-border">
             {engineeringStandards.map((item, i) => (
-              <AnimatedSection key={item.title} delay={i * 0.04}>
-                <div className="bg-section-alt border border-border p-6 h-full">
-                  <div className="bg-accent p-2 inline-flex mb-4">
-                    <item.icon className="h-5 w-5 text-accent-foreground" strokeWidth={1.5} />
-                  </div>
-                  <h3 className="text-base font-bold text-primary font-heading mb-2">
+              <AnimatedSection key={item.title} delay={i * 0.03}>
+                <div className="flex flex-col items-center text-center gap-2 p-5 border-r border-b border-border h-full">
+                  <item.icon className="h-6 w-6 text-primary" strokeWidth={1.5} />
+                  <h3 className="text-[11px] font-bold text-primary font-heading leading-snug">
                     {item.title}
                   </h3>
-                  <p className="text-secondary text-sm leading-relaxed">{item.desc}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -1154,88 +1119,62 @@ const SecurityStandard = () => {
         </div>
       </section>
 
-      {/* Benefits */}
-      <section className="section-padding bg-section-dark">
+      {/* Benefits strip */}
+      <section className="pt-10 pb-16 bg-background">
         <div className="container-narrow">
-          <AnimatedSection>
-            <Eyebrow>Why It Matters</Eyebrow>
-            <h2 className="text-2xl md:text-3xl font-bold text-white font-heading mb-4">
-              Better Installation Is Not About Appearance. It Is About Reliability.
-            </h2>
-            <p className="text-white/70 max-w-3xl leading-relaxed mb-10">
-              Structured security infrastructure results in:
-            </p>
-          </AnimatedSection>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 bg-primary">
+            {benefits.map((benefit) => (
+              <div
+                key={benefit.title}
+                className="flex items-center gap-2.5 p-4 border-r border-b lg:border-b-0 border-white/10"
+              >
+                <benefit.icon className="h-5 w-5 text-accent flex-shrink-0" strokeWidth={1.5} />
+                <span className="text-[11px] font-semibold text-white leading-snug">
+                  {benefit.title}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, i) => (
-              <AnimatedSection key={benefit.title} delay={i * 0.05}>
-                <div className="bg-primary border border-white/10 p-6 h-full">
-                  <div className="bg-accent p-2 inline-flex mb-4">
-                    <benefit.icon className="h-5 w-5 text-accent-foreground" strokeWidth={1.5} />
+      {/* Deliverables + Testimonial */}
+      <section className="section-padding bg-section-alt pt-0">
+        <div className="container-narrow grid lg:grid-cols-[1.4fr_1fr] gap-6">
+          <AnimatedSection>
+            <div className="bg-background border border-border p-6 md:p-8 h-full">
+              <h2 className="text-xl md:text-2xl font-bold text-primary font-heading mb-6">
+                What You Receive
+              </h2>
+              <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-2.5">
+                {deliverables.map((item) => (
+                  <div key={item} className="flex items-start gap-2">
+                    <Check className="h-3.5 w-3.5 text-accent flex-shrink-0 mt-0.5" strokeWidth={3} />
+                    <span className="text-xs text-secondary leading-snug">{item}</span>
                   </div>
-                  <h3 className="text-base font-bold text-white font-heading mb-2">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-white/70 text-sm leading-relaxed">{benefit.desc}</p>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Deliverables */}
-      <section className="section-padding bg-section-alt">
-        <div className="container-narrow">
-          <AnimatedSection>
-            <Eyebrow>Deliverables</Eyebrow>
-            <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading mb-4">
-              What You Receive
-            </h2>
-            <p className="text-secondary max-w-3xl leading-relaxed mb-10">
-              Depending on the scope of the assessment or project, your deliverables may include:
-            </p>
+                ))}
+              </div>
+            </div>
           </AnimatedSection>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {deliverables.map((item, i) => (
-              <AnimatedSection key={item} delay={i * 0.02}>
-                <div className="flex items-start gap-3 bg-background border border-border p-4 h-full">
-                  <span className="bg-accent p-1 flex-shrink-0 mt-0.5">
-                    <Check className="h-3.5 w-3.5 text-accent-foreground" strokeWidth={2.5} />
-                  </span>
-                  <span className="text-sm text-secondary leading-snug">{item}</span>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonial */}
-      {/* Placeholder testimonial — replace with real customer testimonial once approval is received. */}
-      <section className="section-padding bg-background">
-        <div className="container-narrow">
-          <AnimatedSection>
-            <Eyebrow>Client Perspective</Eyebrow>
-            <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading mb-10">
-              What Our Clients Value
-            </h2>
-          </AnimatedSection>
-
+          {/* Placeholder testimonial — replace with real customer testimonial once approval is received. */}
           <AnimatedSection delay={0.1}>
-            <div className="bg-section-alt border border-border p-8 md:p-12">
-              <blockquote className="text-lg md:text-xl text-primary leading-relaxed font-medium mb-6">
-                "GuardX360 did not approach our CCTV system as a camera-replacement exercise. They
-                reviewed the complete network, identified the underlying causes of recurring
-                complaints and gave us clarity on what actually required correction. The biggest
-                difference was that the recommendations were explained technically and the system was
-                documented for future maintenance."
-              </blockquote>
-              <p className="text-accent font-semibold text-sm uppercase tracking-wide">
-                — Gated Community Management Committee, Hyderabad
-              </p>
+            <div className="bg-background border border-border p-6 md:p-8 h-full flex flex-col">
+              <h2 className="text-xl md:text-2xl font-bold text-primary font-heading mb-6">
+                What Our Clients Say
+              </h2>
+              <div className="bg-accent/5 border-l-2 border-accent p-5 flex-1">
+                <Quote className="h-6 w-6 text-accent mb-3" strokeWidth={1.5} />
+                <blockquote className="text-sm text-primary leading-relaxed mb-4">
+                  "GuardX360 did not approach our CCTV system as a camera-replacement exercise. They
+                  reviewed the complete network, identified the root cause of our recurring issues
+                  and gave us complete documentation. We finally have a system we can rely on."
+                </blockquote>
+                <p className="text-xs font-bold text-primary uppercase tracking-wide">
+                  RWA Committee Member
+                </p>
+                <p className="text-xs text-secondary">Hyderabad</p>
+              </div>
             </div>
           </AnimatedSection>
         </div>
@@ -1243,58 +1182,51 @@ const SecurityStandard = () => {
 
       {/* Founder Story */}
       <section className="section-padding bg-section-dark">
-        <div className="container-narrow">
-          <div className="grid md:grid-cols-2 gap-10 items-center">
-            <AnimatedSection>
-              <div className="relative aspect-[4/5] md:aspect-square bg-primary/10">
-                <img
-                  src={founderImg}
-                  alt="Sri Aditya Devalraju, Founder of GuardX360"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-              </div>
-            </AnimatedSection>
+        <div className="container-narrow grid lg:grid-cols-[200px_1.3fr_1fr] gap-8 items-center">
+          <AnimatedSection>
+            <div className="aspect-square w-full max-w-[220px]">
+              <img
+                src={founderImg}
+                alt="Sri Aditya Devalraju, Founder of GuardX360"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+          </AnimatedSection>
 
-            <AnimatedSection delay={0.1}>
-              <Eyebrow>Founder</Eyebrow>
-              <h2 className="text-2xl md:text-3xl font-bold text-white font-heading mb-6">
-                Why GuardX360 Was Started
-              </h2>
-              <div className="space-y-4 text-white/70 leading-relaxed">
-                <p>
-                  After more than 10 years of working across security installations, one pattern
-                  became very clear.
-                </p>
-                <p>
-                  Most recurring security-system problems were not caused by the camera, boom barrier
-                  or biometric device alone.
-                </p>
-                <p>
-                  They were usually caused by what surrounded the product: incorrect planning,
-                  unsuitable network architecture, improper installation, lack of documentation,
-                  reactive maintenance, repeated replacement without diagnosis, and decisions made
-                  only on the lowest quotation.
-                </p>
-                <p>
-                  Gated communities choose residential communities partly because they expect better
-                  safety and controlled infrastructure. Yet in many communities, the security system
-                  itself has never been designed as one complete system.
-                </p>
-                <p>
-                  GuardX360 was created to change that. Our objective is to bring a defined
-                  engineering and maintenance standard to gated-community security infrastructure.
-                </p>
-                <p className="text-white font-medium">
-                  We do not want security systems to merely be installed. We want them to work when
-                  they are actually needed.
-                </p>
-              </div>
-              <p className="mt-6 text-accent font-semibold text-sm uppercase tracking-wide">
-                Sri Aditya Devalraju, Founder, GuardX360
+          <AnimatedSection delay={0.08}>
+            <h2 className="text-xl md:text-2xl font-bold text-white font-heading mb-4">
+              Why GuardX360 Was Started
+            </h2>
+            <div className="space-y-3 text-sm text-white/70 leading-relaxed">
+              <p>
+                After more than a decade of working on security installations, one pattern became
+                clear: most failures aren't caused by cameras — they come from poor system design,
+                networking, maintenance and documentation.
               </p>
-            </AnimatedSection>
-          </div>
+              <p>
+                GuardX360 exists to bring an engineering standard to gated-community security. We do
+                not want systems to merely be installed. We want them to work when they are actually
+                needed.
+              </p>
+            </div>
+            <p className="mt-5 text-accent font-semibold text-sm">Sri Aditya Devalraju</p>
+            <p className="text-xs text-white/60 uppercase tracking-wide">Founder, GuardX360</p>
+          </AnimatedSection>
+
+          <AnimatedSection delay={0.16}>
+            <div className="grid grid-cols-2 gap-px bg-white/10">
+              {stats.map((stat) => (
+                <div key={stat.value} className="bg-section-dark p-4">
+                  <p className="text-xl font-bold text-accent font-heading">{stat.value}</p>
+                  <p className="text-[11px] text-white font-semibold leading-snug">{stat.label}</p>
+                  {stat.sub && (
+                    <p className="text-[10px] text-white/60 leading-snug mt-0.5">{stat.sub}</p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
