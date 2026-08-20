@@ -244,6 +244,146 @@ const healthScores = [
   { label: "Documentation & Maintainability", score: 35 },
 ];
 
+const processSteps = [
+  {
+    num: "01",
+    title: "System Audit",
+    icon: ClipboardList,
+    desc: "We inspect your existing security infrastructure including: CCTV, NVRs, switches, network architecture, entry systems, access control, perimeter systems, power backup, documentation.",
+  },
+  {
+    num: "02",
+    title: "Risk & Failure Identification",
+    icon: AlertTriangle,
+    desc: "We identify: recurring complaint patterns, blind spots, network bottlenecks, overloaded switches, cabling issues, recording gaps, poor equipment placement, maintenance risks, undocumented infrastructure.",
+  },
+  {
+    num: "03",
+    title: "Security Health Scoring",
+    icon: BarChart3,
+    desc: "The system is evaluated against defined parameters for: coverage, reliability, evidence availability, network health, maintainability, infrastructure quality, documentation, risk exposure.",
+  },
+  {
+    num: "04",
+    title: "Improvement Roadmap",
+    icon: Map,
+    desc: "We classify recommendations into: Immediate Attention (issues affecting reliability or security today), Planned Upgrade (areas that should be improved within the next phase), Future Modernization (long-term upgrades that improve scalability and performance).",
+  },
+  {
+    num: "05",
+    title: "Budget Prioritization",
+    icon: IndianRupee,
+    desc: "Your committee receives clarity on: what needs immediate expenditure, what can be repaired, what should be replaced, what can continue, and where unnecessary spending can be avoided.",
+  },
+];
+
+const serviceCards = [
+  {
+    icon: Camera,
+    title: "CCTV Surveillance",
+    desc: "IP CCTV systems designed around actual surveillance requirements, coverage, evidence quality and network capacity.",
+    includes: [
+      "IP cameras",
+      "NVR systems",
+      "CCTV modernization",
+      "Camera relocation",
+      "Blind-spot correction",
+      "Recording optimization",
+      "CCTV network redesign",
+    ],
+    image: cctvImg,
+    to: "/services/cctv-surveillance",
+  },
+  {
+    icon: ParkingCircle,
+    title: "Boom Barrier & Vehicle Access",
+    desc: "Structured vehicle entry and exit control for residents, staff, visitors and vendors.",
+    includes: [
+      "Boom barriers",
+      "RFID",
+      "UHF readers",
+      "Vehicle tags",
+      "Loop detectors",
+      "Entry/exit integration",
+    ],
+    image: boomBarrierImg,
+    to: "/services/boom-barrier-vehicle-access",
+  },
+  {
+    icon: ScanLine,
+    title: "ANPR & UHF Vehicle Access",
+    desc: "Automatic identification and controlled vehicle access using ANPR and long-range UHF technology. Ideal for communities requiring faster, traceable and automated entry management.",
+    includes: [],
+    image: anprImg,
+    to: "/services/anpr-uhf-vehicle-access",
+  },
+  {
+    icon: Fingerprint,
+    title: "Biometric & Access Control",
+    desc: "Control staff movement and restricted-area access through structured access-control systems.",
+    includes: [
+      "Housekeeping",
+      "Maintenance staff",
+      "Security teams",
+      "Office areas",
+      "Restricted rooms",
+      "Employee attendance",
+    ],
+    image: biometricImg,
+    to: "/services/biometric-access-control",
+  },
+  {
+    icon: Sun,
+    title: "Solar Fencing",
+    desc: "Perimeter protection designed to deter unauthorized entry and strengthen community boundary security.",
+    includes: [],
+    image: solarImg,
+    to: "/services/solar-fencing",
+  },
+  {
+    icon: Network,
+    title: "Network & Security Infrastructure",
+    desc: "The performance of CCTV depends heavily on its underlying infrastructure.",
+    includes: [
+      "Network switches",
+      "Gigabit uplinks",
+      "OFC backbone",
+      "Racks",
+      "Structured cabling",
+      "Power distribution",
+      "UPS",
+      "Camera addressing",
+      "Switch architecture",
+    ],
+    image: assessmentImg,
+    to: "/services/security-assessment-modernization",
+  },
+  {
+    icon: Wrench,
+    title: "Annual Maintenance Contracts",
+    desc: "Preventive maintenance designed to reduce repeated complaints and improve system uptime.",
+    includes: [
+      "Preventive checks",
+      "Complaint response",
+      "Recurring-fault identification",
+      "Equipment health",
+      "Network health",
+      "Documentation",
+      "Recommendation tracking",
+    ],
+    image: amcImg,
+    to: "/services/annual-maintenance-contracts",
+  },
+  {
+    icon: Search,
+    title: "Security Assessment & Modernization",
+    desc: "Already have an existing system? We audit the installation before recommending replacement. Where possible, existing infrastructure is retained, corrected or upgraded instead of replacing everything.",
+    includes: [],
+    image: assessmentImg,
+    to: "/services/security-assessment-modernization",
+  },
+];
+
 const Eyebrow = ({ children }: { children: React.ReactNode }) => (
   <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-4">
     {children}
