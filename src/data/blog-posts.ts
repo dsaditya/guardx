@@ -1,7 +1,4 @@
 import fiveLayersImage from "@/assets/blog/five-layers-gated-community.jpg";
-import maintenanceImage from "@/assets/blog/preventive-maintenance.jpg";
-import residentsImage from "@/assets/blog/residents-expect-2026.jpg";
-import industrialImage from "@/assets/blog/industrial-site-uptime.jpg";
 
 export interface BlogSection {
   id: string;
