@@ -1128,7 +1128,7 @@ const SecurityStandard = () => {
       </section>
 
       {/* Benefits strip */}
-      <section className="pt-10 pb-16 bg-background">
+      <section className="pt-0 pb-16 bg-background">
         <div className="container-narrow">
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 bg-primary">
             {benefits.map((benefit) => (
