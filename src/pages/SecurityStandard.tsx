@@ -1190,7 +1190,7 @@ const SecurityStandard = () => {
 
       {/* Founder Story */}
       <section className="section-padding bg-section-dark relative overflow-hidden">
-        <img src={networkRackBg} alt="" aria-hidden="true" loading="lazy" width={1600} height={900} className="absolute inset-0 w-full h-full object-cover opacity-55" />
+        <img src={networkRackBg} alt="" aria-hidden="true" loading="lazy" width={1600} height={900} className="absolute inset-0 w-full h-full object-cover opacity-50" />
         <div className="container-narrow grid lg:grid-cols-[200px_1.3fr_1fr] gap-8 items-center relative">
           <AnimatedSection>
             <div className="aspect-square w-full max-w-[220px]">
