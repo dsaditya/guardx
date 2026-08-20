@@ -67,6 +67,39 @@ const layers = [
   },
 ];
 
+const problems = [
+  {
+    icon: CameraOff,
+    title: "Cameras Installed. But Footage Unavailable.",
+    desc: "Everything appears to be working until an incident happens — and the required recording cannot be found.",
+  },
+  {
+    icon: RefreshCw,
+    title: "The Same Complaints Keep Returning.",
+    desc: "A camera is replaced. Then a switch. Then a connector. But nobody investigates why the failures keep happening.",
+  },
+  {
+    icon: Wifi,
+    title: "CCTV Is Lagging or Buffering.",
+    desc: "The problem may not be the camera. Poor network design, overloaded switches, uplink limitations or incorrect architecture can affect the complete system.",
+  },
+  {
+    icon: FileQuestion,
+    title: "Nobody Has Complete System Documentation.",
+    desc: "There is no clear record of which camera connects to which switch, switch port, NVR or network segment.",
+  },
+  {
+    icon: UserX,
+    title: "Your System Is Vendor Dependent.",
+    desc: "If your existing technician or vendor disappears tomorrow, another engineer has to understand the entire installation from scratch.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Maintenance Costs Keep Increasing.",
+    desc: "Repeated replacements solve individual complaints — but not the structural reason behind them.",
+  },
+];
+
 const Eyebrow = ({ children }: { children: React.ReactNode }) => (
   <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-4">
     {children}
