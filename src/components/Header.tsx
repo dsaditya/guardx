@@ -32,6 +32,7 @@ const navItems: NavItem[] = [
       { label: "Annual Maintenance Contracts", to: "/services/annual-maintenance-contracts" },
       { label: "Security Assessment & Modernization", to: "/services/security-assessment-modernization" },
       { label: "Security Assessment", to: "/security-assessment" },
+      { label: "Security Standard", to: "/security-standard" },
       { label: "Security Health Score", to: "/services/security-health-score" },
     ],
   },
