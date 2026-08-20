@@ -26,6 +26,16 @@ import {
   Sun,
   Wrench,
   Search,
+  FileText,
+  Cable,
+  Tag,
+  Plug,
+  Battery,
+  ClipboardCheck,
+  ShieldCheck,
+  TrendingDown,
+  Users,
+  Maximize2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
