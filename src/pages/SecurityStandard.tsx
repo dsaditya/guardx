@@ -15,6 +15,8 @@ import {
   TrendingUp,
   ParkingCircle,
   Network,
+  X,
+  Check,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
