@@ -641,11 +641,11 @@ const SecurityStandard = () => {
             src={heroImage}
             alt="Gated community security entrance with CCTV and boom barrier infrastructure"
             className="w-full h-full object-cover"
-            width={1600}
-            height={1000}
+            width={1920}
+            height={1080}
             loading="eager"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/68 to-black/45" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/35" />
         </div>
         <div className="container-narrow relative py-16 md:py-24 lg:py-28">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
