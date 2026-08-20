@@ -225,6 +225,33 @@ const SecurityStandard = () => {
         </div>
       </section>
 
+      {/* Problems Section */}
+      <section className="section-padding bg-background">
+        <div className="container-narrow">
+          <AnimatedSection>
+            <Eyebrow>Common Issues</Eyebrow>
+            <h2 className="text-2xl md:text-3xl font-bold text-primary mb-8 font-heading">
+              Is Your Community Facing Any of These Problems?
+            </h2>
+          </AnimatedSection>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {problems.map((p, i) => (
+              <AnimatedSection key={p.title} delay={i * 0.05}>
+                <div className="bg-accent border border-border p-6 h-full">
+                  <div className="bg-primary/20 p-3 w-fit mb-4">
+                    <p.icon className="h-5 w-5 text-white" strokeWidth={1.5} />
+                  </div>
+                  <h3 className="text-base font-bold text-white font-heading mb-2 leading-snug">
+                    {p.title}
+                  </h3>
+                  <p className="text-white/85 text-sm leading-relaxed">{p.desc}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Placeholder for anchor target */}
       <section id="five-layer-standard" className="section-padding bg-background">
         <div className="container-narrow">
