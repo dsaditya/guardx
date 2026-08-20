@@ -394,6 +394,121 @@ const serviceCards = [
   },
 ];
 
+const caseStudies = [
+  {
+    title: "CCTV Lag & Repeated Network Complaints",
+    problem: "The site faced recurring CCTV lag and intermittent recording issues. Individual cameras and network components were repeatedly checked, but the complaints continued.",
+    diagnosis: "The underlying network architecture and switching design were not suitable for the size of the CCTV system.",
+    approach: "The network was studied at system level instead of treating individual camera complaints independently. Switching, uplinks and network structure were reviewed and corrected.",
+    result: "A more stable network architecture with easier troubleshooting and improved reliability.",
+    lesson: "Sometimes the camera is not the problem. The infrastructure behind the camera is.",
+  },
+  {
+    title: "Cameras Repeatedly Going Offline",
+    problem: "Multiple cameras experienced repeated offline complaints. Individual faults were attended whenever reported.",
+    diagnosis: "Poor physical connections, inadequate protection and the absence of structured preventive maintenance were contributing to repeated failures.",
+    approach: "Connections were standardized and protected, and preventive maintenance practices were introduced.",
+    result: "Reduced recurring failures and improved system reliability.",
+    lesson: "Fixing a complaint is different from fixing the reason the complaint keeps returning.",
+  },
+];
+
+const engineeringStandards = [
+  {
+    icon: Network,
+    title: "Gigabit Network Backbone",
+    desc: "Network architecture is selected based on actual camera traffic and system size — not simply on the number of available switch ports.",
+  },
+  {
+    icon: Cable,
+    title: "OFC for Long-Distance Connectivity",
+    desc: "Fiber connectivity is recommended wherever distance, scale or bandwidth makes copper unsuitable.",
+  },
+  {
+    icon: Cable,
+    title: "Structured Cabling",
+    desc: "Cables are routed, terminated and dressed systematically for reliability and future troubleshooting.",
+  },
+  {
+    icon: Tag,
+    title: "Camera Labeling",
+    desc: "Every camera receives a unique identification.",
+  },
+  {
+    icon: Tag,
+    title: "Switch Labeling",
+    desc: "Switches are clearly named and mapped.",
+  },
+  {
+    icon: Map,
+    title: "Port Mapping",
+    desc: "Camera-to-switch and switch-port relationships are documented.",
+  },
+  {
+    icon: Server,
+    title: "Rack Dressing",
+    desc: "Racks are organized to simplify maintenance and avoid accidental disconnection.",
+  },
+  {
+    icon: Plug,
+    title: "Proper Glands & Termination",
+    desc: "Connections are protected against physical and environmental damage wherever applicable.",
+  },
+  {
+    icon: Battery,
+    title: "UPS & Power Planning",
+    desc: "Critical security infrastructure is planned with proper power and backup requirements.",
+  },
+  {
+    icon: FileText,
+    title: "IP Documentation",
+    desc: "Camera and network IP information is maintained systematically.",
+  },
+  {
+    icon: Map,
+    title: "Network Map",
+    desc: "The handover documentation clearly shows how the system is interconnected.",
+  },
+  {
+    icon: ClipboardCheck,
+    title: "Testing & Commissioning",
+    desc: "Projects are tested against a structured commissioning checklist before handover.",
+  },
+];
+
+const benefits = [
+  {
+    icon: ShieldCheck,
+    title: "More Reliable Systems",
+    desc: "Reduce failures created by poor infrastructure.",
+  },
+  {
+    icon: Wrench,
+    title: "Easier Maintenance",
+    desc: "Technicians can quickly identify equipment and connections.",
+  },
+  {
+    icon: Search,
+    title: "Faster Troubleshooting",
+    desc: "A documented system reduces unnecessary trial-and-error.",
+  },
+  {
+    icon: TrendingDown,
+    title: "Lower Total Cost of Ownership",
+    desc: "Solve structural causes instead of repeatedly replacing individual components.",
+  },
+  {
+    icon: Users,
+    title: "Reduced Vendor Dependency",
+    desc: "Future engineers can understand the system through proper documentation.",
+  },
+  {
+    icon: Maximize2,
+    title: "Easier Expansion",
+    desc: "A structured network makes future camera or access-system additions easier.",
+  },
+];
+
 const Eyebrow = ({ children }: { children: React.ReactNode }) => (
   <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-4">
     {children}
