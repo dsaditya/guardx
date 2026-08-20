@@ -108,35 +108,36 @@ const layers = [
 const problems = [
   {
     icon: CameraOff,
-    title: "Cameras Installed. But Footage Unavailable.",
-    desc: "Everything appears to be working until an incident happens — and the required recording cannot be found.",
+    title: "Cameras Installed, But Footage Unavailable",
+    desc: "Issues appear only when something happens.",
   },
   {
     icon: RefreshCw,
-    title: "The Same Complaints Keep Returning.",
-    desc: "A camera is replaced. Then a switch. Then a connector. But nobody investigates why the failures keep happening.",
+    title: "Recurring Complaints",
+    desc: "Same camera, same switch, fails again and again.",
   },
   {
     icon: Wifi,
-    title: "CCTV Is Lagging or Buffering.",
-    desc: "The problem may not be the camera. Poor network design, overloaded switches, uplink limitations or incorrect architecture can affect the complete system.",
+    title: "Lag, Buffering & Poor Recording",
+    desc: "Usually due to wrong network design.",
   },
   {
     icon: FileQuestion,
-    title: "Nobody Has Complete System Documentation.",
-    desc: "There is no clear record of which camera connects to which switch, switch port, NVR or network segment.",
+    title: "No System Documentation",
+    desc: "No one knows which camera is on which switch or port.",
   },
   {
     icon: UserX,
-    title: "Your System Is Vendor Dependent.",
-    desc: "If your existing technician or vendor disappears tomorrow, another engineer has to understand the entire installation from scratch.",
+    title: "Vendor Dependent",
+    desc: "If your vendor disappears tomorrow, what happens?",
   },
   {
     icon: TrendingUp,
-    title: "Maintenance Costs Keep Increasing.",
-    desc: "Repeated replacements solve individual complaints — but not the structural reason behind them.",
+    title: "High Costs, Low Reliability",
+    desc: "Repairs keep happening, problems keep returning.",
   },
 ];
+
 
 const layerDetails = [
   {
