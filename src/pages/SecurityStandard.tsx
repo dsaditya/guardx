@@ -854,119 +854,97 @@ const SecurityStandard = () => {
         </div>
       </section>
 
-      {/* Comparison Section */}
-      <section className="section-padding bg-background">
-        <div className="container-narrow">
-          <AnimatedSection>
-            <Eyebrow>Comparison</Eyebrow>
-            <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading mb-10">
-              Traditional Installation vs GuardX360 Standard
-            </h2>
-          </AnimatedSection>
-
-          <div className="grid lg:grid-cols-2 gap-px bg-border border border-border">
-            {/* Left column */}
-            <AnimatedSection>
-              <div className="bg-section-alt p-6 md:p-8 h-full">
-                <h3 className="text-lg font-bold text-primary font-heading mb-6">
-                  Typical Security Installation
-                </h3>
-                <ul className="space-y-4">
-                  {typicalInstallation.map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <span className="bg-primary/10 p-1 flex-shrink-0 mt-0.5">
-                        <X className="h-4 w-4 text-secondary" strokeWidth={2} />
-                      </span>
-                      <span className="text-secondary text-sm leading-relaxed">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </AnimatedSection>
-
-            {/* Right column */}
-            <AnimatedSection delay={0.1}>
-              <div className="bg-accent p-6 md:p-8 h-full">
-                <h3 className="text-lg font-bold text-accent-foreground font-heading mb-6">
-                  GuardX360 Standard
-                </h3>
-                <ul className="space-y-4">
-                  {guardxStandard.map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <span className="bg-accent-foreground/20 p-1 flex-shrink-0 mt-0.5">
-                        <Check className="h-4 w-4 text-accent-foreground" strokeWidth={2.5} />
-                      </span>
-                      <span className="text-accent-foreground text-sm leading-relaxed">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
-
-      {/* Health Score Section */}
+      {/* Comparison + Health Score */}
       <section className="section-padding bg-section-dark">
         <div className="container-narrow">
-          <AnimatedSection>
-            <Eyebrow>Assessment</Eyebrow>
-            <h2 className="text-2xl md:text-3xl font-bold text-white font-heading mb-4">
-              How Healthy Is Your Community's Security System?
-            </h2>
-            <p className="text-white/70 max-w-3xl leading-relaxed mb-10">
-              A security system can appear functional while carrying multiple hidden risks. GuardX360
-              evaluates the complete installation across multiple parameters and converts the findings
-              into a simple Security Health Score.
-            </p>
-          </AnimatedSection>
+          <div className="grid lg:grid-cols-[1.4fr_1fr] gap-10 items-start">
+            {/* Comparison */}
+            <div>
+              <AnimatedSection>
+                <h2 className="text-2xl md:text-3xl font-bold text-white font-heading mb-8 text-center lg:text-left">
+                  Traditional Installations vs GuardX360 Standard
+                </h2>
+              </AnimatedSection>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <div className="space-y-6">
-              {healthScores.map((h, i) => (
-                <AnimatedSection key={h.label} delay={i * 0.05}>
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-sm font-semibold text-white">{h.label}</span>
-                      <span className="text-sm font-bold text-accent">
-                        {h.score}
-                        <span className="text-white/50 font-normal">/100</span>
-                      </span>
-                    </div>
-                    <div className="h-2 w-full bg-white/15">
-                      <div
-                        className="h-full bg-accent"
-                        style={{ width: `${h.score}%` }}
-                      />
-                    </div>
+              <div className="relative grid md:grid-cols-2 gap-6">
+                {/* VS badge */}
+                <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 h-10 w-10 items-center justify-center bg-accent">
+                  <span className="text-accent-foreground font-heading font-bold text-sm">VS</span>
+                </div>
+
+                <AnimatedSection>
+                  <div className="bg-primary border border-white/10 h-full">
+                    <h3 className="text-sm font-bold text-white font-heading uppercase tracking-wide bg-white/10 px-5 py-3">
+                      Typical Installations
+                    </h3>
+                    <ul className="p-5 space-y-3">
+                      {typicalInstallation.map((item) => (
+                        <li key={item} className="flex items-start gap-3">
+                          <X className="h-4 w-4 text-white/50 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                          <span className="text-white/70 text-sm leading-relaxed">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </AnimatedSection>
-              ))}
+
+                <AnimatedSection delay={0.1}>
+                  <div className="bg-primary border border-accent/40 h-full">
+                    <h3 className="text-sm font-bold text-accent-foreground font-heading uppercase tracking-wide bg-accent px-5 py-3">
+                      GuardX360 Standard
+                    </h3>
+                    <ul className="p-5 space-y-3">
+                      {guardxStandard.map((item) => (
+                        <li key={item} className="flex items-start gap-3">
+                          <Check className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                          <span className="text-white/85 text-sm leading-relaxed">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </AnimatedSection>
+              </div>
             </div>
 
-            <AnimatedSection delay={0.2}>
-              <div className="bg-primary border border-white/10 p-8 md:p-10">
-                <div className="text-center mb-6">
-                  <div className="text-6xl md:text-7xl font-bold text-white font-heading">
-                    60<span className="text-3xl md:text-4xl text-white/50">/100</span>
-                  </div>
-                  <div className="inline-block mt-4 px-4 py-1.5 bg-accent text-accent-foreground text-xs uppercase tracking-wide font-semibold">
-                    Needs Attention
-                  </div>
-                </div>
-                <p className="text-white/70 text-sm leading-relaxed text-center mb-8">
-                  The objective is not simply to identify faults. It is to show your management
-                  committee: what is working, what is at risk, what needs immediate attention, what
-                  can wait, and where future expenditure should be prioritized.
+            {/* Health Score card */}
+            <AnimatedSection delay={0.15}>
+              <div className="bg-background border border-accent p-6 md:p-8">
+                <h2 className="text-xl font-bold text-primary font-heading text-center mb-2">
+                  Security Health Score
+                </h2>
+                <p className="text-secondary text-sm text-center leading-relaxed mb-6">
+                  Know how healthy your current security system is.
                 </p>
-                <div className="flex justify-center">
+
+                <div className="space-y-4 mb-6">
+                  {healthScores.map((h, i) => (
+                    <div key={h.label} className="grid grid-cols-[1fr_auto] gap-3 items-center">
+                      <div>
+                        <p className="text-xs font-semibold text-primary mb-1">{h.label}</p>
+                        <div className="h-1.5 w-full bg-border">
+                          <div className="h-full bg-accent" style={{ width: `${h.score}%` }} />
+                        </div>
+                      </div>
+                      <p className="text-sm font-bold text-primary">
+                        {h.score}
+                        <span className="text-secondary font-normal text-xs">/100</span>
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="border-t border-border pt-5 text-center">
+                  <p className="text-xs font-semibold text-primary uppercase tracking-wide mb-1">
+                    Overall Security Health Score
+                  </p>
+                  <p className="text-4xl font-bold text-accent font-heading">
+                    60<span className="text-2xl">/100</span>
+                  </p>
+                  <p className="text-sm font-semibold text-secondary mb-5">Needs Attention</p>
                   <Link to="/services/security-health-score">
-                    <Button
-                      size="lg"
-                      className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 h-auto font-semibold uppercase tracking-wide"
-                    >
-                      Get Your Community Security Score
-                      <ArrowRight className="ml-2 h-5 w-5 flex-shrink-0" />
+                    <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground h-auto py-3 font-semibold uppercase tracking-wide text-xs">
+                      Get Your Score
+                      <ArrowRight className="ml-2 h-4 w-4 flex-shrink-0" />
                     </Button>
                   </Link>
                 </div>
@@ -975,6 +953,7 @@ const SecurityStandard = () => {
           </div>
         </div>
       </section>
+
 
       {/* Assessment Process */}
       <section className="section-padding bg-section-alt">
