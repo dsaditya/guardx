@@ -56,7 +56,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import heroImage from "@/assets/lp2/standard-hero-new.jpg.asset.json";
+import heroImage from "@/assets/lp2/standard-hero.jpg";
 import controlRoomBg from "@/assets/lp2/bg-control-room.jpg";
 import perimeterBg from "@/assets/lp2/bg-perimeter.jpg";
 import communityAerialBg from "@/assets/lp2/bg-community-aerial.jpg";
@@ -638,14 +638,14 @@ const SecurityStandard = () => {
       <section className="relative bg-section-dark">
         <div className="absolute inset-0">
           <img
-            src={heroImage.url}
+            src={heroImage}
             alt="Gated community security entrance with CCTV and boom barrier infrastructure"
             className="w-full h-full object-cover"
             width={1920}
             height={1080}
             loading="eager"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/68 to-black/45" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/35" />
         </div>
         <div className="container-narrow relative py-16 md:py-24 lg:py-28">
           <div className="grid lg:grid-cols-2 gap-12 items-center">

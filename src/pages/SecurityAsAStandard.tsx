@@ -36,7 +36,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import heroImage from "@/assets/lp2/standard-hero-new.jpg.asset.json";
+import heroImage from "@/assets/lp2/standard-hero.jpg";
 import rackImage from "@/assets/lp/network-rack.jpg";
 
 const stats = [
@@ -159,14 +159,14 @@ const SecurityAsAStandard = () => {
       <section className="relative bg-section-dark">
         <div className="absolute inset-0">
           <img
-            src={heroImage.url}
+            src={heroImage}
             alt="CCTV camera and cabling on the boundary wall of a gated community in Hyderabad"
             className="w-full h-full object-cover"
             width={1920}
             height={1080}
             loading="eager"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/92 via-black/80 to-black/55" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/35" />
         </div>
         <div className="container-narrow relative py-20 md:py-28">
           <div className="max-w-3xl">
