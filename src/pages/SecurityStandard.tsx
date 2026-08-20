@@ -549,8 +549,55 @@ const Eyebrow = ({ children }: { children: React.ReactNode }) => (
   </p>
 );
 
+const faqs = [
+  {
+    q: "What is a Security Assessment?",
+    a: "A GuardX360 Security Assessment is a structured review of your existing security infrastructure. Depending on the scope, we evaluate CCTV, networking, entry systems, access control, perimeter security, power infrastructure, recurring failures and documentation. The objective is to identify existing risks and provide an improvement roadmap.",
+  },
+  {
+    q: "Do We Need to Replace Our Existing System?",
+    a: "Not necessarily. Our first objective is to understand what can continue working. Where existing equipment and infrastructure are technically suitable, we may recommend retaining them. Replacement is recommended only where reliability, performance, compatibility or future scalability requires it.",
+  },
+  {
+    q: "Do You Only Work With New Installations?",
+    a: "No. A major part of our work involves: audits, modernization, network correction, existing-system standardization, CCTV upgrades, repeated-fault diagnosis, documentation, and maintenance.",
+  },
+  {
+    q: "Why Does CCTV Start Lagging After Installation?",
+    a: "There can be multiple reasons, including: inadequate switch capacity, 10/100 network limitations, overloaded uplinks, poor network architecture, cabling problems, packet loss, power issues, incorrect configuration, or equipment failure. A proper diagnosis should be completed before components are repeatedly replaced.",
+  },
+  {
+    q: "Why Is Documentation Important?",
+    a: "Without documentation, every future technician has to rediscover the complete system. Proper documentation reduces troubleshooting time and helps communities maintain control over their own infrastructure.",
+  },
+  {
+    q: "What Makes GuardX360 Different From a Regular CCTV Vendor?",
+    a: "GuardX360 focuses on the entire security infrastructure rather than only supplying individual products. Our approach combines: auditing, engineering, system design, structured execution, documentation, preventive maintenance, and root-cause diagnosis.",
+  },
+  {
+    q: "Do You Provide AMC?",
+    a: "Yes. AMC services can include preventive maintenance, complaint support, equipment-health review, recurring-fault analysis, documentation updates and recommendations depending on the agreed scope.",
+  },
+  {
+    q: "Do You Work Only in Hyderabad?",
+    a: "Hyderabad is our primary market for gated-community security services. Additional projects may be undertaken in Telangana and Andhra Pradesh depending on project size and scope.",
+  },
+  {
+    q: "How Long Does a Security Assessment Take?",
+    a: "The timeline depends on the size of the community, number of cameras, network complexity and systems being assessed. After understanding the site size and scope, our team will confirm the assessment timeline.",
+  },
+  {
+    q: "Will We Receive a Report?",
+    a: "Yes, where the scope includes a formal audit. The report may contain: findings, risk areas, system-health observations, improvement recommendations, prioritization, and modernization requirements.",
+  },
+];
+
 const SecurityStandard = () => {
   const [open, setOpen] = useState(false);
+
+  const scrollToForm = () => {
+    document.getElementById("request-assessment")?.scrollIntoView({ behavior: "smooth" });
+  };
 
   useSEO({
     title: "5-Layer Security Standard for Gated Communities | GuardX360 Hyderabad",
