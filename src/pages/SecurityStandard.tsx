@@ -13,6 +13,8 @@ import {
   FileQuestion,
   UserX,
   TrendingUp,
+  ParkingCircle,
+  Network,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
