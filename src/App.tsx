@@ -32,6 +32,7 @@ import SolarFencing from "./pages/services/SolarFencing";
 import AnprUhf from "./pages/services/AnprUhf";
 import AMC from "./pages/services/AMC";
 import AssessmentModernization from "./pages/services/AssessmentModernization";
+import VisitorManagement from "./pages/services/VisitorManagement";
 import HealthScore from "./pages/services/HealthScore";
 import ChecklistHub from "./pages/ChecklistHub";
 import SecurityAssessment from "./pages/SecurityAssessment";
@@ -61,6 +62,7 @@ const App = () => (
               <Route path="/services/solar-fencing" element={<SolarFencing />} />
               <Route path="/services/anpr-uhf-vehicle-access" element={<AnprUhf />} />
               <Route path="/services/annual-maintenance-contracts" element={<AMC />} />
+              <Route path="/services/visitor-management" element={<VisitorManagement />} />
               <Route path="/services/security-assessment-modernization" element={<AssessmentModernization />} />
               <Route path="/services/security-health-score" element={<HealthScore />} />
               <Route path="/why-guardx360" element={<WhyGuardX360 />} />

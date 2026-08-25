@@ -27,6 +27,7 @@ const navItems: NavItem[] = [
 
       { label: "Boom Barrier & Vehicle Access", to: "/services/boom-barrier-vehicle-access" },
       { label: "Biometric & Access Control", to: "/services/biometric-access-control" },
+      { label: "Visitor Management", to: "/services/visitor-management" },
       { label: "Solar Fencing", to: "/services/solar-fencing" },
       { label: "ANPR & UHF Vehicle Access", to: "/services/anpr-uhf-vehicle-access" },
       { label: "Annual Maintenance Contracts", to: "/services/annual-maintenance-contracts" },
