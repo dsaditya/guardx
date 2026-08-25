@@ -1,6 +1,7 @@
 import fiveLayersImage from "@/assets/blog/five-layers-gated-community.jpg";
 import whyGuardxExistsImage from "@/assets/blog/why-guardx360-exists.jpg";
 import amcTechnicianImage from "@/assets/blog/amc-technician-documentation.jpg";
+import integratedSecurityImage from "@/assets/blog/integrated-security-one-system.jpg";
 
 export interface BlogSection {
   id: string;
