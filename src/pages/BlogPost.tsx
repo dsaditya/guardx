@@ -162,7 +162,7 @@ const BlogPostPage = () => {
             </aside>
 
             {/* Body */}
-            <article className="lg:col-span-9 order-1 lg:order-2 max-w-3xl">
+            <article className="lg:col-span-9 order-1 lg:order-2 max-w-3xl [&_a]:text-accent [&_a]:font-semibold [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-accent/80">
               <p
                 className="text-lg md:text-xl text-primary leading-relaxed mb-10 font-medium"
                 dangerouslySetInnerHTML={{ __html: post.intro }}
