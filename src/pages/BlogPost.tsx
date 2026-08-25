@@ -221,12 +221,13 @@ const BlogPostPage = () => {
                   <p className="text-white/70 mb-6 leading-relaxed">
                     Book a free Security Health Score assessment. A GuardX360 engineer will visit your site and produce a written rating across six parameters — no sales pressure.
                   </p>
-                  <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground uppercase tracking-wide font-semibold">
-                    <Link to="/contact">
+                  <Button asChild size="lg" className="bg-accent hover:bg-accent/90 uppercase tracking-wide font-semibold [&]:text-accent-foreground [&]:no-underline hover:[&]:text-accent-foreground">
+                    <Link to="/contact" className="!text-accent-foreground !no-underline hover:!text-accent-foreground">
                       Request a Community Security Assessment
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
+
                 </div>
               </AnimatedSection>
             </article>
