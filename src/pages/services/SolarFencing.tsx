@@ -4,8 +4,8 @@ import serviceImage from "@/assets/services/solar-fencing.jpg";
 const SolarFencing = () => (
   <ServicePage
     seoTitle="Solar Fencing for Apartments Hyderabad | GuardX360"
-    seoDescription="Solar-powered perimeter electric fencing for gated communities and apartments in Hyderabad. Designed, installed and maintained by GuardX360."
-    eyebrow="Service 04"
+    seoDescription="Solar-powered perimeter electric fencing for gated communities and apartments across Hyderabad and surrounding areas. Designed, installed and maintained by GuardX360."
+    eyebrow="Service 05"
     title="Solar Fencing Systems"
     description="Perimeter deterrent that runs quietly on solar — day and night."
     image={serviceImage}

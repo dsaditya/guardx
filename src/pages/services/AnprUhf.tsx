@@ -4,8 +4,8 @@ import serviceImage from "@/assets/services/anpr-uhf.jpg";
 const AnprUhf = () => (
   <ServicePage
     seoTitle="ANPR & UHF Vehicle Access Systems Hyderabad | GuardX360"
-    seoDescription="ANPR number plate recognition and UHF long-range vehicle access for apartments and townships in Hyderabad. Integrated with existing boom barriers and CCTV."
-    eyebrow="Service 05"
+    seoDescription="ANPR number plate recognition and UHF long-range vehicle access for apartments and townships across Hyderabad and surrounding areas. Integrated with existing boom barriers and CCTV."
+    eyebrow="Service 06"
     title="ANPR & UHF Vehicle Access Systems"
     description="No queues, no manual checks — verified vehicle entry at community speed."
     image={serviceImage}

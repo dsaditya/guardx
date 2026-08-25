@@ -5,8 +5,8 @@ import HealthScoreQuiz from "@/components/HealthScoreQuiz";
 const HealthScore = () => (
   <ServicePage
     seoTitle="Security Health Score Hyderabad | GuardX360"
-    seoDescription="Annual Security Health Score for gated communities in Hyderabad — a benchmarked, written report on coverage, integration, documentation and readiness."
-    eyebrow="Service 08"
+    seoDescription="Annual Security Health Score for gated communities across Hyderabad and surrounding areas — a benchmarked, written report on coverage, integration, documentation and readiness."
+    eyebrow="Service 09"
     title="Security Health Score"
     description="A yearly, benchmarked view of your community's security readiness — in writing."
     image={serviceImage}
