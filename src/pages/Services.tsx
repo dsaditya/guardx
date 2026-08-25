@@ -3,6 +3,7 @@ import { ArrowRight, Camera, Car, Fingerprint, Zap, ScanLine, Wrench, ClipboardC
 import { Button } from "@/components/ui/button";
 import PageHero from "@/components/PageHero";
 import AnimatedSection from "@/components/AnimatedSection";
+import { useSEO } from "@/hooks/use-seo";
 import cctvImage from "@/assets/services/cctv-surveillance.jpg";
 import boomBarrierImage from "@/assets/services/boom-barrier.jpg";
 import biometricImage from "@/assets/services/biometric-access.jpg";
@@ -146,6 +147,12 @@ const services = [
 ];
 
 const Services = () => {
+  useSEO({
+    title: "Security Infrastructure Company Hyderabad | Security System Integrator | GuardX360",
+    description:
+      "GuardX360 is a security infrastructure company and security system integrator for gated communities across Hyderabad and surrounding areas — CCTV, access control, visitor management, boom barriers, perimeter security and AMC.",
+  });
+
   return (
     <>
       <PageHero
