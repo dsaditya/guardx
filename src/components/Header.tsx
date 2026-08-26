@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 type NavItem = {
   label: string;
   to: string;
-  children?: { label: string; to: string }[];
+  children?: { label: string; to: string; external?: boolean }[];
 };
 
 const navItems: NavItem[] = [
