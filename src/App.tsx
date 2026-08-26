@@ -78,7 +78,7 @@ const App = () => (
               <Route path="/gated-community-security-hyderabad" element={<GatedCommunitySecurityHyderabad />} />
               <Route path="/security-as-a-standard" element={<SecurityAsAStandard />} />
               <Route path="/security-standard" element={<SecurityStandard />} />
-
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
               <Route path="/contact" element={<Contact />} />
               <Route path="/partner-with-us" element={<PartnerWithUs />} />
