@@ -191,15 +191,27 @@ const Header = () => {
                   </div>
                   {item.children && openMobileGroup === item.label && (
                     <div className="pb-3 pl-4">
-                      {item.children.map((child) => (
-                        <button
-                          key={child.to}
-                          onClick={() => handleAnchorNav(child.to)}
-                          className="block w-full text-left py-2 text-xs text-white/60 hover:text-accent uppercase tracking-wide"
-                        >
-                          {child.label}
-                        </button>
-                      ))}
+                      {item.children.map((child) =>
+                        child.external ? (
+                          <a
+                            key={child.to}
+                            href={child.to}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="block w-full text-left py-2 text-xs text-white/60 hover:text-accent uppercase tracking-wide"
+                          >
+                            {child.label}
+                          </a>
+                        ) : (
+                          <button
+                            key={child.to}
+                            onClick={() => handleAnchorNav(child.to)}
+                            className="block w-full text-left py-2 text-xs text-white/60 hover:text-accent uppercase tracking-wide"
+                          >
+                            {child.label}
+                          </button>
+                        )
+                      )}
                     </div>
                   )}
                 </div>
