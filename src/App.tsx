@@ -34,6 +34,7 @@ import AMC from "./pages/services/AMC";
 import AssessmentModernization from "./pages/services/AssessmentModernization";
 import VisitorManagement from "./pages/services/VisitorManagement";
 import HealthScore from "./pages/services/HealthScore";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import ChecklistHub from "./pages/ChecklistHub";
 import SecurityAssessment from "./pages/SecurityAssessment";
 import GatedCommunitySecurityHyderabad from "./pages/GatedCommunitySecurityHyderabad";
