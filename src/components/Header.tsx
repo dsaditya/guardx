@@ -35,6 +35,7 @@ const navItems: NavItem[] = [
       { label: "Security Assessment", to: "/security-assessment" },
       { label: "Security Standard", to: "/security-standard" },
       { label: "Security Health Score", to: "/services/security-health-score" },
+      { label: "Security Assessment Program", to: "https://guardx360-landingpage.lovable.app", external: true },
     ],
   },
   {
