@@ -161,7 +161,7 @@ const PrivacyPolicy = () => {
             </p>
             <div className="text-secondary leading-relaxed">
               <p className="font-semibold text-primary">GuardX360</p>
-              <p>Email: info@guardx360.com</p>
+              <p>Email: contact@guardx360.com</p>
               <p>Phone: +91 90597 77944</p>
               <p>
                 Address: 3rd Floor, MIG 46/A, KPHB Phase 1, Kukatpally, Hyderabad, Telangana 500072
