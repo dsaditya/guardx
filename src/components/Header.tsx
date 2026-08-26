@@ -32,10 +32,7 @@ const navItems: NavItem[] = [
       { label: "ANPR & UHF Vehicle Access", to: "/services/anpr-uhf-vehicle-access" },
       { label: "Annual Maintenance Contracts", to: "/services/annual-maintenance-contracts" },
       { label: "Security Assessment & Modernization", to: "/services/security-assessment-modernization" },
-      { label: "Security Assessment", to: "/security-assessment" },
-      { label: "Security Standard", to: "/security-standard" },
       { label: "Security Health Score", to: "/services/security-health-score" },
-      { label: "Security Assessment Program", to: "https://guardx360-landingpage.lovable.app", external: true },
     ],
   },
   {
