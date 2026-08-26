@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 type NavItem = {
   label: string;
   to: string;
-  children?: { label: string; to: string }[];
+  children?: { label: string; to: string; external?: boolean }[];
 };
 
 const navItems: NavItem[] = [
@@ -35,6 +35,7 @@ const navItems: NavItem[] = [
       { label: "Security Assessment", to: "/security-assessment" },
       { label: "Security Standard", to: "/security-standard" },
       { label: "Security Health Score", to: "/services/security-health-score" },
+      { label: "Security Assessment Program", to: "https://guardx360-landingpage.lovable.app", external: true },
     ],
   },
   {
@@ -109,15 +110,27 @@ const Header = () => {
                   {item.children && openDropdown === item.label && (
                     <div className="absolute top-full left-0 pt-1 min-w-[240px] z-50">
                       <div className="bg-section-dark border border-white/10 py-2 shadow-lg">
-                        {item.children.map((child) => (
-                          <button
-                            key={child.to}
-                            onClick={() => handleAnchorNav(child.to)}
-                            className="block w-full text-left px-4 py-2 text-xs text-white/70 hover:text-accent hover:bg-white/5 transition-colors uppercase tracking-wide"
-                          >
-                            {child.label}
-                          </button>
-                        ))}
+                        {item.children.map((child) =>
+                          child.external ? (
+                            <a
+                              key={child.to}
+                              href={child.to}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="block w-full text-left px-4 py-2 text-xs text-white/70 hover:text-accent hover:bg-white/5 transition-colors uppercase tracking-wide"
+                            >
+                              {child.label}
+                            </a>
+                          ) : (
+                            <button
+                              key={child.to}
+                              onClick={() => handleAnchorNav(child.to)}
+                              className="block w-full text-left px-4 py-2 text-xs text-white/70 hover:text-accent hover:bg-white/5 transition-colors uppercase tracking-wide"
+                            >
+                              {child.label}
+                            </button>
+                          )
+                        )}
                       </div>
                     </div>
                   )}
@@ -178,15 +191,27 @@ const Header = () => {
                   </div>
                   {item.children && openMobileGroup === item.label && (
                     <div className="pb-3 pl-4">
-                      {item.children.map((child) => (
-                        <button
-                          key={child.to}
-                          onClick={() => handleAnchorNav(child.to)}
-                          className="block w-full text-left py-2 text-xs text-white/60 hover:text-accent uppercase tracking-wide"
-                        >
-                          {child.label}
-                        </button>
-                      ))}
+                      {item.children.map((child) =>
+                        child.external ? (
+                          <a
+                            key={child.to}
+                            href={child.to}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="block w-full text-left py-2 text-xs text-white/60 hover:text-accent uppercase tracking-wide"
+                          >
+                            {child.label}
+                          </a>
+                        ) : (
+                          <button
+                            key={child.to}
+                            onClick={() => handleAnchorNav(child.to)}
+                            className="block w-full text-left py-2 text-xs text-white/60 hover:text-accent uppercase tracking-wide"
+                          >
+                            {child.label}
+                          </button>
+                        )
+                      )}
                     </div>
                   )}
                 </div>
