@@ -17,6 +17,7 @@ const footerCols = [
       { label: "About Us", to: "/about" },
       { label: "Why GuardX360", to: "/why-guardx360" },
       { label: "Case Studies", to: "/case-studies" },
+      { label: "Privacy Policy", to: "/privacy-policy" },
     ],
   },
   {
