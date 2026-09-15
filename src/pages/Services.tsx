@@ -118,7 +118,9 @@ const services = [
       "Following the assessment, we design and implement a modernization roadmap that improves reliability, integrates existing systems where possible, and replaces obsolete infrastructure on a planned schedule rather than a reactive one.",
     ],
   },
-  {
+];
+
+
 
 const Services = () => {
   useSEO({
