@@ -321,7 +321,7 @@ const serviceCards = [
   },
   {
     icon: ParkingCircle,
-    title: "Boom Barrier & Vehicle Access",
+    title: "Boom Barrier, ANPR & UHF Vehicle Access",
     desc: "Structured vehicle entry and exit control for residents, staff, visitors and vendors.",
     includes: [
       "Boom barriers",
@@ -332,14 +332,6 @@ const serviceCards = [
       "Entry/exit integration",
     ],
     image: boomBarrierImg,
-    to: "/services/boom-barrier-vehicle-access",
-  },
-  {
-    icon: ScanLine,
-    title: "ANPR & UHF Vehicle Access",
-    desc: "Automatic identification and controlled vehicle access using ANPR and long-range UHF technology. Ideal for communities requiring faster, traceable and automated entry management.",
-    includes: [],
-    image: anprImg,
     to: "/services/boom-barrier-vehicle-access",
   },
   {
