@@ -959,7 +959,7 @@ const SecurityStandard = () => {
                     60<span className="text-2xl">/100</span>
                   </p>
                   <p className="text-sm font-semibold text-secondary mb-5">Needs Attention</p>
-                  <Link to="/services/security-health-score">
+                  <Link to="/contact">
                     <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground h-auto py-3 font-semibold uppercase tracking-wide text-xs">
                       Get Your Score
                       <ArrowRight className="ml-2 h-4 w-4 flex-shrink-0" />

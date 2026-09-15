@@ -85,7 +85,6 @@ const systems = [
   { icon: ScanLine, title: "ANPR & UHF Vehicle Access", text: "Plate and tag based recognition for resident and visitor vehicles.", to: "/services/anpr-uhf-vehicle-access" },
   { icon: Wrench, title: "Annual Maintenance Contracts", text: "Preventive maintenance and breakdown support with defined scope.", to: "/services/annual-maintenance-contracts" },
   { icon: ClipboardCheck, title: "Assessment & Modernization", text: "Independent evaluation of what exists and what needs to change.", to: "/services/security-assessment-modernization" },
-  { icon: ShieldCheck, title: "Security Health Score", text: "A yearly benchmarked view of your security readiness, in writing.", to: "/services/security-health-score" },
 ];
 
 const standards = [
@@ -196,7 +195,7 @@ const SecurityAsAStandard = () => {
                 variant="outline"
                 className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary px-8 py-6 h-auto font-semibold uppercase tracking-wide whitespace-normal"
               >
-                <Link to="/services/security-health-score">Get Your Community Security Score</Link>
+                <Link to="/contact">Get Your Community Security Score</Link>
               </Button>
             </div>
           </div>

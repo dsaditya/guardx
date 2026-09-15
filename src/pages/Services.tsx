@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Camera, Car, Fingerprint, Zap, ScanLine, Wrench, ClipboardCheck, ShieldCheck } from "lucide-react";
+import { ArrowRight, Camera, Car, Fingerprint, Zap, ScanLine, Wrench, ClipboardCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import PageHero from "@/components/PageHero";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -11,7 +11,6 @@ import solarFencingImage from "@/assets/services/solar-fencing.jpg";
 import anprUhfImage from "@/assets/services/anpr-uhf.jpg";
 import amcImage from "@/assets/services/amc.jpg";
 import assessmentImage from "@/assets/services/assessment-modernization.jpg";
-import healthScoreImage from "@/assets/services/health-score.jpg";
 
 
 const slugMap: Record<string, string> = {
@@ -23,7 +22,6 @@ const slugMap: Record<string, string> = {
   "anpr-uhf": "anpr-uhf-vehicle-access",
   amc: "annual-maintenance-contracts",
   assessment: "security-assessment-modernization",
-  audit: "security-health-score",
 };
 
 const services = [
@@ -119,19 +117,9 @@ const services = [
       "Following the assessment, we design and implement a modernization roadmap that improves reliability, integrates existing systems where possible, and replaces obsolete infrastructure on a planned schedule rather than a reactive one.",
     ],
   },
-  {
-    id: "audit",
-    icon: ShieldCheck,
-    image: healthScoreImage,
-    title: "Annual Security Audit",
-
-    keywords: "annual security audit gated community · yearly security system audit Hyderabad · security infrastructure audit RWA",
-    paragraphs: [
-      "An AMC keeps individual systems running. An Annual Security Audit steps back and evaluates the whole infrastructure — coverage, integration, documentation, compliance, and readiness — against your community's current Security Health Score.",
-      "Once a year, GuardX360 conducts a full infrastructure review covering every camera, access point, boom barrier, and fence line, benchmarks the results against the previous year, and delivers a written report to the committee with a prioritized action plan. This keeps security spending planned and evidence-based, rather than reactive.",
-    ],
-  },
 ];
+
+
 
 const Services = () => {
   useSEO({
