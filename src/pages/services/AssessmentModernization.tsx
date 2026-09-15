@@ -5,7 +5,7 @@ const AssessmentModernization = () => (
   <ServicePage
     seoTitle="Security Infrastructure Company Hyderabad | Security Assessment & Modernization | GuardX360"
     seoDescription="Structured audits and modernization roadmaps for existing gated-community security infrastructure across Hyderabad and surrounding areas. Replace patchwork systems with a planned upgrade."
-    eyebrow="Service 08"
+    eyebrow="SERVICE 06"
     title="Security Infrastructure Assessment & Modernization"
     description="From a patchwork of legacy systems to a planned, documented infrastructure."
     image={serviceImage}
