@@ -33,14 +33,6 @@ const BiometricAccess = () => (
                 Each installation is designed around who needs access, when, and how that access is
                 recorded — then documented so it can be handed over and maintained.
               </p>
-              <p className="text-secondary leading-relaxed">
-                Communities that need a structured entry record for guests and staff usually pair this
-                with a{" "}
-                <Link to="/services/visitor-management" className="text-accent underline">
-                  visitor management system
-                </Link>
-                .
-              </p>
             </div>
           </AnimatedSection>
         </div>

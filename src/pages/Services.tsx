@@ -18,7 +18,7 @@ const slugMap: Record<string, string> = {
   cctv: "cctv-surveillance",
   "boom-barrier": "boom-barrier-vehicle-access",
   biometric: "biometric-access-control",
-  "visitor-management": "visitor-management",
+  
   "solar-fencing": "solar-fencing",
   "anpr-uhf": "anpr-uhf-vehicle-access",
   amc: "annual-maintenance-contracts",
@@ -65,19 +65,6 @@ const services = [
       "Controlling who enters your community and when is the foundation of physical security. Access control systems eliminate dependence on manual entry registers and guard judgment for routine access decisions, and create a reliable digital audit trail of every entry and exit event.",
       "GuardX360 designs and installs access control systems ranging from standalone biometric readers for pedestrian gates to multi-zone networked systems for large communities and residential townships. We integrate access control with CCTV surveillance for visual verification at controlled entry points and with boom barriers for unified vehicle and pedestrian access management.",
       "Our systems support fingerprint, RFID card, face recognition, and mobile-based access, and can be configured for time-based access windows, visitor pre-authorization, and role-based permission levels for staff, residents, and delivery personnel.",
-    ],
-  },
-  {
-    id: "visitor-management",
-    icon: UserCheck,
-    image: biometricImage,
-    title: "Visitor Management Systems",
-
-    keywords: "visitor management system Hyderabad · gate entry register apartment · visitor entry system gated community",
-    paragraphs: [
-      "Most visitor disputes in a gated community come down to a missing record. A visitor management system replaces paper registers with a structured, searchable entry record covering guests, domestic staff, delivery personnel and contractors.",
-      "GuardX360 designs visitor management as part of the community entry layer — linked to the CCTV at the same gate for visual verification, and to biometric readers and boom barriers so pedestrian and vehicle entry share one access record.",
-      "Systems are specified to be operable by guards across shift handovers, and checked periodically under AMC so the entry record stays intact.",
     ],
   },
   {
