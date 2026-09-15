@@ -5,7 +5,7 @@ const AMC = () => (
   <ServicePage
     seoTitle="Annual Maintenance Contracts (AMC) Hyderabad | GuardX360"
     seoDescription="Structured AMC for CCTV, boom barriers, biometric access and solar fencing for gated communities across Hyderabad and surrounding areas. Preventive maintenance, breakdown support and reporting."
-    eyebrow="Service 07"
+    eyebrow="SERVICE 05"
     title="Annual Maintenance Contracts (AMC)"
     description="Preventive maintenance and breakdown support with a defined scope — for systems we installed and for systems we didn't."
     image={serviceImage}
