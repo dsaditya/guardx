@@ -1,5 +1,5 @@
 import ServicePage from "@/components/ServicePage";
-import { Link } from "react-router-dom";
+
 import AnimatedSection from "@/components/AnimatedSection";
 import serviceImage from "@/assets/services/biometric-access.jpg";
 
