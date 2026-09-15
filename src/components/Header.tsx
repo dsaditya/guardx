@@ -25,11 +25,10 @@ const navItems: NavItem[] = [
     children: [
       { label: "CCTV Surveillance", to: "/services/cctv-surveillance" },
 
-      { label: "Boom Barrier & Vehicle Access", to: "/services/boom-barrier-vehicle-access" },
+      { label: "Boom Barrier, ANPR & UHF Vehicle Access", to: "/services/boom-barrier-vehicle-access" },
       { label: "Biometric & Access Control", to: "/services/biometric-access-control" },
       
       { label: "Solar Fencing", to: "/services/solar-fencing" },
-      { label: "ANPR & UHF Vehicle Access", to: "/services/anpr-uhf-vehicle-access" },
       { label: "Annual Maintenance Contracts", to: "/services/annual-maintenance-contracts" },
       { label: "Security Assessment & Modernization", to: "/services/security-assessment-modernization" },
     ],
