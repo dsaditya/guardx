@@ -6,7 +6,6 @@ import {
   ParkingCircle,
   Fingerprint,
   Sun,
-  ScanLine,
   Wrench,
   ClipboardCheck,
   Search,

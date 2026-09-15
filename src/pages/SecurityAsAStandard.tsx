@@ -6,7 +6,6 @@ import {
   Car,
   Fingerprint,
   Zap,
-  ScanLine,
   Wrench,
   ClipboardCheck,
   ShieldCheck,

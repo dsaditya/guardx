@@ -23,7 +23,6 @@ import {
   BarChart3,
   Map,
   IndianRupee,
-  ScanLine,
   Sun,
   Wrench,
   Search,
@@ -65,7 +64,6 @@ import networkRackBg from "@/assets/lp/network-rack.jpg";
 import founderImg from "@/assets/lp/founder.png";
 import cctvImg from "@/assets/services/cctv-surveillance.jpg";
 import boomBarrierImg from "@/assets/services/boom-barrier.jpg";
-import anprImg from "@/assets/services/anpr-uhf.jpg";
 import biometricImg from "@/assets/services/biometric-access.jpg";
 import solarImg from "@/assets/services/solar-fencing.jpg";
 import amcImg from "@/assets/services/amc.jpg";
