@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Camera, Car, Fingerprint, Zap, ScanLine, Wrench, ClipboardCheck, ShieldCheck } from "lucide-react";
+import { ArrowRight, Camera, Car, Fingerprint, Zap, ScanLine, Wrench, ClipboardCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import PageHero from "@/components/PageHero";
 import AnimatedSection from "@/components/AnimatedSection";
