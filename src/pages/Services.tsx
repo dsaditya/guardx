@@ -11,7 +11,6 @@ import solarFencingImage from "@/assets/services/solar-fencing.jpg";
 import anprUhfImage from "@/assets/services/anpr-uhf.jpg";
 import amcImage from "@/assets/services/amc.jpg";
 import assessmentImage from "@/assets/services/assessment-modernization.jpg";
-import healthScoreImage from "@/assets/services/health-score.jpg";
 
 
 const slugMap: Record<string, string> = {
