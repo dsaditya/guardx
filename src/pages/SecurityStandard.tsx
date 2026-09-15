@@ -340,7 +340,7 @@ const serviceCards = [
     desc: "Automatic identification and controlled vehicle access using ANPR and long-range UHF technology. Ideal for communities requiring faster, traceable and automated entry management.",
     includes: [],
     image: anprImg,
-    to: "/services/anpr-uhf-vehicle-access",
+    to: "/services/boom-barrier-vehicle-access",
   },
   {
     icon: Fingerprint,

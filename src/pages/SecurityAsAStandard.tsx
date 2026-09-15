@@ -79,10 +79,9 @@ const disciplines = [
 
 const systems = [
   { icon: Camera, title: "CCTV Surveillance", text: "Coverage designed around actual entry points, blind spots and lighting.", to: "/services/cctv-surveillance" },
-  { icon: Car, title: "Boom Barrier & Vehicle Access", text: "Controlled vehicle entry and exit at every gate.", to: "/services/boom-barrier-vehicle-access" },
+  { icon: Car, title: "Boom Barrier, ANPR & UHF Vehicle Access", text: "Controlled vehicle entry and exit at every gate.", to: "/services/boom-barrier-vehicle-access" },
   { icon: Fingerprint, title: "Biometric & Access Control", text: "Access control for gates, clubhouse and utility areas.", to: "/services/biometric-access-control" },
   { icon: Zap, title: "Solar Fencing", text: "Perimeter protection that defines where the site starts.", to: "/services/solar-fencing" },
-  { icon: ScanLine, title: "ANPR & UHF Vehicle Access", text: "Plate and tag based recognition for resident and visitor vehicles.", to: "/services/anpr-uhf-vehicle-access" },
   { icon: Wrench, title: "Annual Maintenance Contracts", text: "Preventive maintenance and breakdown support with defined scope.", to: "/services/annual-maintenance-contracts" },
   { icon: ClipboardCheck, title: "Assessment & Modernization", text: "Independent evaluation of what exists and what needs to change.", to: "/services/security-assessment-modernization" },
 ];

@@ -57,10 +57,9 @@ const deliverables = [
 
 const services = [
   { icon: Camera, title: "CCTV Surveillance", to: "/services/cctv-surveillance" },
-  { icon: ParkingCircle, title: "Boom Barrier & Vehicle Access", to: "/services/boom-barrier-vehicle-access" },
+  { icon: ParkingCircle, title: "Boom Barrier, ANPR & UHF Vehicle Access", to: "/services/boom-barrier-vehicle-access" },
   { icon: Fingerprint, title: "Biometric & Access Control", to: "/services/biometric-access-control" },
   { icon: Sun, title: "Solar Fencing", to: "/services/solar-fencing" },
-  { icon: ScanLine, title: "ANPR & UHF Vehicle Access", to: "/services/anpr-uhf-vehicle-access" },
   { icon: Wrench, title: "Annual Maintenance Contracts", to: "/services/annual-maintenance-contracts" },
   { icon: ClipboardCheck, title: "Security Assessment & Modernization", to: "/services/security-assessment-modernization" },
 ];
