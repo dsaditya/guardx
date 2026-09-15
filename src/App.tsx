@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ScrollToHash from "@/components/ScrollToHash";
 import Header from "@/components/Header";
 import GetInTouchButton from "@/components/GetInTouchButton";
@@ -29,7 +29,6 @@ import CCTVSurveillance from "./pages/services/CCTVSurveillance";
 import BoomBarrier from "./pages/services/BoomBarrier";
 import BiometricAccess from "./pages/services/BiometricAccess";
 import SolarFencing from "./pages/services/SolarFencing";
-import AnprUhf from "./pages/services/AnprUhf";
 import AMC from "./pages/services/AMC";
 import AssessmentModernization from "./pages/services/AssessmentModernization";
 
@@ -60,7 +59,7 @@ const App = () => (
               <Route path="/services/boom-barrier-vehicle-access" element={<BoomBarrier />} />
               <Route path="/services/biometric-access-control" element={<BiometricAccess />} />
               <Route path="/services/solar-fencing" element={<SolarFencing />} />
-              <Route path="/services/anpr-uhf-vehicle-access" element={<AnprUhf />} />
+              <Route path="/services/anpr-uhf-vehicle-access" element={<Navigate to="/services/boom-barrier-vehicle-access" replace />} />
               <Route path="/services/annual-maintenance-contracts" element={<AMC />} />
               
               <Route path="/services/security-assessment-modernization" element={<AssessmentModernization />} />

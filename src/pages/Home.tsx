@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Shield, MapPin, CheckCircle2, Wrench, Camera, Car, Fingerprint, Zap, ScanLine, ClipboardCheck, ShieldCheck, Network, Cable, FileText, Server, Users } from "lucide-react";
+import { ArrowRight, Shield, MapPin, CheckCircle2, Wrench, Camera, Car, Fingerprint, Zap, ClipboardCheck, ShieldCheck, Network, Cable, FileText, Server, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
 
@@ -12,10 +12,9 @@ const trustPoints = [
 
 const services = [
   { icon: Camera, title: "CCTV Surveillance", path: "/services/cctv-surveillance" },
-  { icon: Car, title: "Boom Barrier & Vehicle Access", path: "/services/boom-barrier-vehicle-access" },
+  { icon: Car, title: "Boom Barrier, ANPR & UHF Vehicle Access", path: "/services/boom-barrier-vehicle-access" },
   { icon: Fingerprint, title: "Biometric & Access Control", path: "/services/biometric-access-control" },
   { icon: Zap, title: "Solar Fencing", path: "/services/solar-fencing" },
-  { icon: ScanLine, title: "ANPR & UHF Vehicle Access", path: "/services/anpr-uhf-vehicle-access" },
   { icon: Wrench, title: "Annual Maintenance Contracts", path: "/services/annual-maintenance-contracts" },
   { icon: ClipboardCheck, title: "Assessment & Modernization", path: "/services/security-assessment-modernization" },
 ];

@@ -23,7 +23,6 @@ import {
   BarChart3,
   Map,
   IndianRupee,
-  ScanLine,
   Sun,
   Wrench,
   Search,
@@ -65,7 +64,6 @@ import networkRackBg from "@/assets/lp/network-rack.jpg";
 import founderImg from "@/assets/lp/founder.png";
 import cctvImg from "@/assets/services/cctv-surveillance.jpg";
 import boomBarrierImg from "@/assets/services/boom-barrier.jpg";
-import anprImg from "@/assets/services/anpr-uhf.jpg";
 import biometricImg from "@/assets/services/biometric-access.jpg";
 import solarImg from "@/assets/services/solar-fencing.jpg";
 import amcImg from "@/assets/services/amc.jpg";
@@ -321,7 +319,7 @@ const serviceCards = [
   },
   {
     icon: ParkingCircle,
-    title: "Boom Barrier & Vehicle Access",
+    title: "Boom Barrier, ANPR & UHF Vehicle Access",
     desc: "Structured vehicle entry and exit control for residents, staff, visitors and vendors.",
     includes: [
       "Boom barriers",
@@ -333,14 +331,6 @@ const serviceCards = [
     ],
     image: boomBarrierImg,
     to: "/services/boom-barrier-vehicle-access",
-  },
-  {
-    icon: ScanLine,
-    title: "ANPR & UHF Vehicle Access",
-    desc: "Automatic identification and controlled vehicle access using ANPR and long-range UHF technology. Ideal for communities requiring faster, traceable and automated entry management.",
-    includes: [],
-    image: anprImg,
-    to: "/services/anpr-uhf-vehicle-access",
   },
   {
     icon: Fingerprint,

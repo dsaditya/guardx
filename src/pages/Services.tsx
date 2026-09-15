@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Camera, Car, Fingerprint, Zap, ScanLine, Wrench, ClipboardCheck } from "lucide-react";
+import { ArrowRight, Camera, Car, Fingerprint, Zap, Wrench, ClipboardCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import PageHero from "@/components/PageHero";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -8,7 +8,6 @@ import cctvImage from "@/assets/services/cctv-surveillance.jpg";
 import boomBarrierImage from "@/assets/services/boom-barrier.jpg";
 import biometricImage from "@/assets/services/biometric-access.jpg";
 import solarFencingImage from "@/assets/services/solar-fencing.jpg";
-import anprUhfImage from "@/assets/services/anpr-uhf.jpg";
 import amcImage from "@/assets/services/amc.jpg";
 import assessmentImage from "@/assets/services/assessment-modernization.jpg";
 
@@ -19,7 +18,6 @@ const slugMap: Record<string, string> = {
   biometric: "biometric-access-control",
   
   "solar-fencing": "solar-fencing",
-  "anpr-uhf": "anpr-uhf-vehicle-access",
   amc: "annual-maintenance-contracts",
   assessment: "security-assessment-modernization",
 };
@@ -43,15 +41,17 @@ const services = [
     id: "boom-barrier",
     icon: Car,
     image: boomBarrierImage,
-    title: "Boom Barrier & Vehicle Access Management",
+    title: "Boom Barrier, ANPR & UHF Vehicle Access",
 
-    keywords: "boom barrier for apartment Hyderabad · vehicle access management gated community · ANPR boom barrier Hyderabad",
+    keywords: "boom barrier for apartment Hyderabad · vehicle access management gated community · ANPR boom barrier Hyderabad · UHF vehicle access gated community",
     paragraphs: [
       "Uncontrolled vehicle movement is one of the most common security complaints in gated communities. Manual registers, ad-hoc guard decisions, and broken boom barriers create gaps that expose residents to unauthorized access, parking disputes, and security incidents.",
-      "GuardX360 designs and installs automated boom barrier systems for vehicle entry and exit points, with ANPR and UHF vehicle identification integration available for communities requiring seamless, guard-free access management.",
-      "We handle end-to-end delivery including site assessment, barrier type selection, installation, commissioning, and annual maintenance contracts. For communities upgrading from older barrier systems, we offer modernization services that improve reliability and integrate existing entry infrastructure into a unified access management ecosystem.",
+      "GuardX360 designs and installs automated boom barrier systems for vehicle entry and exit points, with ANPR number plate recognition and UHF long-range tag identification built into the same layer for seamless, guard-free access management.",
+      "ANPR and UHF eliminate queues at peak hours, reduce guard dependency, and create a verifiable digital record of every vehicle entering and exiting the community — integrated with existing boom barriers and CCTV.",
+      "We handle end-to-end delivery including site assessment, barrier and reader selection, installation, commissioning, and annual maintenance contracts. For communities upgrading from older barrier systems, we offer modernization services that improve reliability and integrate existing entry infrastructure into a unified access management ecosystem.",
     ],
   },
+
   {
     id: "biometric",
     icon: Fingerprint,
@@ -76,18 +76,6 @@ const services = [
       "Perimeter protection is the first and most critical layer of a community's security infrastructure. A weak or unmaintained perimeter fence creates an easy entry point for intruders — regardless of how sophisticated your internal surveillance or access control systems are.",
       "GuardX360 designs and installs solar-powered electric fencing systems that provide a strong physical and psychological deterrent along the full community perimeter. The systems operate on solar power with battery backup, include alarm output on breach, and are designed for low maintenance and long operational life.",
       "We cover complete project delivery including perimeter assessment, system design, installation, testing, and AMC support.",
-    ],
-  },
-  {
-    id: "anpr-uhf",
-    icon: ScanLine,
-    image: anprUhfImage,
-    title: "ANPR & UHF Vehicle Access Systems",
-
-    keywords: "ANPR system for apartments Hyderabad · UHF vehicle access gated community · automatic vehicle entry system Hyderabad",
-    paragraphs: [
-      "High-traffic residential communities require vehicle access management that is fast, accurate, and does not depend on manual verification at every gate. ANPR (Automatic Number Plate Recognition) and UHF long-range vehicle identification systems eliminate queues, reduce guard dependency, and create a verifiable digital record of every vehicle entering and exiting the community.",
-      "GuardX360 designs and integrates ANPR and UHF access systems with existing boom barriers and CCTV infrastructure, creating a unified vehicle management ecosystem at community entry and exit points.",
     ],
   },
   {

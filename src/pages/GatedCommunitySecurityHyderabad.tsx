@@ -6,7 +6,6 @@ import {
   Car,
   Fingerprint,
   Zap,
-  ScanLine,
   Wrench,
   ClipboardCheck,
   ShieldCheck,
@@ -74,7 +73,7 @@ const layers = [
     n: "02",
     title: "Vehicle Access",
     text: "Boom barriers, ANPR and UHF readers controlling every vehicle entry and exit.",
-    to: "/services/anpr-uhf-vehicle-access",
+    to: "/services/boom-barrier-vehicle-access",
   },
   {
     n: "03",
@@ -123,10 +122,9 @@ const process = [
 
 const solutions = [
   { icon: Camera, title: "CCTV Surveillance", to: "/services/cctv-surveillance" },
-  { icon: Car, title: "Boom Barrier & Vehicle Access", to: "/services/boom-barrier-vehicle-access" },
+  { icon: Car, title: "Boom Barrier, ANPR & UHF Vehicle Access", to: "/services/boom-barrier-vehicle-access" },
   { icon: Fingerprint, title: "Biometric & Access Control", to: "/services/biometric-access-control" },
   { icon: Zap, title: "Solar Fencing", to: "/services/solar-fencing" },
-  { icon: ScanLine, title: "ANPR & UHF Vehicle Access", to: "/services/anpr-uhf-vehicle-access" },
   { icon: Wrench, title: "Annual Maintenance Contracts", to: "/services/annual-maintenance-contracts" },
   { icon: ClipboardCheck, title: "Assessment & Modernization", to: "/services/security-assessment-modernization" },
 ];
