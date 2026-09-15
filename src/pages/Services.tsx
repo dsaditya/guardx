@@ -43,15 +43,17 @@ const services = [
     id: "boom-barrier",
     icon: Car,
     image: boomBarrierImage,
-    title: "Boom Barrier & Vehicle Access Management",
+    title: "Boom Barrier, ANPR & UHF Vehicle Access",
 
-    keywords: "boom barrier for apartment Hyderabad · vehicle access management gated community · ANPR boom barrier Hyderabad",
+    keywords: "boom barrier for apartment Hyderabad · vehicle access management gated community · ANPR boom barrier Hyderabad · UHF vehicle access gated community",
     paragraphs: [
       "Uncontrolled vehicle movement is one of the most common security complaints in gated communities. Manual registers, ad-hoc guard decisions, and broken boom barriers create gaps that expose residents to unauthorized access, parking disputes, and security incidents.",
-      "GuardX360 designs and installs automated boom barrier systems for vehicle entry and exit points, with ANPR and UHF vehicle identification integration available for communities requiring seamless, guard-free access management.",
-      "We handle end-to-end delivery including site assessment, barrier type selection, installation, commissioning, and annual maintenance contracts. For communities upgrading from older barrier systems, we offer modernization services that improve reliability and integrate existing entry infrastructure into a unified access management ecosystem.",
+      "GuardX360 designs and installs automated boom barrier systems for vehicle entry and exit points, with ANPR number plate recognition and UHF long-range tag identification built into the same layer for seamless, guard-free access management.",
+      "ANPR and UHF eliminate queues at peak hours, reduce guard dependency, and create a verifiable digital record of every vehicle entering and exiting the community — integrated with existing boom barriers and CCTV.",
+      "We handle end-to-end delivery including site assessment, barrier and reader selection, installation, commissioning, and annual maintenance contracts. For communities upgrading from older barrier systems, we offer modernization services that improve reliability and integrate existing entry infrastructure into a unified access management ecosystem.",
     ],
   },
+
   {
     id: "biometric",
     icon: Fingerprint,
