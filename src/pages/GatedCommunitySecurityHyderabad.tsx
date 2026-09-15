@@ -129,7 +129,6 @@ const solutions = [
   { icon: ScanLine, title: "ANPR & UHF Vehicle Access", to: "/services/anpr-uhf-vehicle-access" },
   { icon: Wrench, title: "Annual Maintenance Contracts", to: "/services/annual-maintenance-contracts" },
   { icon: ClipboardCheck, title: "Assessment & Modernization", to: "/services/security-assessment-modernization" },
-  { icon: ShieldCheck, title: "Security Health Score", to: "/services/security-health-score" },
 ];
 
 const standards = [
@@ -201,7 +200,7 @@ const GatedCommunitySecurityHyderabad = () => {
       variant="outline"
       className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary px-8 py-6 h-auto font-semibold uppercase tracking-wide whitespace-normal"
     >
-      <Link to="/services/security-health-score">Get Your Community Security Score</Link>
+      <Link to="/contact">Get Your Community Security Score</Link>
     </Button>
   );
 

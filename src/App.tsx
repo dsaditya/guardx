@@ -33,7 +33,6 @@ import AnprUhf from "./pages/services/AnprUhf";
 import AMC from "./pages/services/AMC";
 import AssessmentModernization from "./pages/services/AssessmentModernization";
 
-import HealthScore from "./pages/services/HealthScore";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import ChecklistHub from "./pages/ChecklistHub";
 import SecurityAssessment from "./pages/SecurityAssessment";
@@ -65,7 +64,6 @@ const App = () => (
               <Route path="/services/annual-maintenance-contracts" element={<AMC />} />
               
               <Route path="/services/security-assessment-modernization" element={<AssessmentModernization />} />
-              <Route path="/services/security-health-score" element={<HealthScore />} />
               <Route path="/why-guardx360" element={<WhyGuardX360 />} />
               <Route path="/case-studies" element={<CaseStudies />} />
               <Route path="/knowledge-center" element={<KnowledgeCenter />} />

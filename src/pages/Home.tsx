@@ -18,7 +18,6 @@ const services = [
   { icon: ScanLine, title: "ANPR & UHF Vehicle Access", path: "/services/anpr-uhf-vehicle-access" },
   { icon: Wrench, title: "Annual Maintenance Contracts", path: "/services/annual-maintenance-contracts" },
   { icon: ClipboardCheck, title: "Assessment & Modernization", path: "/services/security-assessment-modernization" },
-  { icon: ShieldCheck, title: "Security Health Score", path: "/services/security-health-score" },
 ];
 
 const failurePoints = [
