@@ -25,33 +25,35 @@ const BoomBarrier = () => (
       <section className="section-padding bg-background border-t border-border">
         <div className="container-narrow">
           <AnimatedSection>
-            <div className="max-w-3xl space-y-5">
-              <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading leading-tight">
-                Boom Barrier Installation Hyderabad
-              </h2>
-              <p className="text-secondary leading-relaxed">
-                We install and maintain boom barriers for gated communities across Hyderabad and
-                surrounding areas, sizing each barrier to the gate's actual traffic volume rather than
-                to a catalogue specification.
-              </p>
-              <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading leading-tight pt-4">
-                Vehicle Access Control System Design
-              </h2>
-              <p className="text-secondary leading-relaxed">
-                A vehicle access control system is more than a barrier arm. It covers detection, reader
-                placement, power arrangement, safety loops and the entry record that follows each
-                movement — designed as one layer, documented, and maintained under AMC.
-              </p>
-              <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading leading-tight pt-4">
-                ANPR & UHF Vehicle Identification
-              </h2>
-              <p className="text-secondary leading-relaxed">
-                High-traffic communities need entry that is fast, accurate and not dependent on manual
-                verification at every gate. ANPR reads the number plate; UHF reads a long-range tag on
-                the resident's vehicle. Both trigger the same barrier, write to the same log, and can
-                be reviewed by the committee after an incident.
-              </p>
-              <div className="pt-4">
+            <div className="grid md:grid-cols-12 gap-8 md:gap-12 items-start">
+              <div className="md:col-span-7 space-y-5">
+                <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading leading-tight">
+                  Boom Barrier Installation Hyderabad
+                </h2>
+                <p className="text-secondary leading-relaxed">
+                  We install and maintain boom barriers for gated communities across Hyderabad and
+                  surrounding areas, sizing each barrier to the gate's actual traffic volume rather than
+                  to a catalogue specification.
+                </p>
+                <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading leading-tight pt-4">
+                  Vehicle Access Control System Design
+                </h2>
+                <p className="text-secondary leading-relaxed">
+                  A vehicle access control system is more than a barrier arm. It covers detection, reader
+                  placement, power arrangement, safety loops and the entry record that follows each
+                  movement — designed as one layer, documented, and maintained under AMC.
+                </p>
+                <h2 className="text-2xl md:text-3xl font-bold text-primary font-heading leading-tight pt-4">
+                  ANPR & UHF Vehicle Identification
+                </h2>
+                <p className="text-secondary leading-relaxed">
+                  High-traffic communities need entry that is fast, accurate and not dependent on manual
+                  verification at every gate. ANPR reads the number plate; UHF reads a long-range tag on
+                  the resident's vehicle. Both trigger the same barrier, write to the same log, and can
+                  be reviewed by the committee after an incident.
+                </p>
+              </div>
+              <div className="md:col-span-5">
                 <img
                   src={anprImage}
                   alt="Vehicle at an automated access gate with number plate recognition"
