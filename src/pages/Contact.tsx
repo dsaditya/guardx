@@ -150,7 +150,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <Label htmlFor="contact-community" className="text-xs uppercase tracking-wide text-secondary">
-                        Community Name
+                        Location
                       </Label>
                       <Input
                         id="contact-community"

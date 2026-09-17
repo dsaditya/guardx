@@ -51,7 +51,7 @@ const REQUIREMENTS = [
 
 const schema = z.object({
   name: z.string().trim().min(2, "Name is required").max(100),
-  community: z.string().trim().min(2, "Community / property name is required").max(150),
+  community: z.string().trim().min(2, "Location is required").max(150),
   communityType: z.string().trim().max(60).optional(),
   location: z.string().trim().min(2, "Location is required").max(150),
   phone: z.string().trim().min(10, "Enter a valid phone number").max(15),
@@ -162,9 +162,9 @@ const AssessmentLeadForm = () => {
             name="community"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className={labelClass}>Community / Property Name *</FormLabel>
+                <FormLabel className={labelClass}>Location *</FormLabel>
                 <FormControl>
-                  <Input placeholder="Community or property name" className="border-border" {...field} />
+                  <Input placeholder="Your location or property name" className="border-border" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -199,7 +199,7 @@ const AssessmentLeadForm = () => {
             name="location"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className={labelClass}>Location / Area *</FormLabel>
+                <FormLabel className={labelClass}>Area / City *</FormLabel>
                 <FormControl>
                   <Input placeholder="Area, city" className="border-border" {...field} />
                 </FormControl>
