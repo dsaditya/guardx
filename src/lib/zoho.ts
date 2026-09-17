@@ -3,9 +3,17 @@
 const ZOHO_URL = "https://crm.zoho.in/crm/WebToLeadForm";
 const IFRAME_NAME = "guardx360-zoho-target";
 
+// Reads the GCLID captured by Zoho's tracking script (zcga.js), which fills
+// the static #zc_gad hidden field in index.html when a visitor arrives from
+// Google Ads.
+function getGoogleAdsGclid(): string {
+  if (typeof document === "undefined") return "";
+  const field = document.getElementById("zc_gad") as HTMLInputElement | null;
+  return field?.value ?? "";
+}
+
 const HIDDEN_FIELDS: Record<string, string> = {
   xnQsjsdp: "8ef6b52cb69a53ea6549d0ef68918ed7db61bca04c2bac3204180e42f129ad09",
-  zc_gad: "",
   xmIwtLD:
     "30ac06779e67da9b7a9c23828bff0679a2e33dbba3f2f8f112e9b5008b5484827d6bd9edcfa5d04653730c1f69f6241b",
   actionType: "TGVhZHM=",
