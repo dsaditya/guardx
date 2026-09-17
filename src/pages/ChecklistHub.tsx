@@ -266,7 +266,7 @@ const ChecklistHub = () => {
                   <Input id="email" type="email" value={form.email} onChange={update("email")} required maxLength={255} className="mt-1" />
                 </div>
                 <div>
-                  <Label htmlFor="community" className="text-xs uppercase tracking-wide">Location</Label>
+                  <Label htmlFor="community" className="text-xs uppercase tracking-wide">Gated Community Name</Label>
                   <Input id="community" value={form.community} onChange={update("community")} required maxLength={150} className="mt-1" />
                 </div>
                 <Button
