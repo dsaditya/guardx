@@ -27,7 +27,7 @@ import { submitZohoLead } from "@/lib/zoho";
 
 const schema = z.object({
   name: z.string().trim().min(2, "Name is required").max(100),
-  community: z.string().trim().min(2, "Community / property name is required").max(150),
+  community: z.string().trim().min(2, "Location is required").max(150),
   communityType: z.string().min(1, "Please select a community type"),
   location: z.string().trim().min(2, "Location is required").max(120),
   phone: z.string().trim().min(10, "Enter a valid phone number").max(15),
@@ -152,9 +152,9 @@ const LeadForm = ({ showEmail = false, submitLabel = "Request a Community Securi
             name="community"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-sm uppercase tracking-wide text-secondary">Community / Property Name *</FormLabel>
+                <FormLabel className="text-sm uppercase tracking-wide text-secondary">Location *</FormLabel>
                 <FormControl>
-                  <Input placeholder="e.g. Prestige Towers" className="border-border" {...field} />
+                  <Input placeholder="e.g. Prestige Towers, Gachibowli" className="border-border" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -192,7 +192,7 @@ const LeadForm = ({ showEmail = false, submitLabel = "Request a Community Securi
             name="location"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-sm uppercase tracking-wide text-secondary">Location / Area in Hyderabad *</FormLabel>
+                <FormLabel className="text-sm uppercase tracking-wide text-secondary">Area in Hyderabad *</FormLabel>
                 <FormControl>
                   <Input placeholder="e.g. Gachibowli, Kondapur" className="border-border" {...field} />
                 </FormControl>

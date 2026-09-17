@@ -221,9 +221,9 @@ const ChecklistDetail = () => {
                           name="company"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel className="text-[11px] uppercase tracking-wide text-secondary">Community / Company</FormLabel>
+                              <FormLabel className="text-[11px] uppercase tracking-wide text-secondary">Location / Company</FormLabel>
                               <FormControl>
-                                <Input placeholder="e.g. Prestige Towers" className="border-border" {...field} />
+                                <Input placeholder="e.g. Prestige Towers, Gachibowli" className="border-border" {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
