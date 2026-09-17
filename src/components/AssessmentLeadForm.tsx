@@ -51,7 +51,7 @@ const REQUIREMENTS = [
 
 const schema = z.object({
   name: z.string().trim().min(2, "Name is required").max(100),
-  community: z.string().trim().min(2, "Community / property name is required").max(150),
+  community: z.string().trim().min(2, "Location is required").max(150),
   communityType: z.string().trim().max(60).optional(),
   location: z.string().trim().min(2, "Location is required").max(150),
   phone: z.string().trim().min(10, "Enter a valid phone number").max(15),

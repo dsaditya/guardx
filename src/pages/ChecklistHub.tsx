@@ -97,7 +97,7 @@ const leadSchema = z.object({
   name: z.string().trim().min(2, "Enter your name").max(100),
   phone: z.string().trim().min(7, "Enter a valid phone number").max(20),
   email: z.string().trim().email("Enter a valid email").max(255),
-  community: z.string().trim().min(2, "Enter your community name").max(150),
+  community: z.string().trim().min(2, "Enter your location").max(150),
 });
 
 const ChecklistHub = () => {
@@ -266,7 +266,7 @@ const ChecklistHub = () => {
                   <Input id="email" type="email" value={form.email} onChange={update("email")} required maxLength={255} className="mt-1" />
                 </div>
                 <div>
-                  <Label htmlFor="community" className="text-xs uppercase tracking-wide">Community Name</Label>
+                  <Label htmlFor="community" className="text-xs uppercase tracking-wide">Location</Label>
                   <Input id="community" value={form.community} onChange={update("community")} required maxLength={150} className="mt-1" />
                 </div>
                 <Button
