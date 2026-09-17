@@ -141,7 +141,7 @@ const GetInTouchButton = () => {
               <Input id="git-email" type="email" value={form.email} onChange={update("email")} required maxLength={255} className="mt-1" />
             </div>
             <div>
-              <Label htmlFor="git-community" className="text-xs uppercase tracking-wide">Location</Label>
+              <Label htmlFor="git-community" className="text-xs uppercase tracking-wide">Gated Community Name</Label>
               <Input id="git-community" value={form.community} onChange={update("community")} required maxLength={150} className="mt-1" />
             </div>
             <div>
