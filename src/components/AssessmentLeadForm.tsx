@@ -162,9 +162,9 @@ const AssessmentLeadForm = () => {
             name="community"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className={labelClass}>Community / Property Name *</FormLabel>
+                <FormLabel className={labelClass}>Location *</FormLabel>
                 <FormControl>
-                  <Input placeholder="Community or property name" className="border-border" {...field} />
+                  <Input placeholder="Your location or property name" className="border-border" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -199,7 +199,7 @@ const AssessmentLeadForm = () => {
             name="location"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className={labelClass}>Location / Area *</FormLabel>
+                <FormLabel className={labelClass}>Area / City *</FormLabel>
                 <FormControl>
                   <Input placeholder="Area, city" className="border-border" {...field} />
                 </FormControl>
