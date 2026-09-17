@@ -54,6 +54,7 @@ export function submitZohoLead(lead: ZohoLead) {
 
   const values: Record<string, string> = {
     ...HIDDEN_FIELDS,
+    zc_gad: getGoogleAdsGclid(),
     "Last Name": lead.name,
     Mobile: lead.phone,
     Email: lead.email,
